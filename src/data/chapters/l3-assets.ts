@@ -695,7 +695,7 @@ export const assets: Record<string, Chapter> = {
     subtitle: 'Leverage on a very expensive, very illiquid asset',
     minutes: 7,
     blocks: [
-      { kind: 'p', text: 'A home loan lets you buy a property with a small upfront payment, which is the main reason Indian households use it. You also get tax benefits: the principal portion under Section 80EEA and the interest under Section 80(b)(2)(ii), for the old regime.' },
+      { kind: 'p', text: 'A home loan lets you buy a property with a small upfront payment, which is the main reason Indian households use it. In the old regime you also get tax benefits: principal repayment counts under Section 80C, interest on a self-occupied home up to ₹2 lakh a year under Section 24(b), and first-time buyers of affordable homes may claim an extra interest deduction under Section 80EEA.' },
       {
         kind: 'table',
         caption: 'The four types, and what they cost',

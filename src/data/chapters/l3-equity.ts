@@ -148,7 +148,7 @@ export const equity: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
       { kind: 'scene', name: 'dividend-stream', caption: 'Dividends arrive without any action from you. Growth on top is the part that compounds.' },
-      { kind: 'p', text: 'A dividend is a portion of profit distributed to shareholders, usually as cash. The amount is decided by the board, not guaranteed, and can be cut in a bad year. Indian dividends carry Dividend Distribution Tax (DDT), so the tax is paid at the company level rather than by you.' },
+      { kind: 'p', text: 'A dividend is a portion of profit distributed to shareholders, usually as cash. The amount is decided by the board, not guaranteed, and can be cut in a bad year. India abolished Dividend Distribution Tax in 2020 — dividends are now taxable in your hands at your slab rate, with TDS deducted above ₹5,000 a year.' },
       {
         kind: 'formula',
         label: 'Dividend yield',
@@ -162,7 +162,7 @@ export const equity: Record<string, Chapter> = {
         rows: [
           ['Income now', 'Income when you sell'],
           ['Paid from cash the company holds', 'Paid from price appreciation'],
-          ['Usually lower tax in India (DDT route)', 'Gains taxed at slab, with LTCG concessions'],
+          ['Taxed at your slab rate, with TDS above ₹5,000', 'LTCG on listed equity taxed at 12.5% above ₹1.25 lakh'],
           ['Not guaranteed', 'Also not guaranteed'],
           ['Useful for ongoing income', 'Better for long-term growth in most cases'],
         ],
@@ -213,10 +213,10 @@ export const equity: Record<string, Chapter> = {
         caption: 'Holding period decides the tax treatment',
         headers: ['Held for', 'Category', 'Indicative tax'],
         rows: [
-          ['Under 12 months', 'Short-term (STCG)', 'Your income slab rate'],
-          ['12 months or more', 'Long-term (LTCG)', '12.5% without indexation (listed equity)'],
-          ['Under 24 months', 'Short-term', 'Slab rate'],
-          ['24 months or more', 'Long-term', 'Slab rate, with indexation benefit'],
+          ['Listed equity — under 12 months', 'Short-term', '20% on listed equity (s.111A)'],
+          ['Listed equity — 12 months or more', 'Long-term', '12.5% above ₹1.25 lakh, no indexation (s.112A)'],
+          ['Debt funds & deposits — any holding', 'Slab', 'Taxed at your slab rate; no indexation'],
+          ['Property — 24 months or more', 'Long-term', '12.5% without indexation (20% with it only for pre-23-Jul-2024 buys)'],
         ],
       },
       {
@@ -235,7 +235,7 @@ export const equity: Record<string, Chapter> = {
         kind: 'callout',
         tone: 'warning',
         title: 'Set-off losses have rules',
-        text: 'Losses can offset gains within the same category, and up to ₹1.25 lakh of capital losses can offset dividend or other income in a year. Carry-forward rules exist too, but this is where a CA earns their fee.',
+        text: 'Capital losses can be set off only against capital gains — a short-term loss against any gain, a long-term loss against long-term gains only — and unabsorbed losses carry forward for up to eight years. They cannot be set off against salary or other income, so this is where a CA earns their fee.',
       },
     ],
     quiz: [

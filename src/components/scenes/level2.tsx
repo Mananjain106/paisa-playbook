@@ -100,70 +100,68 @@ export function BalanceSheet() {
 
 /** One EMI payment split into principal and interest. */
 export function EmiSplit() {
+  const cx = 108
+  const cy = 100
+  const R = 52
+  const C = 2 * Math.PI * R
+  const interestFrac = 0.8
+  const svgRotate = `rotate(-90 ${cx} ${cy})`
   return (
     <>
-      <motion.circle
-        cx="200"
-        cy="100"
-        r="62"
-        fill="#34e0a1"
-        opacity="0.18"
-        initial={{ scale: 0.7 }}
-        animate={{ scale: 1 }}
-        transition={{ type: 'spring', stiffness: 160 }}
-        style={{ transformOrigin: '200px 100px' }}
-      />
-      <motion.circle
-        cx="200"
-        cy="100"
-        r="46"
-        fill="#34e0a1"
-        opacity="0.35"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 0.9 }}
-        style={{
-          transformOrigin: '200px 100px',
-          strokeDasharray: '200 300',
-          strokeWidth: 2,
-        }}
-      />
-      <text x="200" y="94" textAnchor="middle" fontSize="12" fill="#0b1524" fontWeight="800">
-        EMI
-      </text>
-      <text x="200" y="112" textAnchor="middle" fontSize="10" fill="#0b1524">
-        every month
-      </text>
-      <motion.rect
-        x="24"
-        y="170"
-        height="20"
-        rx="6"
-        fill="#34e0a1"
-        opacity="0.8"
-        initial={{ width: 0 }}
-        animate={{ width: 80 }}
-        transition={{ delay: 0.6, type: 'spring', stiffness: 140 }}
-      />
-      <motion.rect
-        x="110"
-        y="170"
-        height="20"
-        rx="6"
-        fill="#f87171"
-        opacity="0.8"
-        initial={{ width: 0 }}
-        animate={{ width: 130 }}
-        transition={{ delay: 0.8, type: 'spring', stiffness: 140 }}
-      />
-      {/* labels centred under their own bars: 24+80/2 = 64, 110+130/2 = 175 */}
-      <text x="64" y="205" textAnchor="middle" fontSize="10" fill="#34e0a3">
-        principal
-      </text>
-      <text x="175" y="205" textAnchor="middle" fontSize="10" fill="#fca5a5">
-        interest
-      </text>
-      <text x="200" y="35" textAnchor="middle" fontSize="11" fill="#d7dbe9">
+      <motion.g
+        initial={{ opacity: 0, scale: 0.84 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ type: 'spring', stiffness: 140 }}
+        style={{ transformOrigin: `${cx}px ${cy}px` }}
+      >
+        <circle cx={cx} cy={cy} r={R} fill="none" stroke="#ffffff" strokeOpacity="0.06" strokeWidth="22" />
+        <circle
+          cx={cx}
+          cy={cy}
+          r={R}
+          fill="none"
+          stroke="#f87171"
+          strokeWidth="22"
+          strokeDasharray={`${C * interestFrac} ${C}`}
+          transform={svgRotate}
+        />
+        <circle
+          cx={cx}
+          cy={cy}
+          r={R}
+          fill="none"
+          stroke="#34e0a1"
+          strokeWidth="22"
+          strokeDasharray={`${C * (1 - interestFrac)} ${C}`}
+          strokeDashoffset={-C * interestFrac}
+          transform={svgRotate}
+        />
+        <text x={cx} y={cy - 1} textAnchor="middle" fontSize="16" fill="#e8ecf7" fontWeight="800">
+          EMI
+        </text>
+        <text x={cx} y={cy + 15} textAnchor="middle" fontSize="9" fill="#8791b3">
+          each month
+        </text>
+      </motion.g>
+
+      <motion.g initial={{ opacity: 0, x: 12 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
+        <rect x="196" y="58" width="12" height="12" rx="3" fill="#f87171" />
+        <text x="216" y="68" fontSize="11" fill="#fca5a5" fontWeight="700">
+          Interest
+        </text>
+        <text x="196" y="87" fontSize="9" fill="#8791b3">
+          ≈80% · the lender&apos;s — never comes back
+        </text>
+        <rect x="196" y="106" width="12" height="12" rx="3" fill="#34e0a1" />
+        <text x="216" y="116" fontSize="11" fill="#a7f3d0" fontWeight="700">
+          Principal
+        </text>
+        <text x="196" y="135" fontSize="9" fill="#8791b3">
+          ≈20% · this part reduces your loan
+        </text>
+      </motion.g>
+
+      <text x="200" y="205" textAnchor="middle" fontSize="10" fill="#d7dbe9">
         Early on, most of your EMI buys nothing you own
       </text>
     </>
@@ -211,47 +209,53 @@ export function EmergencyLadder() {
   )
 }
 
-/** The minimum payment barely denting a growing balance. */
+/** Minimum payments barely dent a balance that keeps compounding. */
 export function MinPaymentTrap() {
   const bars = [
-    { l: 'Month 0', b: 100000 },
-    { l: 'Month 6', b: 112000 },
-    { l: 'Month 12', b: 126000 },
-    { l: 'Month 24', b: 158000 },
-    { l: 'Month 36', b: 198000 },
+    { m: '0', b: 100000 },
+    { m: '6', b: 112000 },
+    { m: '12', b: 126000 },
+    { m: '24', b: 158000 },
+    { m: '36', b: 198000 },
   ]
+  const base = 170
+  const maxH = 108
+  const max = 198000
   return (
     <>
-      {bars.map((b, i) => (
-        <motion.g key={b.l} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.16 }}>
-          <motion.rect
-            x={30 + i * 72}
-            width="46"
-            rx="6"
-            fill="#f87171"
-            animate={{ height: b.b / 1000, y: 170 - b.b / 1000 }}
-            transition={{ delay: i * 0.16, type: 'spring', stiffness: 110 }}
-          />
-          <text x={53 + i * 72} y="188" textAnchor="middle" fontSize="9" fill="#8791b3">
-            {b.l.split(' ')[1]}
-          </text>
-        </motion.g>
-      ))}
-      <motion.text
-        x="200"
-        y="30"
-        textAnchor="middle"
-        fontSize="12"
-        fill="#fca5a5"
-        fontWeight="700"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-      >
-        Paying minimums: the balance grew
-      </motion.text>
+      <text x="200" y="24" textAnchor="middle" fontSize="12" fill="#fca5a5" fontWeight="700">
+        Paying only the minimum
+      </text>
+      <text x="200" y="40" textAnchor="middle" fontSize="9" fill="#8791b3">
+        ₹1,00,000 of card debt that is never cleared
+      </text>
+      <line x1="24" y1={base} x2="376" y2={base} stroke="white" strokeOpacity="0.15" strokeWidth="1.5" />
+      {bars.map((b, i) => {
+        const h = (b.b / max) * maxH
+        const x = 33 + i * 72
+        return (
+          <motion.g key={b.m} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.14 }}>
+            <motion.rect
+              x={x}
+              width="46"
+              rx="6"
+              fill="#f87171"
+              opacity="0.85"
+              initial={{ height: 0, y: base }}
+              animate={{ height: h, y: base - h }}
+              transition={{ delay: i * 0.14, type: 'spring', stiffness: 110, damping: 16 }}
+            />
+            <text x={x + 23} y={base - h - 7} textAnchor="middle" fontSize="9" fill="#fca5a5" fontWeight="700">
+              {`₹${(b.b / 100000).toFixed(2)}L`}
+            </text>
+            <text x={x + 23} y="186" textAnchor="middle" fontSize="9" fill="#8791b3">
+              {`M${b.m}`}
+            </text>
+          </motion.g>
+        )
+      })}
       <text x="200" y="208" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Months 0 → 36 at roughly 3% a month
+        Months 0 → 36 at roughly 3% a month — it only ever climbs
       </text>
     </>
   )
@@ -264,13 +268,13 @@ export function SecuredVsUnsecured() {
       <motion.g initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}>
         <rect x="30" y="60" width="140" height="90" rx="10" fill="#34e0a1" opacity="0.25" stroke="#34e0a1" strokeWidth="2" />
         <path d="M60 60 L100 34 L140 60 Z" fill="#34e0a1" opacity="0.6" />
-        <text x="100" y="95" textAnchor="middle" fontSize="11" fill="#0b1524" fontWeight="700">
+        <text x="100" y="95" textAnchor="middle" fontSize="11" fill="#a7f3d0" fontWeight="700">
           Secured
         </text>
-        <text x="100" y="112" textAnchor="middle" fontSize="9" fill="#0b1524">
+        <text x="100" y="112" textAnchor="middle" fontSize="9" fill="#a7f3d0">
           house is collateral
         </text>
-        <text x="100" y="125" textAnchor="middle" fontSize="9" fill="#0b1524">
+        <text x="100" y="125" textAnchor="middle" fontSize="9" fill="#a7f3d0">
           lower rate, longer tenure
         </text>
       </motion.g>
@@ -296,42 +300,47 @@ export function SecuredVsUnsecured() {
 /** An umbrella covering a household. */
 export function InsuranceUmbrella() {
   const risks = ['health', 'life', 'vehicle', 'property', 'travel', 'liability']
+  const cols = [96, 222]
+  const rows = [64, 102, 140]
   return (
     <>
       <motion.path
-        d="M200 26 L310 66 V132 C310 168 262 192 200 202 C138 192 90 168 90 132 V66 Z"
+        d="M200 18 L328 58 V128 C328 172 272 198 200 206 C128 198 72 172 72 128 V58 Z"
         fill="#38bdf8"
-        opacity="0.18"
+        opacity="0.16"
         stroke="#38bdf8"
         strokeWidth="2"
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        initial={{ scale: 0.85, opacity: 0 }}
+        animate={{ scale: 1, opacity: 0.16 }}
         transition={{ type: 'spring', stiffness: 150 }}
-        style={{ transformOrigin: '200px 120px' }}
+        style={{ transformOrigin: '200px 116px' }}
       />
-      {risks.map((r, i) => (
-        <motion.g key={r} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.14 }}>
-          <rect x="36" y={36 + i * 28} width="118" height="22" rx="6" fill="#38bdf8" opacity="0.2" />
-          <text x="95" y={51 + i * 28} textAnchor="middle" fontSize="10" fill="#7dd3fc">
-            {r}
-          </text>
-        </motion.g>
-      ))}
-      <text x="200" y="112" textAnchor="middle" fontSize="13" fill="#7dd3fc" fontWeight="700">
-        One household
-      </text>
-      <text x="200" y="132" textAnchor="middle" fontSize="10" fill="#38bdf8">
-        several risks
+      {risks.map((r, i) => {
+        const c = i % 2
+        const rr = Math.floor(i / 2)
+        const x = cols[c]
+        const y = rows[rr]
+        return (
+          <motion.g key={r} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.32 + i * 0.1 }}>
+            <rect x={x - 48} y={y} width="96" height="24" rx="6" fill="#38bdf8" opacity="0.22" />
+            <text x={x} y={y + 16} textAnchor="middle" fontSize="10" fill="#7dd3fc">
+              {r}
+            </text>
+          </motion.g>
+        )
+      })}
+      <text x="200" y="40" textAnchor="middle" fontSize="13" fill="#7dd3fc" fontWeight="700">
+        One household, several risks
       </text>
       <motion.text
         x="200"
-        y="222"
+        y="206"
         textAnchor="middle"
         fontSize="10"
         fill="#8791b3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.3 }}
+        transition={{ delay: 1.1 }}
       >
         Insurance transfers a risk you cannot afford, not one you can
       </motion.text>
@@ -341,62 +350,74 @@ export function InsuranceUmbrella() {
 
 /** Early payouts funded by later investors. */
 export function PonziChain() {
-  const nodes = Array.from({ length: 7 }, (_, i) => 26 + i * 52)
+  const levels = [
+    { y: 34, xs: [200] },
+    { y: 74, xs: [160, 240] },
+    { y: 114, xs: [120, 160, 240, 280] },
+    { y: 154, xs: [80, 110, 140, 170, 230, 260, 290, 320] },
+  ]
   return (
     <>
-      {nodes.slice(0, -1).map((x, i) => (
-        <motion.path
-          key={i}
-          d={`M${x},80 Q${x + 26},30 ${x + 52},80`}
-          fill="none"
-          stroke="#fbbf24"
-          strokeWidth="1.5"
-          strokeDasharray="5 6"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 0.8 }}
-          transition={{ delay: i * 0.2, duration: 0.5 }}
-        />
+      {levels.map((lvl, r) => (
+        lvl.xs.map((x, i) => {
+          const above = levels[r - 1]
+          if (!above) return null
+          const ax = above.xs[Math.floor(i / 2)]
+          return (
+            <motion.path
+              key={`${r}-${i}`}
+              d={`M${ax},${levels[r - 1].y} L${x},${lvl.y}`}
+              stroke="#fbbf24"
+              strokeWidth="1.2"
+              strokeDasharray="4 5"
+              initial={{ pathLength: 0, opacity: 0 }}
+              animate={{ pathLength: 1, opacity: 0.7 }}
+              transition={{ delay: (r - 1) * 0.18 + (i % 2) * 0.06, duration: 0.4 }}
+            />
+          )
+        })
       ))}
-      {nodes.map((x, i) => (
-        <motion.g
-          key={i}
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: i * 0.2, type: 'spring', stiffness: 220 }}
-          style={{ transformOrigin: `${x}px 80px` }}
-        >
-          <circle cx={x} cy="80" r="14" fill={i === 0 ? '#34e0a1' : '#fbbf24'} opacity="0.75" />
-          {i === 0 && <text x={x} y="84" textAnchor="middle" fontSize="10" fill="#0b1524" fontWeight="700">you</text>}
-        </motion.g>
+      {levels.map((lvl, r) => (
+        lvl.xs.map((x, i) => (
+          <motion.g
+            key={`n${r}${i}`}
+            initial={{ opacity: 0, scale: 0.4 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: r * 0.18 + i * 0.05, type: 'spring', stiffness: 200 }}
+            style={{ transformOrigin: `${x}px ${lvl.y}px` }}
+          >
+            <circle cx={x} cy={lvl.y} r={r === 0 ? 16 : 10} fill={r === 0 && i === 0 ? '#34e0a1' : '#fbbf24'} opacity={r === 0 ? 0.85 : 0.7} />
+            {r === 0 && (
+              <text x={x} y={lvl.y + 4} textAnchor="middle" fontSize="10" fill="#0b1524" fontWeight="700">you</text>
+            )}
+          </motion.g>
+        ))
       ))}
+      <motion.circle
+        cx="320"
+        cy="154"
+        r="16"
+        fill="none"
+        stroke="#f87171"
+        strokeWidth="2"
+        animate={{ r: [12, 22, 12], opacity: [1, 0.3, 1] }}
+        transition={{ repeat: Infinity, duration: 1.8 }}
+      />
       <motion.text
         x="200"
-        y="140"
+        y="192"
         textAnchor="middle"
-        fontSize="12"
+        fontSize="11"
         fill="#fcd34d"
         fontWeight="700"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.6 }}
+        transition={{ delay: 1.2 }}
       >
-        Only the first people are paid from real returns
+        New money flows up to pay earlier investors
       </motion.text>
-      <text x="200" y="162" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Classic Ponzi maths: to pay everyone, the scheme must keep growing
-      </text>
-      <motion.circle
-        cx="352"
-        cy="80"
-        r="20"
-        fill="none"
-        stroke="#f87171"
-        strokeWidth="2"
-        animate={{ r: [16, 26, 16], opacity: [1, 0.3, 1] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-      />
-      <text x="200" y="200" textAnchor="middle" fontSize="10" fill="#fca5a5">
-        When growth stops, everyone after the first few loses everything
+      <text x="200" y="210" textAnchor="middle" fontSize="9" fill="#8791b3">
+        When new money stops, the bottom layer has no one left — collapse
       </text>
     </>
   )
@@ -462,10 +483,19 @@ export function FomoChase() {
           transition={{ delay: i * 0.07, type: 'spring', stiffness: 130 }}
         />
       ))}
-      <line x1={14 + 5 * 31} x2={14 + 5 * 31 + 24} y1="20" y2="180" stroke="#f87171" strokeWidth="2" />
+      <line x1="14" x2="386" y1="180" y2="180" stroke="white" strokeOpacity="0.12" />
+      <motion.circle
+        cx={14 + 5 * 31 + 12}
+        cy={180 - 118}
+        r="3.5"
+        fill="#f87171"
+        initial={{ scale: 0.6, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ delay: 0.8 }}
+      />
       <motion.text
         x={14 + 5 * 31 + 12}
-        y="16"
+        y={180 - 118 - 6}
         textAnchor="middle"
         fontSize="10"
         fill="#fca5a5"
@@ -494,8 +524,8 @@ export function LifestyleInflation() {
           <motion.g key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.18 }}>
             <motion.rect x={x} width="26" rx="4" fill="#38bdf8" opacity="0.7" animate={{ height: v * 1.1, y: 185 - v * 1.1 }} transition={{ delay: i * 0.18, type: 'spring', stiffness: 120 }} />
             <motion.rect x={x + 28} width="26" rx="4" fill="#f87171" opacity="0.7" animate={{ height: spending[i] * 1.1, y: 185 - spending[i] * 1.1 }} transition={{ delay: i * 0.18, type: 'spring', stiffness: 120 }} />
-            <text x={x + 27} y={198} textAnchor="middle" fontSize="9" fill="#fcd34d">
-              +{saved[i]}
+            <text x={x + 27} y={198} textAnchor="middle" fontSize="9" fill={saved[i] <= 0 ? "#fca5a5" : "#fcd34d"} fontWeight={saved[i] <= 0 ? 700 : 400}>
+              {saved[i] <= 0 ? 0 : `+${saved[i}`}
             </text>
           </motion.g>
         )
@@ -689,38 +719,41 @@ export function ScoreMeter() {
     { l: '650–749', c: '#facc15', t: 'Good' },
     { l: '750–900', c: '#4ade80', t: 'Excellent' },
   ]
+  const base = 150
   return (
     <>
-      {bands.map((b, i) => (
-        <motion.g key={b.l} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.16 }}>
-          <motion.rect
-            x={30 + i * 88}
-            y={120 - i * 22}
-            width="84"
-            height={24 + i * 22}
-            rx="4"
-            fill={b.c}
-            opacity="0.65"
-            initial={{ y: 150 }}
-            animate={{ y: 120 - i * 22 }}
-            transition={{ delay: i * 0.16, type: 'spring', stiffness: 120 }}
-          />
-          <text x={72 + i * 88} y={112 - i * 22} textAnchor="middle" fontSize="9" fill="#0b1524" fontWeight="700">
-            {b.t}
-          </text>
-          <text x={72 + i * 88} y={156} textAnchor="middle" fontSize="9" fill="#8791b3">
-            {b.l}
-          </text>
-        </motion.g>
-      ))}
-      <motion.g animate={{ y: [0, -4, 0] }} transition={{ repeat: Infinity, duration: 1.8 }}>
-        <text x="346" y="86" textAnchor="middle" fontSize="13">
-          ▲
-        </text>
-      </motion.g>
-      <text x="200" y="190" textAnchor="middle" fontSize="10" fill="#8791b3">
+      {bands.map((b, i) => {
+        const h = 28 + i * 26
+        const x = 30 + i * 88
+        const top = base - h
+        return (
+          <motion.g key={b.l} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.16 }}>
+            <motion.rect
+              x={x}
+              width="84"
+              rx="6"
+              fill={b.c}
+              opacity="0.8"
+              initial={{ attrY: base, height: 0 }}
+              animate={{ attrY: top, height: h }}
+              transition={{ delay: i * 0.16, type: 'spring', stiffness: 120 }}
+            />
+            <text x={x + 42} y={top - 9} textAnchor="middle" fontSize="10" fill={b.c} fontWeight="700">
+              {b.t}
+            </text>
+            <text x={x + 42} y={base + 17} textAnchor="middle" fontSize="9" fill="#8791b3">
+              {b.l}
+            </text>
+          </motion.g>
+        )
+      })}
+      <line x1="24" y1={base} x2="376" y2={base} stroke="white" strokeOpacity="0.15" strokeWidth="1.5" />
+      <text x="200" y="196" textAnchor="middle" fontSize="10" fill="#8791b3">
         Payment history is roughly two-thirds of your score
       </text>
     </>
   )
 }
+
+
+

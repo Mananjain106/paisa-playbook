@@ -8,7 +8,7 @@ export const education: Record<string, Chapter> = {
     subtitle: 'Funding learning without funding the decision badly.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('goal-ladder', 'Education is a rung bought with fees, time and forgone income.'),
       { kind: 'p', text: "Education is often treated as a sacred investment, and in many cases it is one of the most valuable things a person can buy. But it is still a purchase with a price, a financing choice, a timeline, and an expected return. The useful habit is to finance education thoughtfully: compare the cost with the likely outcome, avoid debt that outlives the benefit, and keep the decision grounded in the career and life it is meant to enable." },
       { kind: 'h', text: 'The finance questions education raises' },
       { kind: 'list', items: [
@@ -43,7 +43,7 @@ export const education: Record<string, Chapter> = {
     subtitle: 'Money for learning that does not have to be repaid.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('goal-ladder', 'A scholarship removes part of the cost of the very same rung.'),
       { kind: 'p', text: "A scholarship is money for education that does not have to be repaid, usually awarded on the basis of merit, need, or both, depending on the program. Because it is not a loan, a scholarship changes the economics of education in a way that loans do not: it lowers the price directly rather than lowering only the timing problem. That is why scholarships are worth pursuing aggressively when they are accessible." },
       { kind: 'h', text: 'Why scholarships matter financially' },
       { kind: 'list', items: [
@@ -78,7 +78,7 @@ export const education: Record<string, Chapter> = {
     subtitle: 'Borrowing for a future payoff — useful, but not free.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('loan-amort', 'A loan spreads the fee bill into years of interest and principal.'),
       { kind: 'p', text: "An education loan can be a sensible way to fund a course when the expected payoff justifies the borrowing and the terms are manageable. It can bridge the gap when savings, scholarships, and family support are not enough. But a loan is still a loan: it creates a future obligation, with interest, and that obligation should be sized against the realistic earnings the education is meant to unlock." },
       { kind: 'h', text: 'What to weigh before taking an education loan' },
       { kind: 'list', items: [
@@ -113,7 +113,7 @@ export const education: Record<string, Chapter> = {
     subtitle: 'What the education is expected to return, in money and in options.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('corpus-ladder', 'The payoff of education arrives years after the cost.'),
       { kind: 'p', text: "Return on investment for education is not only the salary you might earn after a course. It is also the doors it opens, the skills it builds, the mobility it gives you, and the option value it creates. Money matters, but so does whether the education meaningfully expands what you can do. The best education decisions compare the cost with the full range of expected benefits, not just the highest hoped-for salary." },
       { kind: 'h', text: 'What counts as return' },
       { kind: 'list', items: [
@@ -149,7 +149,7 @@ export const education: Record<string, Chapter> = {
     subtitle: 'What studying costs besides the fee bill.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('real-vs-nominal', 'The cost you see is only part of the cost you actually pay.'),
       { kind: 'p', text: "When people think about the cost of education, they usually think about fees. They should also think about the things they give up to study: the income they do not earn, the experience they do not gain, and the years they spend in one path instead of another. That forgone value is the opportunity cost of education, and it can be a large part of the real price." },
       { kind: 'h', text: 'What is often left out of the cost' },
       { kind: 'list', items: [

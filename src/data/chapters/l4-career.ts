@@ -7,7 +7,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'Your career is your biggest money machine — manage it like one.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('income-streams', 'Your salary is the stream that fills every other account.'),
       { kind: 'p', text: "Career finance is the part of personal finance that people most often ignore because it feels like a life issue, not a money issue. But your earning ability over a working life is usually the biggest driver of your financial outcome. A better job, a better raise, a better switch, and a better skill plan can matter more than fiddling with small expenses. The key idea is to treat your career as an asset you maintain and improve." },
       { kind: 'h', text: 'What career finance includes' },
       { kind: 'list', items: [
@@ -43,7 +43,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'The few conversations that can move your money for years.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('salary-deductions', 'Negotiate the gross; the deductions decide what actually arrives.'),
       { kind: 'p', text: "Salary negotiation is one of the few moments where a relatively short conversation can change your income for a long time. The reason is compounding: a better starting salary or a better raise can lift every future paycheck, every future base for another job, and every future bonus calculation. People often leave money on the table because they are uncomfortable, unprepared, or under time pressure." },
       { kind: 'h', text: 'What good negotiation usually needs' },
       { kind: 'list', items: [
@@ -79,7 +79,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'How pay grows inside a job, and why you cannot assume it will.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('income-streams', 'Raises are small annual additions to one long stream.'),
       { kind: 'p', text: "A raise is an increase in pay within the same job, usually tied to performance, market movement, tenure, or a review cycle. Many people assume raises will arrive automatically and generously. They often do not. The useful habit is to treat raises as something to earn, ask for, and track, not as a reward that arrives on its own." },
       { kind: 'h', text: 'Why raises are worth managing' },
       { kind: 'list', items: [
@@ -114,7 +114,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'A promotion can raise income, responsibility, and options — or all three at once.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('goal-ladder', 'A promotion is a rung — worth taking only if it leads upward.'),
       { kind: 'p', text: "A promotion is a move up in role, responsibility, or seniority. It often brings higher pay, but not always enough higher pay for the extra responsibility. The useful way to think about a promotion is as a package of changes: more scope, more accountability, possibly more stress, and often more money. Not every promotion is a good financial or life decision at the moment it is offered." },
       { kind: 'h', text: 'What to weigh in a promotion' },
       { kind: 'list', items: [
@@ -150,7 +150,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'The move that can reset your income trajectory.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('income-streams', 'A switch can lift the whole stream, not just the next paycheck.'),
       { kind: 'p', text: "Job switching is one of the most powerful ways people change their income, because a new role often comes with a new base, new responsibilities, and a new salary floor for the future. Staying too long in the same job can mean slower growth than moving, while moving too often can look unstable or cost you the benefits of deep experience. The useful skill is knowing when to stay and when to go." },
       { kind: 'h', text: 'What a job switch should accomplish' },
       { kind: 'list', items: [
@@ -186,7 +186,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'Extra money can help — or distract — depending on how you build it.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('income-streams', 'A second stream helps only if it does not drain the first.'),
       { kind: 'p', text: "Side income is money earned outside your main job, from freelancing, a small business, consulting, or similar work. It can speed up savings, diversify your income, and build skills. It can also drain time, create tax complexity, and distract from the main job that pays most of the bills. The right approach is to treat side income as a tool with trade-offs, not as a default solution." },
       { kind: 'h', text: 'What to think about before building side income' },
       { kind: 'list', items: [
@@ -222,7 +222,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'Protecting your income source, not just your savings.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('emergency-ladder', 'Career resilience is a ladder you climb before you need it.'),
       { kind: 'p', text: "Career risk is the risk that your income could be interrupted, reduced, or stranded because of job loss, industry change, skill obsolescence, a bad reputation, or a move that does not work out. People often insure their phone or bike and forget to insure the income that pays for everything else. The useful habit is to manage career risk the way you manage any other financial risk: identify it, reduce it, and keep a buffer." },
       { kind: 'h', text: 'What career risk often looks like' },
       { kind: 'list', items: [
@@ -258,7 +258,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'The steady compounding of skills, reputation, and options.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('goal-ladder', 'Skill by skill, the ladder compounds across a career.'),
       { kind: 'p', text: "Professional growth is the slow build of what makes you more valuable over time: skills, judgment, relationships, credentials where they matter, and a reputation for reliability. It is not usually a single dramatic event; it is the compounding of small, consistent improvements. That is the point: professional growth is often the part of finance that looks like career stuff but acts like an investment." },
       { kind: 'h', text: 'What professional growth is built from' },
       { kind: 'list', items: [

@@ -75,19 +75,32 @@ for (const ref of allChapters) {
   }
 
   let hasVisual = false
+  let simCount = 0
+  let sceneCount = 0
   for (const b of ch.blocks) {
     if (b.kind === 'scene') {
       hasVisual = true
+      sceneCount++
       if (!SCENES.has(b.name)) fail(`${ref.id} references unknown scene "${b.name}"`)
+      if (!(b.caption ?? '').trim()) fail(`${ref.id} has a scene without a caption`)
     }
     if (b.kind === 'sim') {
       hasVisual = true
+      simCount++
       if (!SIMS.has(b.name)) fail(`${ref.id} references unknown sim "${b.name}"`)
+      if (!(b.caption ?? '').trim()) fail(`${ref.id} has a simulation without a caption`)
     }
     if (b.kind === 'p' && !b.text.trim()) fail(`${ref.id} has an empty paragraph`)
     if (b.kind === 'callout' && !b.text.trim()) fail(`${ref.id} has an empty callout`)
   }
   if (!hasVisual) fail(`${ref.id} has neither an illustration nor a simulation`)
+
+  // Levels 3 and 4 are held to a higher bar: every chapter must carry BOTH a
+  // chapter-related illustration and a hands-on simulation, not just one.
+  if (ref.level >= 3) {
+    if (sceneCount === 0) fail(`${ref.id} has no illustration`)
+    if (simCount === 0) fail(`${ref.id} has no simulation`)
+  }
 }
 
 // Orphan check: authored chapters that are not in the syllabus

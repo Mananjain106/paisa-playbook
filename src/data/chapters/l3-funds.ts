@@ -285,7 +285,7 @@ export const funds: Record<string, Chapter> = {
         rows: [
           ['Conservative hybrid', '10–25%', 'Barely moves, modest growth'],
           ['Balanced or aggressive hybrid', '50–80%', 'A growth engine with some ballast'],
-          ['Equity-oriented hybrid (ELSS)', '65–80%', 'Gets the Section 80C benefit'],
+          ['Aggressive hybrid', '65–80%', 'Growth-oriented, with some debt ballast'],
           ['Arbitrage hybrid', 'Mostly equity, hedged', 'Targets a market-like return with lower downside'],
         ],
       },

@@ -16,7 +16,9 @@ export default defineConfig({
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
   webServer: {
-    command: 'npm run build && npm run preview -- --port 5313 --strictPort',
+    // --host pins vite preview to IPv4 so the 127.0.0.1 baseURL resolves on
+    // Windows, where `localhost` can bind to ::1 only.
+    command: 'npm run build && npm run preview -- --port 5313 --strictPort --host 127.0.0.1',
     url: 'http://127.0.0.1:5313',
     reuseExistingServer: !process.env.CI,
     timeout: 180_000,

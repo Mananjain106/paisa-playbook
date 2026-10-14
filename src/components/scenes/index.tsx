@@ -13,7 +13,6 @@ import * as planning from './planning'
  * importing the raw component. That keeps chapter content declarative.
  */
 type SceneFn = () => React.ReactElement
-
 export const SCENES: Record<SceneName, SceneFn> = {
   coins: () => <money.Coins />,
   barter: () => <money.Barter />,
@@ -71,9 +70,9 @@ export const SCENES: Record<SceneName, SceneFn> = {
   'real-vs-nominal': () => <level3.RealVsNominal />,
   'gold-role': () => <level3.GoldRole />,
   'money-allocation': () => <level3.MoneyAllocation />,
-  'tax-bracket': () => <level4.TaxBracket />,
+  'tax-bracket': () => <level4.TaxBracket step={2} />,
   'tds-flow': () => <level4.TdsFlow />,
-  'cover-ladder': () => <level4.CoverLadder />,
+  'cover-ladder': () => <level4.CoverLadder step={3} />,
   'emi-split-early': () => <level4.EmiSplit />,
   'nps-annuity': () => <level4.NpsAnnuity />,
   'call-put': () => <level4.CallPut />,
@@ -82,7 +81,7 @@ export const SCENES: Record<SceneName, SceneFn> = {
   'deriv-payoff': () => <level4.DerivPayoff />,
   'currency-risk': () => <level4.CurrencyRisk />,
   'growth-vs-value': () => <level4.GrowthVsValue />,
-  'corpus-ladder': () => <level4.CorpusLadder />,
+  'corpus-ladder': () => <level4.CorpusLadder step={3} />,
 }
 
 export function Scene({ name, caption }: { name: SceneName; caption?: string }) {

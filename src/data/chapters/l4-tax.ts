@@ -336,7 +336,7 @@ export const tax: Record<string, Chapter> = {
     subtitle: 'How long you hold can change how the profit is taxed.',
     minutes: 6,
     blocks: [
-      scene4('deriv-payoff', 'Payoff at expiry is a simple function of spot — holding period is one of the variables that changes the tax answer.'),
+      scene4('tax-bracket', 'Short-term and long-term gains sit in different tax brackets — the holding period decides which one applies.'),
       { kind: 'p', text: "The law often treats gains differently depending on how long you held the asset before selling. Short-term gains are generally taxed at one set of rules; long-term gains can be taxed at another, sometimes more favourably, sometimes with different conditions. The dividing line is the holding period, and it is set by the type of asset." },
       sim('tax', ''),
       { kind: 'h', text: 'Why the holding period matters' },

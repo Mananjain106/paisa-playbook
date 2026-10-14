@@ -27,20 +27,26 @@ export function EmiLab() {
     const r = rate / 100 / 12
     let bal = loan
     let interestPaid = 0
-    const firstHalf: { y: number; principal: number; interest: number }[] = []
+    let prevPrincipal = 0
+    let prevInterest = 0
+    const yearly: { y: number; principal: number; interest: number }[] = []
     for (let m = 1; m <= months; m++) {
       const i = bal * r
       const p = payment - i
       bal = Math.max(0, bal - p)
       interestPaid += i
-      if (m % 12 === 0) firstHalf.push({ y: m / 12, principal: loan - bal, interest: interestPaid })
+      if (m % 12 === 0) {
+        const principal = loan - bal
+        yearly.push({ y: m / 12, principal: principal - prevPrincipal, interest: interestPaid - prevInterest })
+        prevPrincipal = principal
+        prevInterest = interestPaid
+      }
     }
-    return firstHalf
+    return yearly
   }, [loan, rate, months, payment])
 
   const firstYearInterest = schedule[0]?.interest ?? 0
-  const lastYear = schedule[schedule.length - 1]
-  const lastYearPrincipal = lastYear ? lastYear.principal - (schedule[schedule.length - 2]?.principal ?? 0) : 0
+  const lastYearPrincipal = schedule[schedule.length - 1]?.principal ?? 0
 
   // A shorter tenure with the same loan amount means a bigger EMI but far less interest.
   const fasterYears = Math.max(1, Math.round(years * 0.8))
@@ -48,7 +54,7 @@ export function EmiLab() {
 
   const W = 700
   const H = 230
-  const maxV = Math.max(lastYear?.interest ?? 1, lastYearPrincipal || 1, 1)
+  const maxV = Math.max(...schedule.map((s) => s.principal + s.interest), 1)
   const bw = W / Math.max(schedule.length, 1) - 4
   const scale = (v: number) => (v / maxV) * (H - 30)
 
@@ -81,28 +87,27 @@ export function EmiLab() {
         <h4 className="mb-2 text-sm text-ink-300">Year by year: principal vs interest repaid</h4>
         <svg viewBox={`0 0 ${W} ${H}`} className="w-full rounded-xl bg-ink-900/60" role="img" aria-label="Principal versus interest by year">
           {schedule.map((s, i) => {
-            const prev = i ? schedule[i - 1].interest : 0
-            const yearlyInterest = s.interest - prev
             const x = 2 + i * bw
+            const interestH = Math.max(1, scale(s.interest))
+            const principalH = Math.max(1, scale(s.principal))
             return (
               <g key={s.y}>
                 <motion.rect
                   x={x}
+                  width={bw}
                   rx="2"
                   fill="#f87171"
                   initial={{ height: 0, y: H - 8 }}
-                  animate={{ height: Math.max(1, scale(yearlyInterest)), y: H - 8 - Math.max(1, scale(yearlyInterest)) }}
+                  animate={{ height: interestH, y: H - 8 - interestH }}
                   transition={{ delay: i * 0.03, type: 'spring', stiffness: 140 }}
                 />
                 <motion.rect
                   x={x}
+                  width={bw}
                   rx="2"
                   fill="#34e0a1"
                   initial={{ height: 0, y: H - 8 }}
-                  animate={{
-                    height: Math.max(1, scale(s.principal - (i ? schedule[i - 1].principal : 0))),
-                    y: H - 8 - Math.max(1, scale(s.principal - (i ? schedule[i - 1].principal : 0))) - Math.max(1, scale(yearlyInterest)),
-                  }}
+                  animate={{ height: principalH, y: H - 8 - interestH - principalH }}
                   transition={{ delay: i * 0.03, type: 'spring', stiffness: 140 }}
                 />
                 {s.y % Math.ceil(schedule.length / 10) === 0 && (
@@ -134,7 +139,8 @@ export function EmiLab() {
         <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-sm">
           <div className="text-xs uppercase tracking-wide text-ink-400">Final year</div>
           <div className="mt-1 text-ink-200">
-            Only {rupees(lastYearPrincipal)} goes to principal — most early payments are interest.
+            {rupees(lastYearPrincipal)} of your final-year payments goes to principal — early payments are
+            mostly interest.
           </div>
         </div>
       </div>

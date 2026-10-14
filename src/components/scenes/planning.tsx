@@ -163,7 +163,7 @@ export function SafeVsRisk() {
             fill={j.c}
             opacity="0.5"
             initial={{ height: 0, y: 168 }}
-            animate={{ height: j.h, y: 168 - j.h }}
+            animate={{ height: j.h, y: 170 - j.h }}
             transition={{ delay: 0.3 + i * 0.25, type: 'spring', stiffness: 100 }}
           />
           <text x={j.x} y="190" textAnchor="middle" fontSize="12" fill={j.c} fontWeight="700">
@@ -281,12 +281,12 @@ export function OpportunityFork() {
         animate={{ pathLength: 1 }}
         transition={{ duration: 0.9 }}
       />
-      <motion.circle cx="300" cy="55" r="20" fill="#38bdf8" opacity="0.5" />
-      <motion.circle cx="300" cy="165" r="20" fill="#f472b6" opacity="0.5" />
-      <text x="300" y="60" textAnchor="middle" fontSize="10" fill="#0b1524" fontWeight="700">
+      <motion.circle cx="300" cy="55" r="20" fill="#38bdf8" opacity="0.6" />
+      <motion.circle cx="300" cy="165" r="20" fill="#f472b6" opacity="0.6" />
+      <text x="300" y="60" textAnchor="middle" fontSize="10" fill="#a7f3d0" fontWeight="700">
         Movie
       </text>
-      <text x="300" y="170" textAnchor="middle" fontSize="10" fill="#3b0a20" fontWeight="700">
+      <text x="300" y="170" textAnchor="middle" fontSize="10" fill="#ffe4f1" fontWeight="700">
         Invest
       </text>
       <text x="60" y="115" textAnchor="middle" fontSize="11" fill="#0b1524" fontWeight="700">

@@ -66,9 +66,9 @@ test.describe('search', () => {
   })
 
   test('search covers chapters beyond the written levels by title', async ({ page }) => {
-    // Level 3+ is unwritten, but its titles are still in the syllabus and must
-    // be findable, marked "coming soon".
-    await page.goto('/search?q=dividend')
+    // Levels 1–4 are written; Level 5 titles are still in the syllabus and must
+    // be findable, marked "coming soon". "InvITs" is a Level-5-only title.
+    await page.goto('/search?q=InvIT')
     const soon = page.locator('ul li a', { hasText: 'coming soon' })
     await expect(soon.first()).toBeVisible({ timeout: 15_000 })
   })

@@ -26,7 +26,6 @@ type Position = 'long-call' | 'long-put' | 'short-call' | 'short-put'
 
 function computePayoff(
   type: Position,
-  spot: number,
   strike: number,
   premium: number,
   max: number,
@@ -61,7 +60,7 @@ export function OptionsPayoffLab() {
   const [position, setPosition] = useState<Position>('long-call')
 
   const maxSpot = Math.round(strike * 2.2)
-  const pts = useMemo(() => computePayoff(position, spotNow, strike, premium, maxSpot), [position, strike, premium, maxSpot])
+  const pts = useMemo(() => computePayoff(position, strike, premium, maxSpot), [position, strike, premium, maxSpot])
   const be = useMemo(() => {
     if (position === 'long-call') return strike + premium
     if (position === 'short-call') return strike + premium

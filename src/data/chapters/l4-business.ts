@@ -7,7 +7,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'Money in a business is not the same as money in your pocket.',
     minutes: 7,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('money-allocation', 'Business money and personal money are two different pools — never one.'),
       { kind: 'p', text: "Business finance is the management of money inside a business: how it comes in, how it is spent, how it is kept safe, and how it is used to grow or survive. For a founder, the hardest lesson is often the simplest one: the business account and the personal account are not the same thing, even when the business is tiny. Mixing them makes every decision harder to understand and every problem harder to fix." },
       { kind: 'h', text: 'What business finance is really about' },
       { kind: 'list', items: [
@@ -43,7 +43,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'The simplest business form, and the one where you are fully on the hook.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('dashboard', 'One owner, with personal assets fully exposed to the business.'),
       { kind: 'p', text: "A sole proprietorship is a business owned and run by one person, where the business and the owner are treated as one for many legal and tax purposes. It is the simplest structure to start, which is why so many small businesses begin that way. The trade-off is simplicity now in exchange for direct personal exposure later: the owner is usually personally responsible for the business’s obligations." },
       { kind: 'h', text: 'What defines a sole proprietorship' },
       { kind: 'list', items: [
@@ -78,7 +78,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'A business owned by two or more people — and the agreements that keep it working.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('share-slice', 'Two or more owners splitting one pie — the agreement decides the slices.'),
       { kind: 'p', text: "A partnership is a business owned by two or more people who agree to share the work, the profits, and the responsibilities. It is a natural structure when a business is founded by more than one person, because it lets them pool skills, money, and time. The hard part is not starting the partnership; it is managing the relationship when the business gets harder, because partners can disagree on money, direction, effort, and exit." },
       { kind: 'h', text: 'What makes partnerships work or fail' },
       { kind: 'list', items: [
@@ -113,7 +113,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'A partnership-like structure with more separation from personal risk.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('balance-sheet', 'A partnership feel, with a cleaner liability position behind it.'),
       { kind: 'p', text: "An LLP, or Limited Liability Partnership, is a business structure that combines features of a partnership with a layer of limited liability for the partners. It is often used by professional firms and small-to-medium businesses that want more flexibility than a company but more protection than a traditional partnership. The key idea is that the partners can share the business while limiting their personal exposure to some extent." },
       { kind: 'h', text: 'What an LLP is designed for' },
       { kind: 'list', items: [
@@ -148,7 +148,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'The point where a business becomes a separate legal entity.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('share-slice', 'Incorporation turns owners into shareholders of one separate entity.'),
       { kind: 'p', text: "A company is a business that has a separate legal identity from its owners. That separation is the big idea: the company can own property, take on debt, sign contracts, and be sued in its own name. For founders, that changes the relationship between the business and their personal assets, and it brings more formality, more compliance, and more discipline." },
       { kind: 'h', text: 'Why people incorporate a business' },
       { kind: 'list', items: [
@@ -183,7 +183,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'The paperwork that makes a business legitimate to the system.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('dashboard', 'Registration is the business appearing on the system map.'),
       { kind: 'p', text: "Business registration is the process of bringing the business into the formal system: getting the identifiers, licences, and tax registrations the business needs to operate legally and cleanly. The exact forms depend on the structure and the activity, but the principle is the same: a business that wants to transact, hire, sign contracts, and file taxes properly usually needs to be registered in more than one place." },
       { kind: 'h', text: 'Why registration matters' },
       { kind: 'list', items: [
@@ -218,14 +218,14 @@ export const business: Record<string, Chapter> = {
     subtitle: 'Taxes on a business are different from taxes on a salary.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('tax-bracket', 'Business income, GST and payroll — tax that a salary never faces.'),
       { kind: 'p', text: "Business taxation is the set of taxes a business may owe on its income, transactions, employees, and activities. It is broader than personal income tax because a business can have many moving parts: revenue, expenses, payroll, sales tax or GST, withholding, and different rules for different types of income. The first lesson is that business tax is not the same as the tax on an individual’s salary, and the second is that the structure of the business matters." },
       { kind: 'h', text: 'What business tax usually involves' },
       { kind: 'list', items: [
         'Tax on business income, depending on the structure and the law.',
         'GST or similar indirect taxes on sales and purchases, where applicable.',
         'Payroll-related obligations if the business has employees.',
-        ' filings and records that show income, expenses, and the tax position.',
+        'Filings and records that show income, expenses, and the tax position.',
         'Planning opportunities that are lawful, like choosing structure, timing, and allowable deductions sensibly.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Good business tax is clean, not clever', text: "A business should pay what the law asks and use the lawful tools the law gives it. The risk comes when owners try to be too clever: mixing personal and business expenses, under-reporting income, or treating the business like a personal wallet. Clean records and a proper structure are usually more valuable than aggressive shortcuts." },
@@ -254,7 +254,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'If it is not recorded, it does not exist for the business.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('balance-sheet', 'Records are the written memory of every rupee the business moves.'),
       { kind: 'p', text: "Business records are the written and digital evidence of what the business did: sales, purchases, payments, receipts, payroll, taxes, and contracts. Good records are not only for compliance; they are the business’s memory. They tell you whether the business is healthy, whether a decision worked, and what happened in any given month. A business without records is flying partly blind." },
       { kind: 'h', text: 'Records worth keeping well' },
       { kind: 'list', items: [
@@ -290,7 +290,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'Growing a business without breaking its finances.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('goal-ladder', 'Growth is a climb that needs cash for every rung.'),
       { kind: 'p', text: "Growth is exciting, and it is also dangerous. A business can grow revenue and still run into cash trouble if the growth requires more money, more stock, more staff, or more investment than the cash flow can support. Growth planning is the discipline of expanding in a way that the business can actually sustain, not just in a way that looks impressive on a graph." },
       { kind: 'h', text: 'What growth planning should answer' },
       { kind: 'list', items: [
@@ -362,7 +362,7 @@ export const business: Record<string, Chapter> = {
     subtitle: 'Thinking about the end before the business gets expensive.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('dashboard', 'A business that can run without you is worth far more on exit.'),
       { kind: 'p', text: "Exit planning is the process of thinking about how a business owner will eventually leave the business, whether by selling it, shutting it down, passing it on, or some other path. It sounds premature in a young business, but the decisions made early affect the exit later. The value of a business is easier to protect and shape when the owner thinks about the end from time to time." },
       { kind: 'h', text: 'Why exit planning is useful early' },
       { kind: 'list', items: [
