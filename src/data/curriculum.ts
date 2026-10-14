@@ -17,12 +17,13 @@ export type { Chapter, ChapterRef, LevelRef }
  * AUTHORED_LEVELS lists which levels have written content, so we can show
  * "coming soon" without downloading anything.
  */
-export const AUTHORED_LEVELS = [1, 2, 3]
+export const AUTHORED_LEVELS = [1, 2, 3, 4]
 
 const levelLoaders: Record<number, () => Promise<Record<string, Chapter>>> = {
   1: () => import('./chapters/level1').then((m) => m.level1),
   2: () => import('./chapters/level2').then((m) => m.level2),
   3: () => import('./chapters/level3').then((m) => m.level3),
+  4: () => import('./chapters/level4').then((m) => m.level4),
 }
 
 /** Populated as levels load. Read through `getChapter` / `isAuthored`. */

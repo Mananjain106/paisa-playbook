@@ -53,53 +53,58 @@ export function IncomeStreams() {
   )
 }
 
-/** Needs vs wants pie */
+/** Needs vs wants pie with rounded labels tucked inside each slice */
 export function PieNeedsWants() {
+  const cx = 200
+  const cy = 108
+  const R = 88
   const needs = 0.6
+
   const polar = (frac: number, r: number) => {
     const a = frac * 2 * Math.PI - Math.PI / 2
-    return { x: 200 + r * Math.cos(a), y: 110 + r * Math.sin(a) }
+    return { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) }
   }
-  const arc = (from: number, to: number, rO: number, rI: number) => {
-    const so = polar(from, rO)
-    const eo = polar(to, rO)
-    const si = polar(from, rI)
-    const ei = polar(to, rI)
-    // A single slice spanning the full turn has coincident start/end points, so
-    // an SVG arc would draw nothing — split it into two half-turns instead.
-    if (to - from >= 0.9999) {
-      const mo = polar(from + 0.5, rO)
-      const mi = polar(from + 0.5, rI)
-      return `M${so.x},${so.y} A${rO},${rO} 0 1 1 ${mo.x},${mo.y} A${rO},${rO} 0 1 1 ${so.x},${so.y} L${si.x},${si.y} A${rI},${rI} 0 1 0 ${mi.x},${mi.y} A${rI},${rI} 0 1 0 ${si.x},${si.y} Z`
-    }
+  const wedge = (from: number, to: number) => {
+    const a = polar(from, R)
+    const b = polar(to, R)
     const large = to - from > 0.5 ? 1 : 0
-    return `M${so.x},${so.y} A${rO},${rO} 0 ${large} 1 ${eo.x},${eo.y} L${ei.x},${ei.y} A${rI},${rI} 0 ${large} 0 ${si.x},${si.y} Z`
+    return `M${cx},${cy} L${a.x},${a.y} A${R},${R} 0 ${large} 1 ${b.x},${b.y} Z`
   }
+
+  const slices = [
+    { from: 0, to: needs, fill: '#38bdf8', label: 'Needs 60%' },
+    { from: needs, to: 1, fill: '#f472b6', label: 'Wants 40%' },
+  ]
   return (
     <>
-      <motion.path
-        d={arc(0, needs, 88, 48)}
-        fill="#38bdf8"
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        style={{ transformOrigin: '200px 110px' }}
-      />
-      <motion.path
-        d={arc(needs, 1, 88, 48)}
-        fill="#f472b6"
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.3, duration: 0.6 }}
-        style={{ transformOrigin: '200px 110px' }}
-      />
-      <text x="130" y="105" fontSize="11" fill="#0b1524" fontWeight="700">
-        Needs 60%
-      </text>
-      <text x="278" y="120" fontSize="11" fill="#3b0a20" fontWeight="700">
-        Wants
-      </text>
-      <text x="200" y="200" textAnchor="middle" fontSize="11" fill="#8791b3">
+      {slices.map((s, i) => (
+        <motion.path
+          key={s.label}
+          d={wedge(s.from, s.to)}
+          fill={s.fill}
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: i * 0.25, duration: 0.6 }}
+          style={{ transformOrigin: `${cx}px ${cy}px` }}
+        />
+      ))}
+      {slices.map((s, i) => {
+        const p = polar((s.from + s.to) / 2, 48)
+        return (
+          <motion.g
+            key={s.label}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 + i * 0.25 }}
+          >
+            <rect x={p.x - 37} y={p.y - 13} width="74" height="26" rx="13" fill="#0b1524" opacity="0.55" />
+            <text x={p.x} y={p.y + 4} textAnchor="middle" fontSize="11" fontWeight="700" fill="#ffffff">
+              {s.label}
+            </text>
+          </motion.g>
+        )
+      })}
+      <text x={cx} y={213} textAnchor="middle" fontSize="11" fill="#8791b3">
         Money decides faster when you know which is which
       </text>
     </>
@@ -149,40 +154,69 @@ export function SpendLeak() {
 
 /** Ad shouting at a shopper */
 export function AdTrap() {
+  const tags = [
+    { label: 'urgency', w: 50, cx: 102.5 },
+    { label: 'scarcity', w: 48, cx: 161.5 },
+    { label: 'discount', w: 52, cx: 221.5 },
+    { label: 'social proof', w: 65, cx: 290 },
+  ]
   return (
     <>
+      <defs>
+        <marker id="adtrap-arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#f472b6" />
+        </marker>
+      </defs>
+
       <motion.g
         initial={{ scale: 0.6, opacity: 0 }}
         animate={{ scale: [0.6, 1.06, 1], opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
-        style={{ transformOrigin: '120px 90px' }}
+        style={{ transformOrigin: '105px 98px' }}
       >
-        <rect x="40" y="40" width="160" height="100" rx="12" fill="#f472b6" opacity="0.85" />
-        <text x="120" y="82" textAnchor="middle" fontSize="15" fill="#3b0a20" fontWeight="800">
+        <rect x="30" y="44" width="150" height="108" rx="16" fill="#f472b6" opacity="0.9" />
+        <text x="105" y="84" textAnchor="middle" fontSize="16" fill="#3b0a20" fontWeight="800">
           50% OFF!
         </text>
-        <text x="120" y="108" textAnchor="middle" fontSize="11" fill="#3b0a20">
+        <rect x="45" y="100" width="120" height="26" rx="13" fill="#3b0a20" opacity="0.28" />
+        <text x="105" y="117" textAnchor="middle" fontSize="11" fill="#ffffff" fontWeight="700">
           Only 3 left!
         </text>
       </motion.g>
-      <motion.g initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 }}>
-        <circle cx="320" cy="80" r="18" fill="#34e0a1" />
-        <rect x="290" y="105" width="60" height="60" rx="12" fill="#34e0a1" opacity="0.5" />
+
+      <motion.path
+        d="M298,122 C255,138 215,116 190,101"
+        fill="none"
+        stroke="#f472b6"
+        strokeWidth="2"
+        strokeDasharray="6 6"
+        markerEnd="url(#adtrap-arrow)"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, strokeDashoffset: [0, -24] }}
+        transition={{ opacity: { delay: 0.6, duration: 0.4 }, strokeDashoffset: { repeat: Infinity, duration: 0.9, ease: 'linear' } }}
+      />
+
+      <motion.g initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.6 }}>
+        <line x1="304" y1="126" x2="262" y2="112" stroke="#34e0a1" strokeWidth="8" strokeLinecap="round" />
+        <circle cx="322" cy="94" r="15" fill="#34e0a1" />
+        <rect x="300" y="114" width="44" height="52" rx="20" fill="#34e0a1" opacity="0.5" />
+        <circle cx="258" cy="110" r="7" fill="#34e0a1" />
       </motion.g>
-      {['urgency', 'discount', 'scarcity', 'social proof'].map((t, i) => (
-        <motion.text
-          key={t}
-          x={250 + i * 38}
-          y={25}
-          fontSize="9"
-          fill="#f472b6"
+
+      {tags.map((t, i) => (
+        <motion.g
+          key={t.label}
           initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: [0, 1, 1], y: 0 }}
-          transition={{ delay: 0.9 + i * 0.15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9 + i * 0.12 }}
         >
-          {t}
-        </motion.text>
+          <rect x={t.cx - t.w / 2} y="13" width={t.w} height="22" rx="11" fill="#f472b6" opacity="0.16" stroke="#f472b6" strokeOpacity="0.6" />
+          <text x={t.cx} y="27" textAnchor="middle" fontSize="9" fill="#f9a8d4">
+            {t.label}
+          </text>
+        </motion.g>
       ))}
+
       <text x="200" y="200" textAnchor="middle" fontSize="11" fill="#8791b3">
         Tactics designed to switch off your rational brain
       </text>

@@ -21,6 +21,7 @@ const SIMS = new Set([
   'compound', 'budget', 'networth', 'market', 'sheet', 'rupee10', 'scam-spotter',
   'emi', 'salary-slip', 'minpayment', 'cover',
   'portfolio', 'bond', 'realreturn', 'currency', 'valuation', 'feedrag', 'cycle',
+  'tax', 'options-payoff',
 ])
 const SCENES = new Set([
   'coins', 'barter', 'timeline', 'rupee', 'rupee-erode', 'money-flow', 'rbi-funnel', 'bank-pyramid',
@@ -33,6 +34,9 @@ const SCENES = new Set([
   'share-slice', 'market-cap-ladder', 'fee-drag-visual', 'allocation-pie', 'currency-erosion',
   'dividend-stream', 'property-cashflow', 'time-horizon', 'passive-vs-active', 'real-vs-nominal',
   'gold-role', 'money-allocation',
+  // Level 4 scenes
+  'tax-bracket', 'tds-flow', 'cover-ladder', 'emi-split-early', 'nps-annuity',
+  'call-put', 'rent-vs-buy', 'loan-amort', 'deriv-payoff', 'currency-risk', 'growth-vs-value', 'corpus-ladder',
 ])
 
 for (const level of levels) {

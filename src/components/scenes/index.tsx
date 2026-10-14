@@ -3,10 +3,15 @@ import type { SceneName } from '../../types'
 import * as behaviour from './behaviour'
 import * as level2 from './level2'
 import * as level3 from './level3'
+import * as level4 from './level4'
 import * as money from './money'
 import * as payments from './payments'
 import * as planning from './planning'
 
+/* Call-scene components are authored SVG scenes that take props (for example a step or rate).
+ * When a chapter block references them, it does so via the scene helper below rather than
+ * importing the raw component. That keeps chapter content declarative.
+ */
 type SceneFn = () => React.ReactElement
 
 export const SCENES: Record<SceneName, SceneFn> = {
@@ -66,6 +71,18 @@ export const SCENES: Record<SceneName, SceneFn> = {
   'real-vs-nominal': () => <level3.RealVsNominal />,
   'gold-role': () => <level3.GoldRole />,
   'money-allocation': () => <level3.MoneyAllocation />,
+  'tax-bracket': () => <level4.TaxBracket />,
+  'tds-flow': () => <level4.TdsFlow />,
+  'cover-ladder': () => <level4.CoverLadder />,
+  'emi-split-early': () => <level4.EmiSplit />,
+  'nps-annuity': () => <level4.NpsAnnuity />,
+  'call-put': () => <level4.CallPut />,
+  'rent-vs-buy': () => <level4.RentVsBuy />,
+  'loan-amort': () => <level4.LoanAmort />,
+  'deriv-payoff': () => <level4.DerivPayoff />,
+  'currency-risk': () => <level4.CurrencyRisk />,
+  'growth-vs-value': () => <level4.GrowthVsValue />,
+  'corpus-ladder': () => <level4.CorpusLadder />,
 }
 
 export function Scene({ name, caption }: { name: SceneName; caption?: string }) {
@@ -73,7 +90,7 @@ export function Scene({ name, caption }: { name: SceneName; caption?: string }) 
   return (
     <figure className="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-ink-900/80 to-ink-950/60">
       <svg viewBox="0 0 400 220" className="w-full" role="img" aria-label={caption ?? name}>
-        <Body />
+        {typeof Body === 'function' ? <Body /> : Body}
       </svg>
       {caption && (
         <figcaption className="border-t border-white/5 px-4 py-2 text-center text-xs text-ink-400">

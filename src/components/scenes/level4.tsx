@@ -1,407 +1,534 @@
 import { motion } from 'framer-motion'
 
-/** Level 4 illustrations: tax slabs, TDS, retirement, derivatives, careers. */
+/** Motion-friendly, compact SVG illustrations for Level 4. */
 
-const ease = { type: 'spring' as const, stiffness: 130 }
-
-/** The new-regime slab ladder: each band taxed at a different rate. */
-export function TaxSlabLadder() {
-  const bands = [
-    { l: '0–4L', r: 'Nil', w: 46, c: '#34e0a1' },
-    { l: '4–8L', r: '5%', w: 58, c: '#38bdf8' },
-    { l: '8–12L', r: '10%', w: 70, c: '#818cf8' },
-    { l: '12–16L', r: '15%', w: 82, c: '#a855f7' },
-    { l: '16–20L', r: '20%', w: 94, c: '#f472b6' },
-    { l: '20–24L', r: '25%', w: 106, c: '#fb923c' },
-    { l: '24L+', r: '30%', w: 124, c: '#f87171' },
-  ]
-  return (
-    <>
-      {bands.map((b, i) => (
-        <motion.g key={b.l} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
-          <motion.rect
-            x="26"
-            y={24 + i * 25}
-            width={b.w}
-            height="19"
-            rx="5"
-            fill={b.c}
-            opacity="0.85"
-            initial={{ width: 0 }}
-            animate={{ width: b.w }}
-            transition={{ delay: i * 0.08, ...ease }}
-          />
-          <text x={b.w + 34} y={38 + i * 25} fontSize="10" fill="#d7dbe9">
-            {b.l} → {b.r}
-          </text>
-        </motion.g>
+export const TaxBracket: React.FC<{ step: 0 | 1 | 2 }> = ({ step }) => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <g stroke="#94a3b8" opacity="0.4">
+      {[0, 1, 2, 3].map((i) => (
+        <line key={i} x1="60" y1={40 + i * 30} x2="300" y2={40 + i * 30} />
       ))}
-      <text x="200" y="212" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Marginal, not flat: only the top slab pays the top rate
+    </g>
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      Marginal slabs — only the slice pays
+    </text>
+    <g fill="#38bdf8" opacity={step >= 1 ? 1 : 0.25}>
+      <rect x="60" y="70" width="70" height="30" rx="6" />
+      <text x="95" y="90" textAnchor="middle" fill="#fff" fontSize="10">
+        5%
       </text>
-    </>
-  )
-}
-
-/** Cash leaving a payer, through TDS, into the government, with the gap refunded. */
-export function TdsFlow() {
-  return (
-    <>
-      <motion.rect x="24" y="60" width="86" height="52" rx="9" fill="#38bdf8" opacity="0.85" initial={{ x: 24, opacity: 0 }} animate={{ x: 24, opacity: 0.85 }} transition={ease} />
-      <text x="67" y="82" textAnchor="middle" fontSize="10" fill="#0b1524" fontWeight="700">Payer</text>
-      <text x="67" y="97" textAnchor="middle" fontSize="9" fill="#0b1524">salary, rent</text>
-
-      <motion.rect x="156" y="60" width="86" height="52" rx="9" fill="#94a3b8" opacity="0.85" initial={{ opacity: 0 }} animate={{ opacity: 0.85 }} transition={{ delay: 0.2, ...ease }} />
-      <text x="199" y="82" textAnchor="middle" fontSize="10" fill="#11131f" fontWeight="700">You</text>
-      <text x="199" y="97" textAnchor="middle" fontSize="9" fill="#11131f">net receipt</text>
-
-      <motion.rect x="288" y="60" width="86" height="52" rx="9" fill="#f87171" opacity="0.85" initial={{ opacity: 0 }} animate={{ opacity: 0.85 }} transition={{ delay: 0.4, ...ease }} />
-      <text x="331" y="82" textAnchor="middle" fontSize="10" fill="#2a0f0f" fontWeight="700">Govt</text>
-      <text x="331" y="97" textAnchor="middle" fontSize="9" fill="#2a0f0f">TDS + 26AS</text>
-
-      <motion.line x1="112" y1="86" x2="152" y2="86" stroke="#38bdf8" strokeWidth="2" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.1 }} />
-      <motion.line x1="244" y1="86" x2="284" y2="86" stroke="#f87171" strokeWidth="2" strokeDasharray="4 3" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.35 }} />
-
-      <text x="132" y="76" textAnchor="middle" fontSize="9" fill="#d7dbe9">gross</text>
-      <text x="264" y="76" textAnchor="middle" fontSize="9" fill="#f87171">withheld</text>
-
-      <motion.rect x="120" y="150" width="160" height="30" rx="7" fill="#34e0a1" opacity="0.22" initial={{ opacity: 0 }} animate={{ opacity: 0.22 }} transition={{ delay: 0.55 }} />
-      <text x="200" y="169" textAnchor="middle" fontSize="10" fill="#34e0a1">
-        Refund only if you overpaid
+    </g>
+    <g fill="#34e0a1" opacity={step >= 2 ? 1 : 0.25}>
+      <rect x="130" y="70" width="90" height="30" rx="6" />
+      <text x="175" y="90" textAnchor="middle" fill="#0f1529" fontSize="10">
+        20%
       </text>
-      <text x="200" y="206" textAnchor="middle" fontSize="10" fill="#8791b3">
-        TDS is an advance on your own liability, not an extra charge
+    </g>
+    <g fill="#f59e0b" opacity={step >= 2 ? 0.6 : 0.25}>
+      <rect x="220" y="70" width="80" height="30" rx="6" />
+      <text x="260" y="90" textAnchor="middle" fill="#0f1529" fontSize="10">
+        30%
       </text>
-    </>
-  )
-}
+    </g>
+    <motion.line
+      x1="130"
+      y1="105"
+      x2="130"
+      y2="125"
+      stroke="#f87171"
+      strokeWidth="2"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: step >= 1 ? 1 : 0 }}
+    />
+    <text x="130" y="138" textAnchor="middle" fill="#f87171" fontSize="10" opacity={step >= 1 ? 1 : 0}>
+      Boundary, not a cliff
+    </text>
+    <text x="180" y="158" textAnchor="middle" fill="#8791b3" fontSize="9">
+      A raise lands partly in a new band — not the whole thing
+    </text>
+  </svg>
+)
 
-/** How a retirement corpus grows, and what inflation does to it. */
-export function RetirementCorpus() {
-  const years = [0, 10, 20, 30, 40]
-  const nom = [100, 145, 210, 305, 442]
-  const real = [100, 84, 70, 58, 48]
-  const max = 460
-  const w = 66
-  return (
-    <>
-      <motion.line x1="40" y1="180" x2="372" y2="180" stroke="#8791b3" strokeWidth="1" />
-      {nom.map((v, i) => (
-        <motion.rect
-          key={'n' + i}
-          x={46 + i * w}
-          y={180 - (v / max) * 150}
-          width="22"
-          height={(v / max) * 150}
-          rx="4"
-          fill="#34e0a1"
-          opacity="0.75"
-          initial={{ height: 0, y: 180 }}
-          animate={{ height: (v / max) * 150, y: 180 - (v / max) * 150 }}
-          transition={{ delay: i * 0.1, ...ease }}
-        />
-      ))}
-      {real.map((v, i) => (
-        <motion.rect
-          key={'r' + i}
-          x={46 + i * w + 24}
-          y={180 - (v / max) * 150}
-          width="22"
-          height={(v / max) * 150}
-          rx="4"
-          fill="#f87171"
-          opacity="0.75"
-          initial={{ height: 0, y: 180 }}
-          animate={{ height: (v / max) * 150, y: 180 - (v / max) * 150 }}
-          transition={{ delay: 0.2 + i * 0.1, ...ease }}
-        />
-      ))}
-      {years.map((y, i) => (
-        <text key={y} x={57 + i * w} y="194" textAnchor="middle" fontSize="9" fill="#8791b3">
-          {y === 0 ? 'now' : `${y}y`}
-        </text>
-      ))}
-      <text x="200" y="26" textAnchor="middle" fontSize="10" fill="#34e0a1">green: nominal</text>
-      <text x="200" y="40" textAnchor="middle" fontSize="10" fill="#f87171">red: same money in today&apos;s rupees</text>
-      <text x="200" y="212" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Plan retirement in the red bars, not the green ones
+export const TdsFlow: React.FC = () => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      TDS: tax already paid to the government
+    </text>
+    <g fill="#38bdf8">
+      <rect x="40" y="60" width="70" height="40" rx="10" />
+      <text x="75" y="82" textAnchor="middle" fill="#fff" fontSize="10">
+        Payer
       </text>
-    </>
-  )
-}
-
-/** The payoff shape of a call and a put at expiry. */
-export function OptionPayoff() {
-  const strike = 200
-  const lo = 120
-  const hi = 280
-  const x = (p: number) => 30 + ((p - lo) / (hi - lo)) * 340
-  const y = (v: number) => 150 - v * 4
-  return (
-    <>
-      <motion.line x1={x(strike)} y1="24" x2={x(strike)} y2="176" stroke="#8791b3" strokeWidth="1" strokeDasharray="4 4" />
-      <text x={x(strike)} y="18" textAnchor="middle" fontSize="9" fill="#8791b3">
-        strike
+      <text x="75" y="96" textAnchor="middle" fill="#fff" fontSize="9" opacity="0.8">
+        deducts tax
       </text>
-      <motion.line x1="30" y1="150" x2="370" y2="150" stroke="#8791b3" strokeWidth="1" />
+    </g>
+    <motion.path
+      d="M110 80 L150 80 L146 76 M150 80 L146 84"
+      stroke="#34e0a1"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ repeat: Infinity, duration: 2 }}
+    />
+    <g fill="#34e0a1">
+      <rect x="150" y="60" width="70" height="40" rx="10" />
+      <text x="185" y="82" textAnchor="middle" fill="#0f1529" fontSize="10">
+        Govt
+      </text>
+      <text x="185" y="96" textAnchor="middle" fill="#0f1529" fontSize="9" opacity="0.8">
+        credits
+      </text>
+    </g>
+    <motion.path
+      d="M220 80 L260 80 L256 76 M260 80 L256 84"
+      stroke="#f59e0b"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ repeat: Infinity, duration: 2, delay: 0.3 }}
+    />
+    <g fill="#f59e0b">
+      <rect x="260" y="60" width="70" height="40" rx="10" />
+      <text x="295" y="82" textAnchor="middle" fill="#0f1529" fontSize="10">
+        You
+      </text>
+      <text x="295" y="96" textAnchor="middle" fill="#0f1529" fontSize="9" opacity="0.8">
+        claim credit
+      </text>
+    </g>
+    <text x="180" y="130" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Overpaid → refund. Underpaid → pay balance at return time
+    </text>
+    <text x="180" y="150" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Form 26AS/Form 16 summarises what was deducted and deposited
+    </text>
+  </svg>
+)
 
-      <motion.path
-        d={`M ${x(lo)} ${y(0)} L ${x(strike)} ${y(0)} L ${x(hi)} ${y(60)}`}
-        fill="none"
-        stroke="#34e0a1"
-        strokeWidth="2.5"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 0.9 }}
+export const CoverLadder: React.FC<{ step: 0 | 1 | 2 | 3 }> = ({ step }) => (
+  <svg viewBox="0 0 360 200" className="w-full">
+    <rect width="360" height="200" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      Adequate cover before investing — a simple ladder
+    </text>
+    <g>
+      <rect x="60" y="40" width="240" height="22" rx="11" fill="#1e293b" />
+      <motion.rect
+        x="60"
+        y="40"
+        height="22"
+        rx="11"
+        fill="#ef4444"
+        initial={{ width: 0 }}
+        animate={{ width: 60 + step * 45 }}
       />
-      <motion.path
-        d={`M ${x(lo)} ${y(0)} L ${x(strike)} ${y(50)} L ${x(hi)} ${y(0)}`}
-        fill="none"
-        stroke="#f87171"
-        strokeWidth="2.5"
-        strokeDasharray="5 4"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 0.9, delay: 0.2 }}
+      <text x="70" y="54" fill="#fff" fontSize="9">
+        Emergency fund
+      </text>
+    </g>
+    <g opacity={step >= 1 ? 1 : 0.3}>
+      <rect x="60" y="70" width="240" height="22" rx="11" fill="#1e293b" />
+      <motion.rect x="60" y="70" width={step >= 1 ? 80 : 0} height="22" rx="11" fill="#f59e0b" />
+      <text x="70" y="84" fill="#0f1529" fontSize="9">
+        Health cover
+      </text>
+    </g>
+    <g opacity={step >= 2 ? 1 : 0.3}>
+      <rect x="60" y="100" width="240" height="22" rx="11" fill="#1e293b" />
+      <motion.rect x="60" y="100" width={step >= 2 ? 90 : 0} height="22" rx="11" fill="#38bdf8" />
+      <text x="70" y="114" fill="#fff" fontSize="9">
+        Term insurance
+      </text>
+    </g>
+    <g opacity={step >= 3 ? 1 : 0.3}>
+      <rect x="60" y="130" width="240" height="22" rx="11" fill="#1e293b" />
+      <motion.rect x="60" y="130" width={step >= 3 ? 70 : 0} height="22" rx="11" fill="#34e0a1" />
+      <text x="70" y="144" fill="#0f1529" fontSize="9">
+        Investments
+      </text>
+    </g>
+    <text x="180" y="170" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Insurance protects the ladder; compounding rewards patience later
+    </text>
+  </svg>
+)
+
+export const EmiSplit: React.FC = () => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      Early EMIs are almost all interest
+    </text>
+    <g stroke="#475569">
+      <line x1="60" y1="40" x2="300" y2="40" />
+      <line x1="60" y1="40" x2="60" y2="140" />
+    </g>
+    <motion.path
+      d="M60 120 L90 115 L120 105 L150 90 L180 70 L210 50 L240 40 L270 40 L300 40"
+      stroke="#38bdf8"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ duration: 1 }}
+    />
+    <motion.path
+      d="M60 40 L90 50 L120 70 L150 90 L180 110 L210 120 L240 130 L270 135 L300 135"
+      stroke="#34e0a1"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ duration: 1, delay: 0.2 }}
+    />
+    <text x="310" y="42" fill="#38bdf8" fontSize="9">
+      Interest
+    </text>
+    <text x="310" y="138" fill="#34e0a1" fontSize="9">
+      Principal
+    </text>
+    <text x="180" y="158" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Prepaying in years 1–3 gives far more bang per rupee than years 8–10
+    </text>
+  </svg>
+)
+
+export const NpsAnnuity: React.FC = () => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      NPS: accumulation → annuity (or lump sum) at 60
+    </text>
+    <g stroke="#475569">
+      <line x1="60" y1="40" x2="300" y2="40" />
+      <line x1="60" y1="40" x2="60" y2="140" />
+    </g>
+    <motion.path
+      d="M60 120 L80 115 L100 108 L120 98 L140 85 L160 70 L180 55 L200 48 L220 46 L240 46 L260 46 L280 46 L300 46"
+      stroke="#38bdf8"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+    />
+    <motion.path
+      d="M60 46 L80 48 L100 52 L120 58 L140 66 L160 76 L180 88 L200 100 L220 110 L240 118 L260 124 L280 128 L300 130"
+      stroke="#34e0a1"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ delay: 0.25 }}
+    />
+    <text x="200" y="44" fill="#38bdf8" fontSize="9">
+      Corpus (growth)
+    </text>
+    <text x="210" y="132" fill="#34e0a1" fontSize="9">
+      Payout phase
+    </text>
+    <text x="180" y="158" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Tax breaks up front, but annuity income is taxable — plan for that
+    </text>
+  </svg>
+)
+
+export const CallPut: React.FC = () => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      Calls and puts — rights, not obligations
+    </text>
+    <g stroke="#475569">
+      <line x1="60" y1="90" x2="300" y2="90" />
+    </g>
+    <motion.path d="M60 90 L160 90 L200 50 L300 50" stroke="#38bdf8" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} />
+    <motion.path d="M60 90 L160 90 L200 130 L300 130" stroke="#34e0a1" strokeWidth="2" fill="none" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ delay: 0.15 }} />
+    <text x="70" y="82" fill="#8791b3" fontSize="9">
+      Spot
+    </text>
+    <text x="260" y="48" fill="#38bdf8" fontSize="9">
+      Long call payoff
+    </text>
+    <text x="260" y="138" fill="#34e0a1" fontSize="9">
+      Long put payoff
+    </text>
+    <text x="180" y="158" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Premium caps loss; for naked shorts, upside/loss asymmetry flips
+    </text>
+  </svg>
+)
+
+export const RentVsBuy: React.FC = () => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      Rent or buy: same house, two very different ledgers
+    </text>
+    <g stroke="#475569">
+      <line x1="60" y1="40" x2="300" y2="40" />
+      <line x1="60" y1="40" x2="60" y2="140" />
+    </g>
+    <motion.path
+      d="M60 120 L70 118 L80 115 L90 110 L100 105 L110 98 L120 90 L130 81 L140 71 L150 60 L160 48 L170 40 L180 40 L190 40 L200 40 L210 40 L220 40 L230 40 L240 40 L250 40 L260 40 L270 40 L280 40 L290 40 L300 40"
+      stroke="#38bdf8"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+    />
+    <motion.path
+      d="M60 40 L70 42 L80 45 L90 49 L100 54 L110 60 L120 67 L130 75 L140 83 L150 90 L160 96 L170 101 L180 106 L190 110 L200 114 L210 117 L220 120 L230 122 L240 124 L250 125 L260 127 L270 128 L280 129 L290 130 L300 130"
+      stroke="#34e0a1"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ delay: 0.2 }}
+    />
+    <text x="298" y="38" fill="#38bdf8" fontSize="9">
+      Buy (own/interest/gains)
+    </text>
+    <text x="298" y="132" fill="#34e0a1" fontSize="9">
+      Rent (paid out)
+    </text>
+    <text x="180" y="158" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Buy also needs a down payment — that capital has an opportunity cost too
+    </text>
+  </svg>
+)
+
+export const LoanAmort: React.FC = () => (
+  <svg viewBox="0 0 360 200" className="w-full">
+    <rect width="360" height="200" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      A loan shrinks by taste, not by guess
+    </text>
+    <g stroke="#475569">
+      <line x1="60" y1="50" x2="300" y2="50" />
+      <line x1="60" y1="50" x2="60" y2="170" />
+    </g>
+    <g fill="#38bdf8">
+      <rect x="60" y="60" width="34" height="4" />
+      <rect x="60" y="66" width="32" height="4" />
+      <rect x="60" y="72" width="30" height="4" />
+      <rect x="60" y="78" width="28" height="4" />
+      <rect x="60" y="84" width="25" height="4" />
+      <rect x="60" y="90" width="22" height="4" />
+      <rect x="60" y="96" width="19" height="4" />
+      <rect x="60" y="102" width="16" height="4" />
+      <rect x="60" y="108" width="13" height="4" />
+      <rect x="60" y="114" width="10" height="4" />
+      <rect x="60" y="120" width="7" height="4" />
+      <rect x="60" y="126" width="4" height="4" />
+      <rect x="60" y="132" width="1" height="4" />
+    </g>
+    <text x="60" y="48" fill="#8791b3" fontSize="9">
+      Year 1
+    </text>
+    <text x="300" y="48" fill="#8791b3" fontSize="9" textAnchor="end">
+      Year 12
+    </text>
+    <motion.path
+      d="M60 150 L90 148 L120 144 L150 138 L180 130 L210 120 L240 110 L270 100 L300 90"
+      stroke="#34e0a1"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+    />
+    <motion.path
+      d="M60 55 L90 58 L120 64 L150 72 L180 84 L210 98 L240 112 L270 126 L300 140"
+      stroke="#38bdf8"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ delay: 0.2 }}
+    />
+    <text x="298" y="56" fill="#38bdf8" fontSize="9">
+      Interest
+    </text>
+    <text x="298" y="142" fill="#34e0a1" fontSize="9">
+      Principal
+    </text>
+    <text x="180" y="186" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Each EMI is fixed, but the interest principal balance it pays off changes every year
+    </text>
+  </svg>
+)
+
+export const DerivPayoff: React.FC = () => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      At expiry, payoff is a simple function of spot
+    </text>
+    <g stroke="#475569">
+      <line x1="60" y1="90" x2="300" y2="90" />
+    </g>
+    <motion.path
+      d="M60 150 L140 140 L180 90 L220 40 L300 40"
+      stroke="#38bdf8"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+    />
+    <motion.path
+      d="M60 30 L140 40 L180 90 L220 140 L300 150"
+      stroke="#34e0a1"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ delay: 0.2 }}
+    />
+    <text x="70" y="84" fill="#8791b3" fontSize="9">
+      Spot at expiry
+    </text>
+    <text x="270" y="48" fill="#38bdf8" fontSize="9">
+      Call payoff
+    </text>
+    <text x="270" y="150" fill="#34e0a1" fontSize="9">
+      Put payoff
+    </text>
+    <text x="180" y="170" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Premium and breakeven turn this into a profit or loss — not just a payoff
+    </text>
+  </svg>
+)
+
+export const CurrencyRisk: React.FC = () => (
+  <svg viewBox="0 0 360 200" className="w-full">
+    <rect width="360" height="200" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      When the rupee falls, the same foreign asset buys more rupees
+    </text>
+    <g fill="#38bdf8">
+      <rect x="60" y="60" width="40" height="100" rx="6" />
+      <rect x="110" y="50" width="40" height="110" rx="6" />
+      <rect x="160" y="42" width="40" height="118" rx="6" />
+      <rect x="210" y="35" width="40" height="125" rx="6" />
+      <rect x="260" y="28" width="40" height="132" rx="6" />
+    </g>
+    <text x="60" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+      +10%
+    </text>
+    <text x="110" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+      +20%
+    </text>
+    <text x="160" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+      +30%
+    </text>
+    <text x="210" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+      +40%
+    </text>
+    <text x="260" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+      +50%
+    </text>
+    <motion.path
+      d="M40 80 L280 40"
+      stroke="#34e0a1"
+      strokeWidth="2"
+      fill="none"
+      strokeDasharray="4 6"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+    />
+    <text x="280" y="36" fill="#34e0a1" fontSize="10">
+      Worse for locals buying imports — better for rupee holders of foreign assets
+    </text>
+  </svg>
+)
+
+export const GrowthVsValue: React.FC = () => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      Growth and value: two ways to miss the same price
+    </text>
+    <g stroke="#475569">
+      <line x1="60" y1="40" x2="300" y2="40" />
+      <line x1="60" y1="40" x2="60" y2="140" />
+    </g>
+    <motion.path
+      d="M60 120 L100 110 L140 95 L180 75 L220 50 L260 35 L300 30"
+      stroke="#34e0a1"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+    />
+    <motion.path
+      d="M60 60 L100 75 L140 88 L180 98 L220 105 L260 110 L300 112"
+      stroke="#38bdf8"
+      strokeWidth="2"
+      fill="none"
+      initial={{ pathLength: 0 }}
+      animate={{ pathLength: 1 }}
+      transition={{ delay: 0.2 }}
+    />
+    <text x="298" y="30" fill="#34e0a1" fontSize="9">
+      Growth (rising, often expensive)
+    </text>
+    <text x="298" y="116" fill="#38bdf8" fontSize="9">
+      Value (flat, then re-rated)
+    </text>
+    <text x="180" y="158" textAnchor="middle" fill="#8791b3" fontSize="9">
+      The same business can look like a growth story or a value story at different times
+    </text>
+  </svg>
+)
+
+export const CorpusLadder: React.FC<{ step: 0 | 1 | 2 | 3 }> = ({ step }) => (
+  <svg viewBox="0 0 360 180" className="w-full">
+    <rect width="360" height="180" rx="16" fill="#0f1529" />
+    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+      Retirement is built in layers, not one big deposit
+    </text>
+    <g>
+      <rect x="50" y="40" width="260" height="22" rx="11" fill="#1e293b" />
+      <motion.rect
+        x="50"
+        y="40"
+        height="22"
+        rx="11"
+        fill="#ef4444"
+        initial={{ width: 0 }}
+        animate={{ width: 50 + step * 50 }}
       />
-      <text x="96" y="176" fontSize="10" fill="#34e0a1">call</text>
-      <text x="290" y="176" fontSize="10" fill="#f87171">put</text>
-      <text x="200" y="206" textAnchor="middle" fontSize="10" fill="#d7dbe9">
-        Gain is limited for buyers, unlimited for sellers
+      <text x="60" y="54" fill="#fff" fontSize="9">
+        Emergency fund
       </text>
-    </>
-  )
-}
-
-/** An EMI split into principal and interest, month by month. */
-export function AmortizationSplit() {
-  const rows = [96, 74, 58, 46, 38]
-  return (
-    <>
-      {rows.map((v, i) => (
-        <motion.g key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.1 }}>
-          <motion.rect
-            x="46"
-            y={28 + i * 32}
-            width={v}
-            height="24"
-            rx="5"
-            fill="#f87171"
-            opacity="0.8"
-            initial={{ width: 0 }}
-            animate={{ width: v }}
-            transition={{ delay: i * 0.1, ...ease }}
-          />
-          <motion.rect
-            x={46 + v}
-            y={28 + i * 32}
-            width={132 - v}
-            height="24"
-            rx="5"
-            fill="#34e0a1"
-            opacity="0.8"
-            initial={{ width: 0 }}
-            animate={{ width: 132 - v }}
-            transition={{ delay: i * 0.1, ...ease }}
-          />
-          <text x="188" y={45 + i * 32} fontSize="9" fill="#8791b3">
-            yr {i + 1}
-          </text>
-        </motion.g>
-      ))}
-      <text x="34" y="26" fontSize="9" fill="#f87171">interest</text>
-      <text x="112" y="196" fontSize="9" fill="#34e0a1">principal</text>
-      <text x="250" y="196" fontSize="10" fill="#d7dbe9">
-        Each EMI is the same size. The split is not.
+    </g>
+    <g opacity={step >= 1 ? 1 : 0.3}>
+      <rect x="50" y="70" width="260" height="22" rx="11" fill="#1e293b" />
+      <motion.rect x="50" y="70" width={step >= 1 ? 90 : 0} height="22" rx="11" fill="#f59e0b" />
+      <text x="60" y="84" fill="#0f1529" fontSize="9">
+        EPF/PPF accrual
       </text>
-    </>
-  )
-}
-
-/** Education spend against the salary it is meant to produce. */
-export function EducationRoi() {
-  const bars = [
-    { l: 'Cost', v: 70, c: '#f87171' },
-    { l: 'Years lost', v: 96, c: '#f87171' },
-    { l: 'First 5 yrs', v: 44, c: '#f59e0b' },
-    { l: 'Year 15', v: 132, c: '#34e0a1' },
-    { l: 'Year 25', v: 176, c: '#34e0a1' },
-  ]
-  const max = 190
-  return (
-    <>
-      <motion.line x1="34" y1="176" x2="372" y2="176" stroke="#8791b3" strokeWidth="1" />
-      {bars.map((b, i) => (
-        <motion.g key={b.l} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }}>
-          <motion.rect
-            x={40 + i * 68}
-            y={176 - (b.v / max) * 148}
-            width="44"
-            height={(b.v / max) * 148}
-            rx="6"
-            fill={b.c}
-            opacity="0.82"
-            initial={{ height: 0, y: 176 }}
-            animate={{ height: (b.v / max) * 148, y: 176 - (b.v / max) * 148 }}
-            transition={{ delay: i * 0.1, ...ease }}
-          />
-          <text x={62 + i * 68} y={190} textAnchor="middle" fontSize="9" fill="#8791b3">
-            {b.l}
-          </text>
-        </motion.g>
-      ))}
-      <text x="200" y="26" textAnchor="middle" fontSize="11" fill="#34e0a1" fontWeight="700">
-        Slow to start, then it compounds
+    </g>
+    <g opacity={step >= 2 ? 1 : 0.3}>
+      <rect x="50" y="100" width="260" height="22" rx="11" fill="#1e293b" />
+      <motion.rect x="50" y="100" width={step >= 2 ? 110 : 0} height="22" rx="11" fill="#38bdf8" />
+      <text x="60" y="114" fill="#fff" fontSize="9">
+        NPS tier match
       </text>
-      <text x="200" y="210" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Judge it over a working lifetime, not one salary
+    </g>
+    <g opacity={step >= 3 ? 1 : 0.3}>
+      <rect x="50" y="130" width="260" height="22" rx="11" fill="#1e293b" />
+      <motion.rect x="50" y="130" width={step >= 3 ? 120 : 0} height="22" rx="11" fill="#34e0a1" />
+      <text x="60" y="144" fill="#0f1529" fontSize="9">
+        Corpus above EPFO/NPS
       </text>
-    </>
-  )
-}
-
-/** A career as an accumulation of net worth, not just a salary line. */
-export function CareerLadder() {
-  const steps = [
-    { l: 'Yr 1', v: 0.12, r: 'nothing saved' },
-    { l: 'Yr 5', v: 0.32, r: 'no buffer' },
-    { l: 'Yr 10', v: 0.58, r: 'options open' },
-    { l: 'Yr 20', v: 0.88, r: 'real wealth' },
-  ]
-  return (
-    <>
-      <motion.path
-        d="M 34 168 Q 180 150 300 60 T 372 34"
-        fill="none"
-        stroke="#34e0a1"
-        strokeWidth="2.5"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 1 }}
-      />
-      {steps.map((s, i) => {
-        const y = 168 - s.v * 140
-        const x = 44 + i * 106
-        return (
-          <motion.g key={s.l} initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 + i * 0.12, ...ease }} style={{ transformOrigin: `${x}px ${y}px` }}>
-            <circle cx={x} cy={y} r="7" fill="#34e0a1" />
-            <text x={x} y={y - 16} textAnchor="middle" fontSize="10" fill="#d7dbe9">
-              {s.l}
-            </text>
-            <text x={x} y={y + 20} textAnchor="middle" fontSize="9" fill="#8791b3">
-              {s.r}
-            </text>
-          </motion.g>
-        )
-      })}
-      <text x="200" y="206" textAnchor="middle" fontSize="10" fill="#8791b3">
-        A raise is noise. Compounding early savings is the signal.
-      </text>
-    </>
-  )
-}
-
-/** Margin: the small deposit controlling a much larger position. */
-export function MarginVisual() {
-  return (
-    <>
-      <motion.rect x="40" y="34" width="320" height="34" rx="8" fill="#f87171" opacity="0.8" initial={{ width: 0 }} animate={{ width: 320 }} transition={ease} />
-      <text x="200" y="56" textAnchor="middle" fontSize="11" fill="#2a0f0f" fontWeight="700">
-        exposure: ₹10,00,000
-      </text>
-      <motion.rect x="40" y="82" width="32" height="34" rx="6" fill="#38bdf8" opacity="0.9" initial={{ width: 0 }} animate={{ width: 32 }} transition={{ delay: 0.25, ...ease }} />
-      <text x="86" y="104" fontSize="11" fill="#38bdf8">
-        margin ₹80,000 — 8%
-      </text>
-      <text x="200" y="152" textAnchor="middle" fontSize="12" fill="#f87171" fontWeight="700">
-        A 8% move against you ends the position
-      </text>
-      <text x="200" y="172" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Before the view was right or wrong
-      </text>
-      <text x="200" y="204" textAnchor="middle" fontSize="10" fill="#d7dbe9">
-        Leverage does not raise expected return. It raises the bill when wrong.
-      </text>
-    </>
-  )
-}
-
-/** Old regime deductions against new regime's flat standard deduction. */
-export function DeductionStack() {
-  const items = [
-    { l: '80C (EPF, ELSS, PPF)', v: 150 },
-    { l: '80D (health premium)', v: 56 },
-    { l: '80CCD(1B) (NPS)', v: 50 },
-    { l: 'Home loan interest', v: 200 },
-  ]
-  return (
-    <>
-      {items.map((it, i) => (
-        <motion.g key={it.l} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.1 }}>
-          <motion.rect
-            x="40"
-            y={26 + i * 34}
-            width={it.v}
-            height="26"
-            rx="6"
-            fill={i === 3 ? '#38bdf8' : '#34e0a1'}
-            opacity="0.8"
-            initial={{ width: 0 }}
-            animate={{ width: it.v }}
-            transition={{ delay: i * 0.1, ...ease }}
-          />
-          <text x="30" y={44 + i * 34} textAnchor="end" fontSize="9" fill="#d7dbe9">
-            {it.l}
-          </text>
-        </motion.g>
-      ))}
-      <motion.rect x="40" y="170" width="300" height="24" rx="6" fill="#f87171" opacity="0.7" initial={{ opacity: 0 }} animate={{ opacity: 0.7 }} transition={{ delay: 0.5 }} />
-      <text x="52" y="187" fontSize="10" fill="#2a0f0f" fontWeight="700">
-        Old regime only — all of it gone under 115BAC
-      </text>
-      <text x="200" y="212" textAnchor="middle" fontSize="9" fill="#8791b3">
-        Which regime wins depends on your actual deductions
-      </text>
-    </>
-  )
-}
-
-/** Total compensation: the headline number versus what reaches you. */
-export function TotalCompStack() {
-  const layers = [
-    { l: 'Gross CTC', v: 200, c: '#8791b3' },
-    { l: 'less: retirement + tax', v: 158, c: '#f87171' },
-    { l: 'less: your premium', v: 140, c: '#f87171' },
-    { l: 'less: PF, leaves, food', v: 128, c: '#f87171' },
-    { l: 'What you can spend', v: 128, c: '#34e0a1' },
-  ]
-  return (
-    <>
-      {layers.map((l, i) => (
-        <motion.g key={l.l} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.1 }}>
-          <motion.rect
-            x="60"
-            y={24 + i * 34}
-            width={l.v}
-            height="26"
-            rx="6"
-            fill={l.c}
-            opacity={i === 4 ? 0.9 : 0.65}
-            initial={{ width: 0 }}
-            animate={{ width: l.v }}
-            transition={{ delay: i * 0.1, ...ease }}
-          />
-          <text x={52} y={42 + i * 34} textAnchor="end" fontSize="9" fill="#d7dbe9">
-            {i === 4 ? '' : '−'}
-          </text>
-          <text x={70 + (i === 4 ? 0 : l.v)} y={42 + i * 34} fontSize="9" fill={i === 4 ? '#0b1524' : '#d7dbe9'} fontWeight={i === 4 ? '700' : '400'}>
-            {l.l}
-          </text>
-        </motion.g>
-      ))}
-      <text x="200" y="208" textAnchor="middle" fontSize="10" fill="#34e0a1">
-        Two offers are rarely equal — compare what you can actually spend
-      </text>
-    </>
-  )
-}
+    </g>
+    <text x="180" y="170" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Public benefits are the base — your own savings top them up
+    </text>
+  </svg>
+)

@@ -110,36 +110,37 @@ export function ExpenseBars() {
   )
 }
 
-/** Goals climbing a ladder by horizon */
+/** Goals climbing a staircase by horizon: the further the goal, the higher the step. */
 export function GoalLadder() {
-  const rungs = [
-    { label: 'Short term', y: 170, c: '#38bdf8', ex: 'phone, courses' },
-    { label: 'Medium term', y: 120, c: '#c084fc', ex: 'bike, holiday' },
-    { label: 'Long term', y: 70, c: '#34e0a1', ex: 'house, retirement' },
+  const steps = [
+    { label: 'Short term', ex: 'phone, courses', veh: 'savings, liquid fund', x: 36, y: 150, w: 104, h: 52, c: '#38bdf8' },
+    { label: 'Medium term', ex: 'bike, holiday', veh: 'FD, debt fund', x: 140, y: 104, w: 104, h: 98, c: '#c084fc' },
+    { label: 'Long term', ex: 'house, retirement', veh: 'equity, EPF, PPF', x: 244, y: 54, w: 122, h: 148, c: '#34e0a1' },
   ]
   return (
     <>
-      <line x1="90" y1="190" x2="90" y2="45" stroke="white" strokeOpacity="0.15" strokeWidth="3" />
-      {rungs.map((r, i) => (
-        <motion.g key={r.label} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.2 }}>
-          <motion.rect
-            x="90"
-            height="12"
-            rx="6"
-            fill={r.c}
-            animate={{ width: 90 + i * 70 }}
-            transition={{ delay: i * 0.2, type: 'spring', stiffness: 120 }}
-          />
-          <text x="100" y={r.y - 8} fontSize="11" fill={r.c} fontWeight="700">
-            {r.label}
+      {steps.map((s, i) => (
+        <motion.g
+          key={s.label}
+          initial={{ opacity: 0, y: -14 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: i * 0.18, type: 'spring', stiffness: 120 }}
+        >
+          <text x={s.x + 8} y={s.y - 24} fontSize="11" fill={s.c} fontWeight="700">
+            {s.label}
           </text>
-          <text x="200" y={r.y - 8} fontSize="9" fill="#8791b3">
-            {r.ex}
+          <text x={s.x + 8} y={s.y - 11} fontSize="9" fill="#8791b3">
+            {s.ex}
+          </text>
+          <rect x={s.x} y={s.y} width={s.w} height={s.h} rx="8" fill={s.c} opacity="0.28" />
+          <rect x={s.x} y={s.y} width={s.w} height="5" rx="2.5" fill={s.c} />
+          <text x={s.x + 8} y={s.y + s.h - 12} fontSize="9" fill="#cbd5e1">
+            {s.veh}
           </text>
         </motion.g>
       ))}
-      <text x="200" y="210" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Bigger goals need more time, not just more money
+      <text x="200" y="214" textAnchor="middle" fontSize="10" fill="#8791b3">
+        Further goal → higher step → more time to grow
       </text>
     </>
   )

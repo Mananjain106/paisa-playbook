@@ -52,18 +52,33 @@ export function BalanceSheet() {
         />
       ))}
       <line x1="200" y1="24" x2="200" y2="170" stroke="white" strokeOpacity="0.2" strokeDasharray="4 4" />
-      {['Bank + FD', 'EPF + NPS', 'Gold', 'Property', 'Home loan', 'Car loan', 'Card + BNPL'].map((t, i) => (
+      {assets.map((a, i) => (
         <motion.text
-          key={t}
-          x={i < 4 ? 118 : 282}
-          y={[42, 74, 106, 138, 42, 74, 106][i]}
+          key={a.label}
+          x={20 + a.w + 8}
+          y={a.y + 15}
           fontSize="9"
           fill="#d7dbe9"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 + i * 0.08 }}
         >
-          {t}
+          {a.label}
+        </motion.text>
+      ))}
+      {debts.map((d, i) => (
+        <motion.text
+          key={d.label}
+          x={380 - d.w - 8}
+          y={d.y + 15}
+          textAnchor="end"
+          fontSize="9"
+          fill="#d7dbe9"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 + (i + 4) * 0.08 }}
+        >
+          {d.label}
         </motion.text>
       ))}
       <motion.text
@@ -158,28 +173,34 @@ export function EmiSplit() {
 /** Umbrella getting wider as months of expenses are saved. */
 export function EmergencyLadder() {
   const levels = [
-    { label: '1 month', w: 90, c: '#38bdf8' },
-    { label: '3 months', w: 140, c: '#34e0a1' },
-    { label: '6 months', w: 190, c: '#a855f7' },
-    { label: '12 months', w: 240, c: '#f59e0b' },
+    { label: '1 month', w: 105, c: '#38bdf8', note: 'quick buffer' },
+    { label: '3 months', w: 155, c: '#34e0a1', note: 'most salaried' },
+    { label: '6 months', w: 205, c: '#a855f7', note: 'single income' },
+    { label: '12 months', w: 250, c: '#f59e0b', note: 'very irregular' },
   ]
   return (
     <>
+      <text x="40" y="18" fontSize="9" fill="#8791b3" letterSpacing="0.4">
+        MONTHS OF EXPENSES
+      </text>
       {levels.map((l, i) => (
-        <motion.g key={l.label} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.18 }}>
+        <motion.g key={l.label} initial={{ opacity: 0, x: -18 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.12 }}>
           <motion.rect
-            x={200 - l.w / 2}
-            y={28 + i * 44}
+            x="40"
+            y={30 + i * 44}
             height="34"
             rx="8"
             fill={l.c}
-            opacity="0.7"
+            opacity="0.8"
             initial={{ width: 0 }}
             animate={{ width: l.w }}
-            transition={{ delay: i * 0.18, type: 'spring', stiffness: 130 }}
+            transition={{ delay: i * 0.12, type: 'spring', stiffness: 130 }}
           />
-          <text x="200" y={50 + i * 44} textAnchor="middle" fontSize="11" fill="#11131f" fontWeight="700">
-            {l.label} of expenses
+          <text x="54" y={52 + i * 44} fontSize="12" fill="#11131f" fontWeight="700">
+            {l.label}
+          </text>
+          <text x={l.w + 52} y={52 + i * 44} fontSize="10" fill="#8791b3">
+            {l.note}
           </text>
         </motion.g>
       ))}
@@ -507,31 +528,61 @@ export function LifestyleInflation() {
 
 /** Gross salary arriving, with deductions peeling away before take-home. */
 export function SalaryDeductions() {
+  const deductions = [
+    { l: 'Employee PF', y: 34 },
+    { l: 'TDS', y: 94 },
+    { l: 'Professional tax', y: 154 },
+  ]
   return (
     <>
       <motion.rect
-        x="40"
-        width="150"
-        height="38"
+        x="24"
+        y="26"
+        width="190"
+        height="42"
         rx="8"
         fill="#38bdf8"
         opacity="0.7"
         initial={{ scaleX: 0.2, opacity: 0 }}
         animate={{ scaleX: 1, opacity: 0.7 }}
         transition={{ type: 'spring', stiffness: 140 }}
-        style={{ transformOrigin: '40px 40px' }}
+        style={{ transformOrigin: '24px 26px' }}
       />
-      <text x="115" y="64" textAnchor="middle" fontSize="12" fill="#0b1524" fontWeight="700">
+      <text x="119" y="53" textAnchor="middle" fontSize="13" fill="#0b1524" fontWeight="800">
         Gross salary
       </text>
-      {[
-        { l: 'employee PF', x: 205 },
-        { l: 'TDS', x: 250 },
-        { l: 'professional tax', x: 290 },
-      ].map((d, i) => (
-        <motion.g key={d.l} initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.25 }}>
+
+      <motion.path
+        d="M99,68 L99,146"
+        fill="none"
+        stroke="#34e0a1"
+        strokeWidth="2"
+        strokeDasharray="5 6"
+        initial={{ pathLength: 0, opacity: 0 }}
+        animate={{ pathLength: 1, opacity: 0.7 }}
+        transition={{ delay: 0.5, duration: 0.6 }}
+      />
+      <motion.rect
+        x="24"
+        y="150"
+        width="150"
+        height="42"
+        rx="8"
+        fill="#34e0a1"
+        opacity="0.75"
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ delay: 1.2, type: 'spring', stiffness: 140 }}
+        style={{ transformOrigin: '24px 150px' }}
+      />
+      <text x="99" y="177" textAnchor="middle" fontSize="13" fill="#0b1524" fontWeight="800">
+        Take-home
+      </text>
+
+      {deductions.map((d, i) => (
+        <motion.g key={d.l} initial={{ opacity: 0, x: 14 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.4 + i * 0.25 }}>
           <motion.path
-            d={`M${d.x},46 Q${d.x + 14},110 ${d.x - 6},128`}
+            d={`M214,55 Q232,${d.y + 5} 236,${d.y + 15}`}
             fill="none"
             stroke="#f87171"
             strokeWidth="1.5"
@@ -539,35 +590,21 @@ export function SalaryDeductions() {
             animate={{ strokeDashoffset: [0, -36] }}
             transition={{ repeat: Infinity, duration: 1.4, delay: i * 0.3 }}
           />
-          <text x={d.x + 6} y="146" textAnchor="middle" fontSize="9" fill="#fca5a5">
+          <rect x="236" y={d.y} width="140" height="30" rx="7" fill="#f87171" opacity="0.22" />
+          <text x="306" y={d.y + 20} textAnchor="middle" fontSize="11" fill="#fca5a5">
             {d.l}
           </text>
         </motion.g>
       ))}
-      <motion.rect
-        x="40"
-        y="170"
-        rx="8"
-        width="110"
-        height="34"
-        fill="#34e0a1"
-        opacity="0.75"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{ delay: 1.2, type: 'spring', stiffness: 140 }}
-        style={{ transformOrigin: '40px 170px' }}
-      />
-      <text x="95" y="192" textAnchor="middle" fontSize="12" fill="#0b1524" fontWeight="700">
-        Take-home
-      </text>
-      <text x="300" y="192" textAnchor="middle" fontSize="10" fill="#8791b3">
-        most deductions are deferred, not lost
+
+      <text x="200" y="212" textAnchor="middle" fontSize="10" fill="#8791b3">
+        Deductions leave before the money reaches your account
       </text>
     </>
   )
 }
 
-/** A personal monthly dashboard. */
+/** A personal monthly dashboard: the four headline numbers, plus every line they feed. */
 export function Dashboard() {
   const cards = [
     { l: 'Income', c: '#34e0a1' },
@@ -575,29 +612,71 @@ export function Dashboard() {
     { l: 'Savings', c: '#38bdf8' },
     { l: 'Debt', c: '#f59e0b' },
   ]
+  const lines = [
+    { l: 'Rent', w: 160, a: '₹22,000' },
+    { l: 'Loan EMIs', w: 104, a: '₹14,000' },
+    { l: 'SIPs', w: 74, a: '₹12,000' },
+    { l: 'Food', w: 58, a: '₹8,000' },
+    { l: 'Professional tax', w: 9, a: '₹200', hot: true },
+  ]
   return (
     <>
       {cards.map((c, i) => (
-        <motion.g key={c.l} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.15 }}>
-          <rect x={22 + i * 92} y="30" width="80" height="54" rx="10" fill={c.c} opacity="0.18" stroke={c.c} strokeOpacity="0.5" />
-          <text x={62 + i * 92} y="62" textAnchor="middle" fontSize="11" fill={c.c} fontWeight="700">
+        <motion.g key={c.l} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.12 }}>
+          <rect x={22 + i * 92} y="16" width="80" height="44" rx="10" fill={c.c} opacity="0.18" stroke={c.c} strokeOpacity="0.5" />
+          <text x={62 + i * 92} y="43" textAnchor="middle" fontSize="11" fill={c.c} fontWeight="700">
             {c.l}
           </text>
         </motion.g>
       ))}
-      <motion.path
-        d="M40 160 Q100 130 160 145 T280 110 T360 96"
-        fill="none"
-        stroke="#34e0a1"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 1.1 }}
-      />
-      <text x="200" y="196" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Four numbers you should be able to state from memory
-      </text>
+
+      <motion.text
+        x="22"
+        y="76"
+        fontSize="9.5"
+        fill="#8791b3"
+        letterSpacing="0.4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.45 }}
+      >
+        WHERE EACH PAYSLIP GOES
+      </motion.text>
+
+      {lines.map((ln, i) => (
+        <motion.g key={ln.l} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.5 + i * 0.14 }}>
+          <text x="22" y={93 + i * 20} fontSize="10" fill={ln.hot ? '#f59e0b' : '#d7dbe9'} fontWeight={ln.hot ? '700' : '500'}>
+            {ln.l}
+          </text>
+          <motion.rect
+            x="118"
+            y={84 + i * 20}
+            height="11"
+            rx="5.5"
+            fill={ln.hot ? '#f59e0b' : '#38bdf8'}
+            opacity={ln.hot ? 1 : 0.55}
+            initial={{ width: 0 }}
+            animate={{ width: ln.w }}
+            transition={{ delay: 0.6 + i * 0.14, type: 'spring', stiffness: 140, damping: 18 }}
+          />
+          <text x="378" y={93 + i * 20} textAnchor="end" fontSize="10" fill={ln.hot ? '#f59e0b' : '#8791b3'}>
+            {ln.a}
+          </text>
+        </motion.g>
+      ))}
+
+      <motion.text
+        x="200"
+        y="200"
+        textAnchor="middle"
+        fontSize="10"
+        fill="#8791b3"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.3 }}
+      >
+        Four numbers, plus every small line beneath them
+      </motion.text>
     </>
   )
 }

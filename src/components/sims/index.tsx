@@ -23,6 +23,8 @@ const PortfolioLab = lazy(() => import('./PortfolioLab').then((m) => ({ default:
 const BondLab = lazy(() => import('./BondLab').then((m) => ({ default: m.BondLab })))
 const RealReturnLab = lazy(() => import('./RealReturnLab').then((m) => ({ default: m.RealReturnLab })))
 const CurrencyLab = lazy(() => import('./CurrencyLab').then((m) => ({ default: m.CurrencyLab })))
+const TaxLab = lazy(() => import('./TaxLab').then((m) => ({ default: m.TaxLab })))
+const OptionsPayoffLab = lazy(() => import('./OptionsPayoffLab').then((m) => ({ default: m.OptionsPayoffLab })))
 const ValuationLab = lazy(() => import('./ValuationLab').then((m) => ({ default: m.ValuationLab })))
 const FeeDragLab = lazy(() => import('./FeeDragLab').then((m) => ({ default: m.FeeDragLab })))
 const CycleLab = lazy(() => import('./CycleLab').then((m) => ({ default: m.CycleLab })))
@@ -135,7 +137,7 @@ export const SIMS: Record<SimName, SimMeta> = {
   cover: {
     title: 'Health cover adequacy',
     blurb: 'Check whether your cover matches your income and family.',
-        C: () => (
+    C: () => (
       <Suspense fallback={<SimLoading />}>
         <CoverLab />
       </Suspense>
@@ -144,7 +146,7 @@ export const SIMS: Record<SimName, SimMeta> = {
   portfolio: {
     title: 'Asset allocation lab',
     blurb: 'Build a mix and see its return, its swing, and what a crash would cost you.',
-        C: () => (
+    C: () => (
       <Suspense fallback={<SimLoading />}>
         <PortfolioLab />
       </Suspense>
@@ -153,7 +155,7 @@ export const SIMS: Record<SimName, SimMeta> = {
   bond: {
     title: 'Bond pricing lab',
     blurb: 'Coupon, maturity and yield — and why bond prices fall when rates rise.',
-        C: () => (
+    C: () => (
       <Suspense fallback={<SimLoading />}>
         <BondLab />
       </Suspense>
@@ -162,7 +164,7 @@ export const SIMS: Record<SimName, SimMeta> = {
   realreturn: {
     title: 'Real return and inflation',
     blurb: 'Strip inflation out of any return and see what your money really buys.',
-        C: () => (
+    C: () => (
       <Suspense fallback={<SimLoading />}>
         <RealReturnLab />
       </Suspense>
@@ -171,7 +173,7 @@ export const SIMS: Record<SimName, SimMeta> = {
   currency: {
     title: 'Currency and the rupee',
     blurb: 'What depreciation gives you abroad, and what it quietly costs you at home.',
-        C: () => (
+    C: () => (
       <Suspense fallback={<SimLoading />}>
         <CurrencyLab />
       </Suspense>
@@ -180,7 +182,7 @@ export const SIMS: Record<SimName, SimMeta> = {
   valuation: {
     title: 'Stock valuation lab',
     blurb: 'Type a company&apos;s numbers and watch EPS, P/E, ROE and debt update live.',
-        C: () => (
+    C: () => (
       <Suspense fallback={<SimLoading />}>
         <ValuationLab />
       </Suspense>
@@ -189,7 +191,7 @@ export const SIMS: Record<SimName, SimMeta> = {
   feedrag: {
     title: 'The drag of fund fees',
     blurb: 'Identical market returns through very different expense ratios.',
-        C: () => (
+    C: () => (
       <Suspense fallback={<SimLoading />}>
         <FeeDragLab />
       </Suspense>
@@ -198,9 +200,27 @@ export const SIMS: Record<SimName, SimMeta> = {
   cycle: {
     title: 'Market cycle lab',
     blurb: 'The same asset, held the same period, three very different outcomes.',
-        C: () => (
+    C: () => (
       <Suspense fallback={<SimLoading />}>
         <CycleLab />
+      </Suspense>
+    ),
+  },
+  tax: {
+    title: 'Income tax regime lab',
+    blurb: 'Edge your way through slabs, rebates and TDS to see what actually lands in your account.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <TaxLab />
+      </Suspense>
+    ),
+  },
+  'options-payoff': {
+    title: 'Options payoff lab',
+    blurb: 'Trace the breakeven and the capped upside/uncapped downside of calls and puts.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <OptionsPayoffLab />
       </Suspense>
     ),
   },

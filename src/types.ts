@@ -75,6 +75,19 @@ export type SceneName =
   | 'real-vs-nominal'
   | 'gold-role'
   | 'money-allocation'
+  // Level 4 scenes
+  | 'tax-bracket'
+  | 'tds-flow'
+  | 'cover-ladder'
+  | 'emi-split-early'
+  | 'nps-annuity'
+  | 'call-put'
+  | 'rent-vs-buy'
+  | 'loan-amort'
+  | 'deriv-payoff'
+  | 'currency-risk'
+  | 'growth-vs-value'
+  | 'corpus-ladder'
 
 /** Hands-on simulations. */
 export type SimName =
@@ -96,6 +109,8 @@ export type SimName =
   | 'valuation'
   | 'feedrag'
   | 'cycle'
+  | 'tax'
+  | 'options-payoff'
 
 export type QuizOption = { text: string; correct?: boolean; why: string }
 
