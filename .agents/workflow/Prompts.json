@@ -1,0 +1,2058 @@
+[
+    {
+        "prompt_index": 1,
+        "content": "You are an expert AI financial advisor and curriculum developer. Your task is to create a comprehensive, interactive personal finance application that teaches finance chapter by chapter across 5 progressive levels. The curriculum covers fundamental financial concepts, banking, personal balance sheets, investing, stock analysis, taxation, and advanced financial planning, with a focus on practical Indian financial contexts (RBI, UPI, TDS, Nifty/Sensex, EPF)."
+    },
+    {
+        "prompt_index": 2,
+        "content": "Create a detailed learning chapter for the topic 'What is money' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 3,
+        "content": "Create a detailed learning chapter for the topic 'history of money' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 4,
+        "content": "Create a detailed learning chapter for the topic 'barter system' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 5,
+        "content": "Create a detailed learning chapter for the topic 'currency' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 6,
+        "content": "Create a detailed learning chapter for the topic 'Indian Rupee' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 7,
+        "content": "Create a detailed learning chapter for the topic 'purchasing power' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 8,
+        "content": "Create a detailed learning chapter for the topic 'how money moves through the economy' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 9,
+        "content": "Create a detailed learning chapter for the topic 'RBI' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 10,
+        "content": "Create a detailed learning chapter for the topic 'banks' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 11,
+        "content": "Create a detailed learning chapter for the topic 'government and businesses' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 12,
+        "content": "Create a detailed learning chapter for the topic 'earning money' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 13,
+        "content": "Create a detailed learning chapter for the topic 'salary' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 14,
+        "content": "Create a detailed learning chapter for the topic 'wages' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 15,
+        "content": "Create a detailed learning chapter for the topic 'business income' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 16,
+        "content": "Create a detailed learning chapter for the topic 'freelance income' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 17,
+        "content": "Create a detailed learning chapter for the topic 'active vs passive income' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 18,
+        "content": "Create a detailed learning chapter for the topic 'needs vs wants' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 19,
+        "content": "Create a detailed learning chapter for the topic 'necessities vs luxuries' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 20,
+        "content": "Create a detailed learning chapter for the topic 'impulse buying' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 21,
+        "content": "Create a detailed learning chapter for the topic 'advertising psychology' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 22,
+        "content": "Create a detailed learning chapter for the topic 'peer pressure and money' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 23,
+        "content": "Create a detailed learning chapter for the topic 'budgeting basics' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 24,
+        "content": "Create a detailed learning chapter for the topic 'income vs expenses' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 25,
+        "content": "Create a detailed learning chapter for the topic 'fixed vs variable expenses' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 26,
+        "content": "Create a detailed learning chapter for the topic 'saving' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 27,
+        "content": "Create a detailed learning chapter for the topic 'savings goals' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 28,
+        "content": "Create a detailed learning chapter for the topic 'bank accounts' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 29,
+        "content": "Create a detailed learning chapter for the topic 'savings accounts' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 30,
+        "content": "Create a detailed learning chapter for the topic 'current accounts' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 31,
+        "content": "Create a detailed learning chapter for the topic 'FD' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 32,
+        "content": "Create a detailed learning chapter for the topic 'RD' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 33,
+        "content": "Create a detailed learning chapter for the topic 'interest' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 34,
+        "content": "Create a detailed learning chapter for the topic 'simple interest' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 35,
+        "content": "Create a detailed learning chapter for the topic 'compound interest' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 36,
+        "content": "Create a detailed learning chapter for the topic 'inflation' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 37,
+        "content": "Create a detailed learning chapter for the topic 'purchasing power' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 38,
+        "content": "Create a detailed learning chapter for the topic 'opportunity cost' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 39,
+        "content": "Create a detailed learning chapter for the topic 'financial goals' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 40,
+        "content": "Create a detailed learning chapter for the topic 'short-term vs medium-term vs long-term goals' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 41,
+        "content": "Create a detailed learning chapter for the topic 'UPI' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 42,
+        "content": "Create a detailed learning chapter for the topic 'digital payments' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 43,
+        "content": "Create a detailed learning chapter for the topic 'debit cards' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 44,
+        "content": "Create a detailed learning chapter for the topic 'ATM' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 45,
+        "content": "Create a detailed learning chapter for the topic 'NEFT' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 46,
+        "content": "Create a detailed learning chapter for the topic 'RTGS' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 47,
+        "content": "Create a detailed learning chapter for the topic 'IMPS' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 48,
+        "content": "Create a detailed learning chapter for the topic 'bank statements' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 49,
+        "content": "Create a detailed learning chapter for the topic 'receipts and financial records' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 50,
+        "content": "Create a detailed learning chapter for the topic 'basic financial vocabulary' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 51,
+        "content": "Create a detailed learning chapter for the topic 'financial habits' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 52,
+        "content": "Create a detailed learning chapter for the topic 'personal responsibility with money' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 53,
+        "content": "Create a detailed learning chapter for the topic 'financial scams' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 54,
+        "content": "Create a detailed learning chapter for the topic 'OTP scams' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 55,
+        "content": "Create a detailed learning chapter for the topic 'phishing' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 56,
+        "content": "Create a detailed learning chapter for the topic 'fake customer care' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 57,
+        "content": "Create a detailed learning chapter for the topic 'UPI scams' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 58,
+        "content": "Create a detailed learning chapter for the topic 'basic cybersecurity' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 59,
+        "content": "Create a detailed learning chapter for the topic 'creating a basic expense tracker' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 60,
+        "content": "Create a detailed learning chapter for the topic 'creating a basic monthly budget' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 61,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: pay yourself first' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 62,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: 24-hour rule for unnecessary purchases' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 63,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: track every rupee for one month' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 64,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: separate needs from wants before purchasing' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 65,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: always know where your money went' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 66,
+        "content": "Create a detailed learning chapter for the topic 'final project: managing a hypothetical ₹10' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 67,
+        "content": "Create a detailed learning chapter for the topic '000' (as part of LEVEL 1). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 68,
+        "content": "Create a detailed learning chapter for the topic 'Personal balance sheet' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 69,
+        "content": "Create a detailed learning chapter for the topic 'assets' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 70,
+        "content": "Create a detailed learning chapter for the topic 'liabilities' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 71,
+        "content": "Create a detailed learning chapter for the topic 'net worth' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 72,
+        "content": "Create a detailed learning chapter for the topic 'income sources' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 73,
+        "content": "Create a detailed learning chapter for the topic 'salary structure' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 74,
+        "content": "Create a detailed learning chapter for the topic 'CTC vs gross salary vs take-home salary' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 75,
+        "content": "Create a detailed learning chapter for the topic 'salary slips' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 76,
+        "content": "Create a detailed learning chapter for the topic 'deductions' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 77,
+        "content": "Create a detailed learning chapter for the topic 'PF' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 78,
+        "content": "Create a detailed learning chapter for the topic 'TDS' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 79,
+        "content": "Create a detailed learning chapter for the topic 'professional tax' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 80,
+        "content": "Create a detailed learning chapter for the topic 'emergency funds' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 81,
+        "content": "Create a detailed learning chapter for the topic 'safety-net accounts' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 82,
+        "content": "Create a detailed learning chapter for the topic 'calculating emergency-fund requirements' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 83,
+        "content": "Create a detailed learning chapter for the topic '3-month vs 6-month vs larger emergency reserves' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 84,
+        "content": "Create a detailed learning chapter for the topic 'where emergency money should be kept' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 85,
+        "content": "Create a detailed learning chapter for the topic 'liquidity vs returns' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 86,
+        "content": "Create a detailed learning chapter for the topic 'sinking funds' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 87,
+        "content": "Create a detailed learning chapter for the topic 'goal-based savings' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 88,
+        "content": "Create a detailed learning chapter for the topic 'banking products' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 89,
+        "content": "Create a detailed learning chapter for the topic 'debit cards' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 90,
+        "content": "Create a detailed learning chapter for the topic 'credit cards' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 91,
+        "content": "Create a detailed learning chapter for the topic 'credit limits' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 92,
+        "content": "Create a detailed learning chapter for the topic 'billing cycles' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 93,
+        "content": "Create a detailed learning chapter for the topic 'due dates' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 94,
+        "content": "Create a detailed learning chapter for the topic 'minimum payment' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 95,
+        "content": "Create a detailed learning chapter for the topic 'interest' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 96,
+        "content": "Create a detailed learning chapter for the topic 'late fees' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 97,
+        "content": "Create a detailed learning chapter for the topic 'rewards and cashback' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 98,
+        "content": "Create a detailed learning chapter for the topic 'credit utilization' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 99,
+        "content": "Create a detailed learning chapter for the topic 'credit scores' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 100,
+        "content": "Create a detailed learning chapter for the topic 'credit history' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 101,
+        "content": "Create a detailed learning chapter for the topic 'loans' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 102,
+        "content": "Create a detailed learning chapter for the topic 'principal' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 103,
+        "content": "Create a detailed learning chapter for the topic 'interest' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 104,
+        "content": "Create a detailed learning chapter for the topic 'tenure' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 105,
+        "content": "Create a detailed learning chapter for the topic 'EMI' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 106,
+        "content": "Create a detailed learning chapter for the topic 'processing fees' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 107,
+        "content": "Create a detailed learning chapter for the topic 'prepayment' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 108,
+        "content": "Create a detailed learning chapter for the topic 'foreclosure' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 109,
+        "content": "Create a detailed learning chapter for the topic 'default' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 110,
+        "content": "Create a detailed learning chapter for the topic 'secured vs unsecured loans' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 111,
+        "content": "Create a detailed learning chapter for the topic 'good debt vs bad debt' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 112,
+        "content": "Create a detailed learning chapter for the topic 'consumer loans' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 113,
+        "content": "Create a detailed learning chapter for the topic 'BNPL' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 114,
+        "content": "Create a detailed learning chapter for the topic 'vehicle loans' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 115,
+        "content": "Create a detailed learning chapter for the topic 'education loans' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 116,
+        "content": "Create a detailed learning chapter for the topic 'home loans' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 117,
+        "content": "Create a detailed learning chapter for the topic 'EMI calculations' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 118,
+        "content": "Create a detailed learning chapter for the topic 'total cost of borrowing' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 119,
+        "content": "Create a detailed learning chapter for the topic 'insurance fundamentals' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 120,
+        "content": "Create a detailed learning chapter for the topic 'health insurance' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 121,
+        "content": "Create a detailed learning chapter for the topic 'life insurance' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 122,
+        "content": "Create a detailed learning chapter for the topic 'motor insurance' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 123,
+        "content": "Create a detailed learning chapter for the topic 'property insurance' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 124,
+        "content": "Create a detailed learning chapter for the topic 'insurance premium' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 125,
+        "content": "Create a detailed learning chapter for the topic 'sum insured' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 126,
+        "content": "Create a detailed learning chapter for the topic 'deductibles' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 127,
+        "content": "Create a detailed learning chapter for the topic 'exclusions' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 128,
+        "content": "Create a detailed learning chapter for the topic 'claims' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 129,
+        "content": "Create a detailed learning chapter for the topic 'financial fraud' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 130,
+        "content": "Create a detailed learning chapter for the topic 'Ponzi schemes' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 131,
+        "content": "Create a detailed learning chapter for the topic 'pyramid schemes' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 132,
+        "content": "Create a detailed learning chapter for the topic 'fake investment schemes' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 133,
+        "content": "Create a detailed learning chapter for the topic 'fake loan apps' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 134,
+        "content": "Create a detailed learning chapter for the topic 'identity theft' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 135,
+        "content": "Create a detailed learning chapter for the topic 'SIM-swap scams' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 136,
+        "content": "Create a detailed learning chapter for the topic 'financial psychology' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 137,
+        "content": "Create a detailed learning chapter for the topic 'FOMO' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 138,
+        "content": "Create a detailed learning chapter for the topic 'herd mentality' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 139,
+        "content": "Create a detailed learning chapter for the topic 'loss aversion' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 140,
+        "content": "Create a detailed learning chapter for the topic 'confirmation bias' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 141,
+        "content": "Create a detailed learning chapter for the topic 'instant gratification' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 142,
+        "content": "Create a detailed learning chapter for the topic 'lifestyle inflation' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 143,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: maintain a separate emergency-fund account' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 144,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: never treat credit-card limit as income' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 145,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: compare total loan cost rather than EMI alone' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 146,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: automate savings' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 147,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: maintain a subscription audit' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 148,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: keep financial documents organized' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 149,
+        "content": "Create a detailed learning chapter for the topic 'build a personal monthly financial dashboard' (as part of LEVEL 2). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 150,
+        "content": "Create a detailed learning chapter for the topic 'Saving vs investing' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 151,
+        "content": "Create a detailed learning chapter for the topic 'risk vs return' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 152,
+        "content": "Create a detailed learning chapter for the topic 'risk capacity' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 153,
+        "content": "Create a detailed learning chapter for the topic 'risk tolerance' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 154,
+        "content": "Create a detailed learning chapter for the topic 'liquidity' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 155,
+        "content": "Create a detailed learning chapter for the topic 'diversification' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 156,
+        "content": "Create a detailed learning chapter for the topic 'asset classes' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 157,
+        "content": "Create a detailed learning chapter for the topic 'fixed deposits' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 158,
+        "content": "Create a detailed learning chapter for the topic 'recurring deposits' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 159,
+        "content": "Create a detailed learning chapter for the topic 'government securities' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 160,
+        "content": "Create a detailed learning chapter for the topic 'treasury bills' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 161,
+        "content": "Create a detailed learning chapter for the topic 'bonds' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 162,
+        "content": "Create a detailed learning chapter for the topic 'corporate bonds' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 163,
+        "content": "Create a detailed learning chapter for the topic 'bond terminology' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 164,
+        "content": "Create a detailed learning chapter for the topic 'coupon' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 165,
+        "content": "Create a detailed learning chapter for the topic 'face value' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 166,
+        "content": "Create a detailed learning chapter for the topic 'maturity' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 167,
+        "content": "Create a detailed learning chapter for the topic 'yield' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 168,
+        "content": "Create a detailed learning chapter for the topic 'interest-rate risk' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 169,
+        "content": "Create a detailed learning chapter for the topic 'credit risk' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 170,
+        "content": "Create a detailed learning chapter for the topic 'stocks' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 171,
+        "content": "Create a detailed learning chapter for the topic 'shares' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 172,
+        "content": "Create a detailed learning chapter for the topic 'equity ownership' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 173,
+        "content": "Create a detailed learning chapter for the topic 'dividends' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 174,
+        "content": "Create a detailed learning chapter for the topic 'capital gains' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 175,
+        "content": "Create a detailed learning chapter for the topic 'stock exchanges' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 176,
+        "content": "Create a detailed learning chapter for the topic 'NSE' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 177,
+        "content": "Create a detailed learning chapter for the topic 'BSE' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 178,
+        "content": "Create a detailed learning chapter for the topic 'brokers' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 179,
+        "content": "Create a detailed learning chapter for the topic 'demat accounts' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 180,
+        "content": "Create a detailed learning chapter for the topic 'trading accounts' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 181,
+        "content": "Create a detailed learning chapter for the topic 'bid and ask' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 182,
+        "content": "Create a detailed learning chapter for the topic 'market orders' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 183,
+        "content": "Create a detailed learning chapter for the topic 'limit orders' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 184,
+        "content": "Create a detailed learning chapter for the topic 'settlement' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 185,
+        "content": "Create a detailed learning chapter for the topic 'market capitalization' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 186,
+        "content": "Create a detailed learning chapter for the topic 'large-cap/mid-cap/small-cap concepts' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 187,
+        "content": "Create a detailed learning chapter for the topic 'company revenue' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 188,
+        "content": "Create a detailed learning chapter for the topic 'expenses' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 189,
+        "content": "Create a detailed learning chapter for the topic 'profit' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 190,
+        "content": "Create a detailed learning chapter for the topic 'assets' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 191,
+        "content": "Create a detailed learning chapter for the topic 'liabilities' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 192,
+        "content": "Create a detailed learning chapter for the topic 'cash flow' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 193,
+        "content": "Create a detailed learning chapter for the topic 'basic financial statements' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 194,
+        "content": "Create a detailed learning chapter for the topic 'EPS' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 195,
+        "content": "Create a detailed learning chapter for the topic 'P/E' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 196,
+        "content": "Create a detailed learning chapter for the topic 'P/B' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 197,
+        "content": "Create a detailed learning chapter for the topic 'ROE' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 198,
+        "content": "Create a detailed learning chapter for the topic 'debt-to-equity' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 199,
+        "content": "Create a detailed learning chapter for the topic 'profit margins' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 200,
+        "content": "Create a detailed learning chapter for the topic 'mutual funds' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 201,
+        "content": "Create a detailed learning chapter for the topic 'AMC' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 202,
+        "content": "Create a detailed learning chapter for the topic 'NAV' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 203,
+        "content": "Create a detailed learning chapter for the topic 'fund manager' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 204,
+        "content": "Create a detailed learning chapter for the topic 'equity funds' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 205,
+        "content": "Create a detailed learning chapter for the topic 'debt funds' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 206,
+        "content": "Create a detailed learning chapter for the topic 'hybrid funds' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 207,
+        "content": "Create a detailed learning chapter for the topic 'expense ratios' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 208,
+        "content": "Create a detailed learning chapter for the topic 'SIPs' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 209,
+        "content": "Create a detailed learning chapter for the topic 'index funds' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 210,
+        "content": "Create a detailed learning chapter for the topic 'ETFs' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 211,
+        "content": "Create a detailed learning chapter for the topic 'Nifty' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 212,
+        "content": "Create a detailed learning chapter for the topic 'Sensex' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 213,
+        "content": "Create a detailed learning chapter for the topic 'passive investing' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 214,
+        "content": "Create a detailed learning chapter for the topic 'active investing' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 215,
+        "content": "Create a detailed learning chapter for the topic 'diversification' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 216,
+        "content": "Create a detailed learning chapter for the topic 'asset allocation' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 217,
+        "content": "Create a detailed learning chapter for the topic 'gold' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 218,
+        "content": "Create a detailed learning chapter for the topic 'physical gold' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 219,
+        "content": "Create a detailed learning chapter for the topic 'gold ETFs' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 220,
+        "content": "Create a detailed learning chapter for the topic 'commodities' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 221,
+        "content": "Create a detailed learning chapter for the topic 'silver' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 222,
+        "content": "Create a detailed learning chapter for the topic 'commodity markets' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 223,
+        "content": "Create a detailed learning chapter for the topic 'real estate' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 224,
+        "content": "Create a detailed learning chapter for the topic 'land' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 225,
+        "content": "Create a detailed learning chapter for the topic 'apartments' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 226,
+        "content": "Create a detailed learning chapter for the topic 'rental yield' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 227,
+        "content": "Create a detailed learning chapter for the topic 'capital appreciation' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 228,
+        "content": "Create a detailed learning chapter for the topic 'property taxes' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 229,
+        "content": "Create a detailed learning chapter for the topic 'stamp duty' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 230,
+        "content": "Create a detailed learning chapter for the topic 'registration costs' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 231,
+        "content": "Create a detailed learning chapter for the topic 'maintenance costs' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 232,
+        "content": "Create a detailed learning chapter for the topic 'home loans' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 233,
+        "content": "Create a detailed learning chapter for the topic 'liquidity of property' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 234,
+        "content": "Create a detailed learning chapter for the topic 'property risk' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 235,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: never invest money you need soon' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 236,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: diversify instead of betting everything on one asset' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 237,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: understand fees before investing' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 238,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: separate investing from speculation' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 239,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: don't confuse past returns with guaranteed future returns' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 240,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: calculate real return after inflation' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 241,
+        "content": "Create a detailed learning chapter for the topic 'portfolio construction' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 242,
+        "content": "Create a detailed learning chapter for the topic 'investment simulation' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 243,
+        "content": "Create a detailed learning chapter for the topic 'investment journal' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 244,
+        "content": "Create a detailed learning chapter for the topic 'spreadsheet-based investment tracker' (as part of LEVEL 3). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 245,
+        "content": "Create a detailed learning chapter for the topic 'Advanced stock analysis' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 246,
+        "content": "Create a detailed learning chapter for the topic 'fundamental analysis' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 247,
+        "content": "Create a detailed learning chapter for the topic 'technical analysis' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 248,
+        "content": "Create a detailed learning chapter for the topic 'company valuation' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 249,
+        "content": "Create a detailed learning chapter for the topic 'growth vs value' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 250,
+        "content": "Create a detailed learning chapter for the topic 'competitive advantages' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 251,
+        "content": "Create a detailed learning chapter for the topic 'business models' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 252,
+        "content": "Create a detailed learning chapter for the topic 'annual reports' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 253,
+        "content": "Create a detailed learning chapter for the topic 'balance-sheet analysis' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 254,
+        "content": "Create a detailed learning chapter for the topic 'income-statement analysis' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 255,
+        "content": "Create a detailed learning chapter for the topic 'cash-flow analysis' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 256,
+        "content": "Create a detailed learning chapter for the topic 'accounting quality' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 257,
+        "content": "Create a detailed learning chapter for the topic 'debt analysis' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 258,
+        "content": "Create a detailed learning chapter for the topic 'corporate actions' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 259,
+        "content": "Create a detailed learning chapter for the topic 'dividends' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 260,
+        "content": "Create a detailed learning chapter for the topic 'stock splits' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 261,
+        "content": "Create a detailed learning chapter for the topic 'buybacks' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 262,
+        "content": "Create a detailed learning chapter for the topic 'taxation fundamentals' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 263,
+        "content": "Create a detailed learning chapter for the topic 'income tax' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 264,
+        "content": "Create a detailed learning chapter for the topic 'taxable income' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 265,
+        "content": "Create a detailed learning chapter for the topic 'tax slabs' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 266,
+        "content": "Create a detailed learning chapter for the topic 'TDS' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 267,
+        "content": "Create a detailed learning chapter for the topic 'Form 16' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 268,
+        "content": "Create a detailed learning chapter for the topic 'ITR' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 269,
+        "content": "Create a detailed learning chapter for the topic 'deductions' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 270,
+        "content": "Create a detailed learning chapter for the topic 'capital gains' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 271,
+        "content": "Create a detailed learning chapter for the topic 'short-term vs long-term capital gains' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 272,
+        "content": "Create a detailed learning chapter for the topic 'tax treatment of investments' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 273,
+        "content": "Create a detailed learning chapter for the topic 'tax planning vs tax evasion' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 274,
+        "content": "Create a detailed learning chapter for the topic 'retirement planning' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 275,
+        "content": "Create a detailed learning chapter for the topic 'inflation-adjusted retirement goals' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 276,
+        "content": "Create a detailed learning chapter for the topic 'retirement corpus' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 277,
+        "content": "Create a detailed learning chapter for the topic 'EPF' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 278,
+        "content": "Create a detailed learning chapter for the topic 'PPF' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 279,
+        "content": "Create a detailed learning chapter for the topic 'NPS' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 280,
+        "content": "Create a detailed learning chapter for the topic 'annuities' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 281,
+        "content": "Create a detailed learning chapter for the topic 'life insurance' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 282,
+        "content": "Create a detailed learning chapter for the topic 'term insurance' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 283,
+        "content": "Create a detailed learning chapter for the topic 'whole-life insurance' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 284,
+        "content": "Create a detailed learning chapter for the topic 'endowment plans' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 285,
+        "content": "Create a detailed learning chapter for the topic 'ULIPs' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 286,
+        "content": "Create a detailed learning chapter for the topic 'insurance vs investment' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 287,
+        "content": "Create a detailed learning chapter for the topic 'health insurance in greater depth' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 288,
+        "content": "Create a detailed learning chapter for the topic 'deductibles' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 289,
+        "content": "Create a detailed learning chapter for the topic 'co-pay' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 290,
+        "content": "Create a detailed learning chapter for the topic 'waiting periods' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 291,
+        "content": "Create a detailed learning chapter for the topic 'exclusions' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 292,
+        "content": "Create a detailed learning chapter for the topic 'claim procedures' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 293,
+        "content": "Create a detailed learning chapter for the topic 'property purchase economics' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 294,
+        "content": "Create a detailed learning chapter for the topic 'rent vs buy analysis' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 295,
+        "content": "Create a detailed learning chapter for the topic 'down payment' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 296,
+        "content": "Create a detailed learning chapter for the topic 'home-loan amortization' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 297,
+        "content": "Create a detailed learning chapter for the topic 'total ownership cost' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 298,
+        "content": "Create a detailed learning chapter for the topic 'education finance' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 299,
+        "content": "Create a detailed learning chapter for the topic 'scholarships' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 300,
+        "content": "Create a detailed learning chapter for the topic 'education loans' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 301,
+        "content": "Create a detailed learning chapter for the topic 'ROI of education' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 302,
+        "content": "Create a detailed learning chapter for the topic 'opportunity cost of education' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 303,
+        "content": "Create a detailed learning chapter for the topic 'futures' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 304,
+        "content": "Create a detailed learning chapter for the topic 'futures contracts' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 305,
+        "content": "Create a detailed learning chapter for the topic 'margin' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 306,
+        "content": "Create a detailed learning chapter for the topic 'leverage' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 307,
+        "content": "Create a detailed learning chapter for the topic 'expiry' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 308,
+        "content": "Create a detailed learning chapter for the topic 'mark-to-market' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 309,
+        "content": "Create a detailed learning chapter for the topic 'hedging' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 310,
+        "content": "Create a detailed learning chapter for the topic 'speculation' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 311,
+        "content": "Create a detailed learning chapter for the topic 'options' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 312,
+        "content": "Create a detailed learning chapter for the topic 'calls' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 313,
+        "content": "Create a detailed learning chapter for the topic 'puts' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 314,
+        "content": "Create a detailed learning chapter for the topic 'strike price' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 315,
+        "content": "Create a detailed learning chapter for the topic 'premium' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 316,
+        "content": "Create a detailed learning chapter for the topic 'expiry' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 317,
+        "content": "Create a detailed learning chapter for the topic 'intrinsic value' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 318,
+        "content": "Create a detailed learning chapter for the topic 'time value' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 319,
+        "content": "Create a detailed learning chapter for the topic 'option buyers vs sellers' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 320,
+        "content": "Create a detailed learning chapter for the topic 'derivatives as risk-management tools' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 321,
+        "content": "Create a detailed learning chapter for the topic 'commodity futures' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 322,
+        "content": "Create a detailed learning chapter for the topic 'index futures' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 323,
+        "content": "Create a detailed learning chapter for the topic 'forex' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 324,
+        "content": "Create a detailed learning chapter for the topic 'exchange rates' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 325,
+        "content": "Create a detailed learning chapter for the topic 'INR/USD' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 326,
+        "content": "Create a detailed learning chapter for the topic 'currency risk' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 327,
+        "content": "Create a detailed learning chapter for the topic 'international transactions' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 328,
+        "content": "Create a detailed learning chapter for the topic 'business finance' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 329,
+        "content": "Create a detailed learning chapter for the topic 'sole proprietorship' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 330,
+        "content": "Create a detailed learning chapter for the topic 'partnership' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 331,
+        "content": "Create a detailed learning chapter for the topic 'LLP' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 332,
+        "content": "Create a detailed learning chapter for the topic 'private limited companies' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 333,
+        "content": "Create a detailed learning chapter for the topic 'equity financing' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 334,
+        "content": "Create a detailed learning chapter for the topic 'debt financing' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 335,
+        "content": "Create a detailed learning chapter for the topic 'revenue' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 336,
+        "content": "Create a detailed learning chapter for the topic 'profit' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 337,
+        "content": "Create a detailed learning chapter for the topic 'cash flow' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 338,
+        "content": "Create a detailed learning chapter for the topic 'startup funding' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 339,
+        "content": "Create a detailed learning chapter for the topic 'career economics' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 340,
+        "content": "Create a detailed learning chapter for the topic 'salary growth' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 341,
+        "content": "Create a detailed learning chapter for the topic 'education cost' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 342,
+        "content": "Create a detailed learning chapter for the topic 'job stability' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 343,
+        "content": "Create a detailed learning chapter for the topic 'benefits' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 344,
+        "content": "Create a detailed learning chapter for the topic 'taxes' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 345,
+        "content": "Create a detailed learning chapter for the topic 'opportunity cost' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 346,
+        "content": "Create a detailed learning chapter for the topic 'career ROI' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 347,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: calculate the lifetime financial cost of a career' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 348,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: compare offers using total compensation rather than headline salary' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 349,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: calculate opportunity cost' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 350,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: stress-test major financial decisions' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 351,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: distinguish nominal return from real return' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 352,
+        "content": "Create a detailed learning chapter for the topic 'build a personal net-worth tracker' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 353,
+        "content": "Create a detailed learning chapter for the topic 'tax tracker and investment dashboard' (as part of LEVEL 4). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 354,
+        "content": "Create a detailed learning chapter for the topic 'First-job financial planning' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 355,
+        "content": "Create a detailed learning chapter for the topic 'salary negotiation' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 356,
+        "content": "Create a detailed learning chapter for the topic 'reading employment offers' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 357,
+        "content": "Create a detailed learning chapter for the topic 'CTC vs take-home' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 358,
+        "content": "Create a detailed learning chapter for the topic 'employee benefits' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 359,
+        "content": "Create a detailed learning chapter for the topic 'PF' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 360,
+        "content": "Create a detailed learning chapter for the topic 'taxation' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 361,
+        "content": "Create a detailed learning chapter for the topic 'creating a monthly financial system' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 362,
+        "content": "Create a detailed learning chapter for the topic 'emergency fund' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 363,
+        "content": "Create a detailed learning chapter for the topic 'sinking funds' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 364,
+        "content": "Create a detailed learning chapter for the topic 'budgeting systems' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 365,
+        "content": "Create a detailed learning chapter for the topic 'zero-based budgeting' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 366,
+        "content": "Create a detailed learning chapter for the topic '50/30/20-style frameworks and their limitations' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 367,
+        "content": "Create a detailed learning chapter for the topic 'cash-flow management' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 368,
+        "content": "Create a detailed learning chapter for the topic 'automated savings' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 369,
+        "content": "Create a detailed learning chapter for the topic 'automated investments' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 370,
+        "content": "Create a detailed learning chapter for the topic 'bill automation' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 371,
+        "content": "Create a detailed learning chapter for the topic 'account alerts' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 372,
+        "content": "Create a detailed learning chapter for the topic 'personal financial dashboards' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 373,
+        "content": "Create a detailed learning chapter for the topic 'advanced portfolio construction' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 374,
+        "content": "Create a detailed learning chapter for the topic 'asset allocation' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 375,
+        "content": "Create a detailed learning chapter for the topic 'diversification' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 376,
+        "content": "Create a detailed learning chapter for the topic 'rebalancing' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 377,
+        "content": "Create a detailed learning chapter for the topic 'goal-based investing' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 378,
+        "content": "Create a detailed learning chapter for the topic 'REITs' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 379,
+        "content": "Create a detailed learning chapter for the topic 'InvITs' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 380,
+        "content": "Create a detailed learning chapter for the topic 'international investing' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 381,
+        "content": "Create a detailed learning chapter for the topic 'ETFs' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 382,
+        "content": "Create a detailed learning chapter for the topic 'alternative investments' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 383,
+        "content": "Create a detailed learning chapter for the topic 'private equity' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 384,
+        "content": "Create a detailed learning chapter for the topic 'venture capital' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 385,
+        "content": "Create a detailed learning chapter for the topic 'liquidity' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 386,
+        "content": "Create a detailed learning chapter for the topic 'fees and access restrictions' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 387,
+        "content": "Create a detailed learning chapter for the topic 'advanced tax planning' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 388,
+        "content": "Create a detailed learning chapter for the topic 'retirement planning' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 389,
+        "content": "Create a detailed learning chapter for the topic 'financial independence' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 390,
+        "content": "Create a detailed learning chapter for the topic 'FIRE' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 391,
+        "content": "Create a detailed learning chapter for the topic 'savings rate' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 392,
+        "content": "Create a detailed learning chapter for the topic 'passive income' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 393,
+        "content": "Create a detailed learning chapter for the topic 'financial regulators' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 394,
+        "content": "Create a detailed learning chapter for the topic 'RBI' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 395,
+        "content": "Create a detailed learning chapter for the topic 'SEBI' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 396,
+        "content": "Create a detailed learning chapter for the topic 'IRDAI' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 397,
+        "content": "Create a detailed learning chapter for the topic 'PFRDA' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 398,
+        "content": "Create a detailed learning chapter for the topic 'banks' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 399,
+        "content": "Create a detailed learning chapter for the topic 'NBFCs' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 400,
+        "content": "Create a detailed learning chapter for the topic 'insurance companies' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 401,
+        "content": "Create a detailed learning chapter for the topic 'AMCs' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 402,
+        "content": "Create a detailed learning chapter for the topic 'stock exchanges' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 403,
+        "content": "Create a detailed learning chapter for the topic 'brokers' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 404,
+        "content": "Create a detailed learning chapter for the topic 'depositories' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 405,
+        "content": "Create a detailed learning chapter for the topic 'KYC' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 406,
+        "content": "Create a detailed learning chapter for the topic 'AML' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 407,
+        "content": "Create a detailed learning chapter for the topic 'investor protection' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 408,
+        "content": "Create a detailed learning chapter for the topic 'financial complaints' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 409,
+        "content": "Create a detailed learning chapter for the topic 'consumer rights' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 410,
+        "content": "Create a detailed learning chapter for the topic 'reading financial contracts' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 411,
+        "content": "Create a detailed learning chapter for the topic 'loan agreements' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 412,
+        "content": "Create a detailed learning chapter for the topic 'insurance policies' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 413,
+        "content": "Create a detailed learning chapter for the topic 'credit-card agreements' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 414,
+        "content": "Create a detailed learning chapter for the topic 'brokerage agreements' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 415,
+        "content": "Create a detailed learning chapter for the topic 'rental agreements' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 416,
+        "content": "Create a detailed learning chapter for the topic 'hidden charges' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 417,
+        "content": "Create a detailed learning chapter for the topic 'fees' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 418,
+        "content": "Create a detailed learning chapter for the topic 'penalties' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 419,
+        "content": "Create a detailed learning chapter for the topic 'clauses' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 420,
+        "content": "Create a detailed learning chapter for the topic 'negotiation of salary' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 421,
+        "content": "Create a detailed learning chapter for the topic 'rent' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 422,
+        "content": "Create a detailed learning chapter for the topic 'loans' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 423,
+        "content": "Create a detailed learning chapter for the topic 'contracts and freelance rates' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 424,
+        "content": "Create a detailed learning chapter for the topic 'estate planning' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 425,
+        "content": "Create a detailed learning chapter for the topic 'nominees' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 426,
+        "content": "Create a detailed learning chapter for the topic 'beneficiaries' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 427,
+        "content": "Create a detailed learning chapter for the topic 'wills' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 428,
+        "content": "Create a detailed learning chapter for the topic 'inheritance' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 429,
+        "content": "Create a detailed learning chapter for the topic 'succession' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 430,
+        "content": "Create a detailed learning chapter for the topic 'joint ownership' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 431,
+        "content": "Create a detailed learning chapter for the topic 'family finance' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 432,
+        "content": "Create a detailed learning chapter for the topic 'marriage finances' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 433,
+        "content": "Create a detailed learning chapter for the topic 'supporting parents' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 434,
+        "content": "Create a detailed learning chapter for the topic 'dependents' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 435,
+        "content": "Create a detailed learning chapter for the topic 'children's education planning' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 436,
+        "content": "Create a detailed learning chapter for the topic 'major purchases' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 437,
+        "content": "Create a detailed learning chapter for the topic 'house purchase' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 438,
+        "content": "Create a detailed learning chapter for the topic 'vehicle purchase' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 439,
+        "content": "Create a detailed learning chapter for the topic 'education decisions' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 440,
+        "content": "Create a detailed learning chapter for the topic 'rent vs buy' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 441,
+        "content": "Create a detailed learning chapter for the topic 'new vs used' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 442,
+        "content": "Create a detailed learning chapter for the topic 'cash vs financing' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 443,
+        "content": "Create a detailed learning chapter for the topic 'financial crisis management' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 444,
+        "content": "Create a detailed learning chapter for the topic 'job loss' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 445,
+        "content": "Create a detailed learning chapter for the topic 'medical emergencies' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 446,
+        "content": "Create a detailed learning chapter for the topic 'market crashes' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 447,
+        "content": "Create a detailed learning chapter for the topic 'recession' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 448,
+        "content": "Create a detailed learning chapter for the topic 'debt crisis' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 449,
+        "content": "Create a detailed learning chapter for the topic 'fraud response' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 450,
+        "content": "Create a detailed learning chapter for the topic 'account compromise' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 451,
+        "content": "Create a detailed learning chapter for the topic 'identity theft' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 452,
+        "content": "Create a detailed learning chapter for the topic 'financial scam detection' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 453,
+        "content": "Create a detailed learning chapter for the topic 'fake gurus' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 454,
+        "content": "Create a detailed learning chapter for the topic 'pump-and-dump schemes' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 455,
+        "content": "Create a detailed learning chapter for the topic 'deepfake scams' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 456,
+        "content": "Create a detailed learning chapter for the topic 'fake trading platforms' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 457,
+        "content": "Create a detailed learning chapter for the topic 'fake jobs' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 458,
+        "content": "Create a detailed learning chapter for the topic 'crypto scams' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 459,
+        "content": "Create a detailed learning chapter for the topic 'social engineering' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 460,
+        "content": "Create a detailed learning chapter for the topic 'financial due diligence' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 461,
+        "content": "Create a detailed learning chapter for the topic 'evaluating financial products' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 462,
+        "content": "Create a detailed learning chapter for the topic 'understanding return sources' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 463,
+        "content": "Create a detailed learning chapter for the topic 'risk analysis' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 464,
+        "content": "Create a detailed learning chapter for the topic 'liquidity analysis' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 465,
+        "content": "Create a detailed learning chapter for the topic 'fee analysis' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 466,
+        "content": "Create a detailed learning chapter for the topic 'regulatory verification' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 467,
+        "content": "Create a detailed learning chapter for the topic 'AI-assisted finance' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 468,
+        "content": "Create a detailed learning chapter for the topic 'AI for budgeting' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 469,
+        "content": "Create a detailed learning chapter for the topic 'AI for spreadsheet creation' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 470,
+        "content": "Create a detailed learning chapter for the topic 'AI for document analysis' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 471,
+        "content": "Create a detailed learning chapter for the topic 'AI for financial education' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 472,
+        "content": "Create a detailed learning chapter for the topic 'AI limitations' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 473,
+        "content": "Create a detailed learning chapter for the topic 'hallucination detection' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 474,
+        "content": "Create a detailed learning chapter for the topic 'privacy when using AI' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 475,
+        "content": "Create a detailed learning chapter for the topic 'never sharing OTP/PIN/password/card information with AI' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 476,
+        "content": "Create a detailed learning chapter for the topic 'spreadsheet finance' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 477,
+        "content": "Create a detailed learning chapter for the topic 'Excel/Google Sheets' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 478,
+        "content": "Create a detailed learning chapter for the topic 'formulas' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 479,
+        "content": "Create a detailed learning chapter for the topic 'SUM' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 480,
+        "content": "Create a detailed learning chapter for the topic 'IF' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 481,
+        "content": "Create a detailed learning chapter for the topic 'SUMIFS' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 482,
+        "content": "Create a detailed learning chapter for the topic 'XLOOKUP' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 483,
+        "content": "Create a detailed learning chapter for the topic 'FILTER' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 484,
+        "content": "Create a detailed learning chapter for the topic 'charts' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 485,
+        "content": "Create a detailed learning chapter for the topic 'pivot tables' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 486,
+        "content": "Create a detailed learning chapter for the topic 'financial calculators' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 487,
+        "content": "Create a detailed learning chapter for the topic 'compound-interest calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 488,
+        "content": "Create a detailed learning chapter for the topic 'EMI calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 489,
+        "content": "Create a detailed learning chapter for the topic 'SIP calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 490,
+        "content": "Create a detailed learning chapter for the topic 'inflation calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 491,
+        "content": "Create a detailed learning chapter for the topic 'retirement calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 492,
+        "content": "Create a detailed learning chapter for the topic 'CAGR calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 493,
+        "content": "Create a detailed learning chapter for the topic 'net-worth calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 494,
+        "content": "Create a detailed learning chapter for the topic 'debt-repayment calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 495,
+        "content": "Create a detailed learning chapter for the topic 'real-return calculator' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 496,
+        "content": "Create a detailed learning chapter for the topic 'scenario analysis' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 497,
+        "content": "Create a detailed learning chapter for the topic 'sensitivity analysis' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 498,
+        "content": "Create a detailed learning chapter for the topic 'best-case/worst-case analysis' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 499,
+        "content": "Create a detailed learning chapter for the topic 'financial stress testing' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 500,
+        "content": "Create a detailed learning chapter for the topic 'personal document management' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 501,
+        "content": "Create a detailed learning chapter for the topic 'encrypted storage' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 502,
+        "content": "Create a detailed learning chapter for the topic 'backups' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 503,
+        "content": "Create a detailed learning chapter for the topic 'financial data security' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 504,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: automate good financial behavior' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 505,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: keep emergency money separate from everyday spending' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 506,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: increase savings when income increases' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 507,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: review recurring subscriptions' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 508,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: compare total cost rather than monthly cost' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 509,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: maintain a personal net-worth statement' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 510,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: periodically rebalance financial goals' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 511,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: conduct an annual financial audit' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 512,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: maintain financial records and backups' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 513,
+        "content": "Create a detailed learning chapter for the topic 'Financial Trick: use AI as an assistant rather than an authority' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    },
+    {
+        "prompt_index": 514,
+        "content": "Create a detailed learning chapter for the topic 'final project: create a complete personal Financial Operating System and a simulated 18-to-retirement financial plan' (as part of LEVEL 5). Include key explanations, real-world examples, practical applications, and a short quiz or practice exercise to reinforce understanding."
+    }
+]

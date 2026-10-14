@@ -1,0 +1,40 @@
+{
+  "name": "finance-adventure",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "gen:curriculum": "node scripts/gen-curriculum.mjs",
+    "check": "tsx scripts/check-content.ts",
+    "check:fonts": "tsx scripts/font-policy.ts",
+    "test:sheet": "tsx scripts/check-sheet.ts",
+    "test:sync": "tsx scripts/check-sync.ts",
+    "test:e2e": "playwright test",
+    "test": "npm run check && npm run check:fonts && npm run test:sheet && npm run test:sync"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.58.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "framer-motion": "^14.0.0",
+    "lucide-react": "^1.51.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.9.1",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
