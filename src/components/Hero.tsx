@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import TechText from './TechText'
+import { releasedLevels, releasedChapterCount } from '../data/curriculum'
+import { SIMS } from './sims'
 
 /**
  * Home hero.
@@ -15,10 +17,12 @@ import TechText from './TechText'
  * label; the accessible content of the page lives in the elements below it.
  */
 
+// Derived from the released levels and the sim registry so the marketing
+// numbers can never drift from what the app actually ships.
 const STATS = [
-  { value: '508', label: 'chapters' },
-  { value: '11', label: 'live sims' },
-  { value: '5', label: 'levels' },
+  { value: String(releasedChapterCount), label: 'chapters live' },
+  { value: String(Object.keys(SIMS).length), label: 'interactive labs' },
+  { value: String(releasedLevels.length), label: 'levels live' },
 ]
 
 export function Hero({
@@ -77,7 +81,7 @@ export function Hero({
           className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/5 px-3 py-1.5 text-xs text-brand-300"
         >
           <Sparkles size={13} />
-          Levels 1 &amp; 2 are live · 145 chapters written
+          Levels 1–{releasedLevels.length} are live · {releasedChapterCount} chapters written
         </motion.div>
 
         {/* The interactive wordmark. Move your cursor across it, or drag a letter. */}
@@ -102,7 +106,7 @@ export function Hero({
             dashGap={3}
             strokeWidth={1.4}
             lineStyle="dashed"
-            reveal="area"
+            reveal="letter"
             draggable
             sweep={!reduceMotion}
             labels={!compact}

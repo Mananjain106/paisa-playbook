@@ -85,7 +85,7 @@ export const property: Record<string, Chapter> = {
     subtitle: 'The first big chunk of money that shapes the whole loan.',
     minutes: 5,
     blocks: [
-      scene4('loan-amort'),
+      scene4('downpayment-effect'),
       { kind: 'p', text: "A down payment is the part of the purchase price you pay from your own funds instead of borrowing. It matters because it reduces the loan amount, changes the interest bill over time, and often affects whether a loan is approved at all. The size of the down payment can shape the affordability and the long-term cost of the purchase more than people realise." },
       { kind: 'h', text: 'Why the down payment matters' },
       { kind: 'list', items: [

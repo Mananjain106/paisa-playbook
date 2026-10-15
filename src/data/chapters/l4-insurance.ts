@@ -46,9 +46,9 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'Simple, low-cost protection for a defined period.',
     minutes: 6,
     blocks: [
-      SCENE_0,
+      scene4('term-cover-rungs'),
       { kind: 'p', text: "Term insurance is the pure-protection version of life insurance: you pay a premium for a death benefit over a chosen term, and if you survive the term, there is typically no maturity payout beyond what the policy terms provide. Because it is focused on protection and not on savings, the cost per unit of cover is usually much lower than in blended products. That is the point." },
-      SCENE_0,
+      scene4('term-cover-rungs'),
       { kind: 'h', text: 'Why term cover is often the core of life protection' },
       { kind: 'list', items: [
         'It provides a large death benefit for a relatively small premium compared with savings-oriented policies.',
@@ -57,7 +57,7 @@ export const insurance: Record<string, Chapter> = {
         'It is usually the recommended base layer of life insurance where protection is the real need.',
       ] },
       { kind: 'callout', tone: 'tip', title: 'Match the cover to the dependency, not to the maximum number you can afford', text: "The point of term cover is to protect dependents if something happens to the earning member. The right amount depends on the people who rely on that income, the debts to be covered, and the years of support needed — not on buying the biggest policy that fits the budget. A well-sized term policy is a responsibility tool, not a trophy." },
-      SCENE_0,
+      scene4('term-cover-rungs'),
       { kind: 'example', title: 'A practical term decision', text: 'If the family would face a serious loss of income on the death of the main earner, term insurance can bridge that gap for the years dependents need support. If the dependents are minimal and debts are small, the need is much smaller. Term insurance is not one-size-fits-all; it is sized to the risk it is meant to cover.' },
       { kind: 'terms', items: [
         { term: 'term insurance', meaning: 'a life insurance product that provides cover for a fixed term, paying a benefit on death during the term, often with little or no savings element.' },
@@ -83,9 +83,9 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'Protection that lasts for life, with a different cost and purpose.',
     minutes: 6,
     blocks: [
-      SCENE_0,
+      scene4('whole-life-bundle'),
       { kind: 'p', text: "Whole-life insurance is life cover that lasts for the insured’s life rather than a fixed term. It can serve a specific purpose — for example, leaving a defined benefit to dependents regardless of when death occurs, or providing permanent cover for a continuing obligation. The trade-off is usually cost: permanent cover tends to be more expensive per unit of protection than pure term cover." },
-      SCENE_0,
+      scene4('whole-life-bundle'),
       { kind: 'h', text: 'When whole-life can make sense' },
       { kind: 'list', items: [
         'When the need for cover does not end at a fixed age — for example, a permanent obligation or a desire to leave a guaranteed benefit.',
@@ -94,7 +94,7 @@ export const insurance: Record<string, Chapter> = {
         'When it serves a real purpose rather than being chosen because it sounds like a complete solution.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Permanent cover is not automatically better cover', text: "A longer-lasting policy is not always the right answer. For many people, the real need is protection during the dependent years, which can be served by term cover. Whole-life is useful for specific purposes, but it is not a default upgrade from term insurance; it is a different tool with a different cost structure." },
-      SCENE_0,
+      scene4('whole-life-bundle'),
       { kind: 'example', title: 'A purpose-led choice', text: 'Someone with a lifelong dependent or a specific bequest goal might consider whole-life cover so that the benefit persists regardless of when death occurs. Someone whose main concern is protecting a young family during the years they rely on income might be better served by term cover sized to that period. The right choice depends on the purpose, not the label.' },
       { kind: 'terms', items: [
         { term: 'whole-life insurance', meaning: 'a life insurance product that provides cover for the insured’s whole life, usually at a higher cost than term cover and sometimes with a savings element.' },
@@ -120,9 +120,9 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'Protection with a savings promise — and a cost for that promise.',
     minutes: 6,
     blocks: [
-      SCENE_0,
+      scene4('endowment-mix'),
       { kind: 'p', text: "An endowment plan is a life insurance product that combines protection with a maturity benefit: if the insured survives the policy term, the plan pays a sum at the end, and if the insured dies during the term, a death benefit is paid. The appeal is the promise of both protection and a lump sum at maturity. The caution is that this combination usually comes at a higher cost than buying protection and savings separately." },
-      SCENE_0,
+      scene4('endowment-mix'),
       { kind: 'h', text: 'What endowment plans are trying to do' },
       { kind: 'list', items: [
         'Provide life cover during the term.',
@@ -131,7 +131,7 @@ export const insurance: Record<string, Chapter> = {
         'Appeal to people who like the idea of a guaranteed-ish end benefit alongside protection.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'The endowment trade-off', text: "The problem is not that endowment plans are bad by definition. The problem is that they often cost more for the same protection and deliver lower growth than a simple term policy plus a separate investment. The convenience is real, but convenience has a price. Ask what each part actually costs and whether the combined product is still worth it." },
-      SCENE_0,
+      scene4('endowment-mix'),
       { kind: 'example', title: 'Separating the jobs', text: 'Consider a family that wants both life cover and a savings outcome. If it buys an endowment plan, it gets one product doing both jobs. If it buys term insurance for protection and invests the difference separately, it may get better-targeted protection and a more transparent return. The second route is not always right, but it is often worth comparing before committing to the blended product.' },
       { kind: 'terms', items: [
         { term: 'endowment plan', meaning: 'a life insurance policy that provides both protection and a maturity benefit if the insured survives the term.' },
@@ -157,9 +157,9 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'Insurance with an investment flavour — understand what you are paying for.',
     minutes: 6,
     blocks: [
-      SCENE_0,
+      scene4('ulip-charges'),
       { kind: 'p', text: "ULIP stands for Unit-Linked Insurance Plan. It is a life insurance product where part of the premium goes to insurance cover and part is invested in units linked to market funds, similar in spirit to a mix of protection and investment. The attraction is the idea of one product that does both. The reality is that ULIPs can be useful for some people, but they are not automatically the best way to do either job." },
-      SCENE_0,
+      scene4('ulip-charges'),
       { kind: 'h', text: 'What to watch in a ULIP' },
       { kind: 'list', items: [
         'The split between insurance cost and investment: understand how much of the premium is doing each job.',
@@ -168,7 +168,7 @@ export const insurance: Record<string, Chapter> = {
         'The lock-in and structure: these plans often have features that make them less flexible than a separate insurance and investment setup.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'ULIPs are not a secret high-return shortcut', text: "ULIPs can be attractive because they blend cover and market-linked investments, but the blend also means you should compare them against the simple alternative: term cover plus a separate investment. If the combined product does not beat that clearly after costs, the convenience may not be worth it." },
-      SCENE_0,
+      scene4('ulip-charges'),
       { kind: 'example', title: 'A comparison habit', text: 'Before buying a ULIP, compare the insurance cover on a standalone term plan and the investment on a product you understand well. Ask whether the ULIP’s combined structure gives you something genuinely better, or whether you are paying extra for packaging. The answer is sometimes yes, often no — but you should know which.' },
       { kind: 'terms', items: [
         { term: 'ULIP', meaning: 'Unit-Linked Insurance Plan — a life insurance product where part of the premium is invested in market-linked units, combining protection and investment in one product.' },
@@ -269,7 +269,7 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'The part of the claim you pay first — and why that can be a good thing.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('deductible-tradeoff'),
       { kind: 'p', text: "A deductible is the amount you agree to bear before the insurer pays the rest of a covered claim. It is a simple idea, but it has a big effect on the policy’s cost and on how you use it. A higher deductible usually lowers the premium, because you are taking on more of the small claims yourself and leaving the insurer to cover the larger ones." },
       { kind: 'h', text: 'Why deductibles exist' },
       { kind: 'list', items: [
@@ -303,7 +303,7 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'Another way you share the claim cost with the insurer.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('copay-slice'),
       { kind: 'p', text: "A co-pay is the share of a covered claim that you agree to pay each time, usually expressed as a percentage or a fixed amount. Like a deductible, it reduces the insurer’s exposure to every claim, but it works differently: instead of a one-time threshold, it is a shared slice of the claim that can apply more often. The practical effect is that you bear part of the cost when you claim, which can lower the premium." },
       { kind: 'h', text: 'Co-pay versus deductible' },
       { kind: 'list', items: [
@@ -338,7 +338,7 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'The time before some covers actually kick in.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('waiting-period'),
       { kind: 'p', text: "A waiting period is the time you must wait before certain parts of the cover become payable. It is a standard feature in many health policies because insurers need to reduce the risk of people buying cover only when they already know a claim is coming. The important thing is that waiting periods are part of the value you buy: a policy is not fully useful on day one for every condition." },
       { kind: 'h', text: 'Why waiting periods matter' },
       { kind: 'list', items: [
@@ -373,7 +373,7 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'What the policy deliberately does not cover.',
     minutes: 5,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('cover-exclusions'),
       { kind: 'p', text: "Exclusions are the parts of risk that the policy does not cover. They are not a hidden flaw; they are part of the product’s definition. The mistake people make is assuming a policy covers broadly because it covers a lot. A health policy, for example, may cover hospitalisation broadly while still excluding specific conditions, specific treatments, or specific circumstances until certain conditions are met." },
       { kind: 'h', text: 'How to read exclusions usefully' },
       { kind: 'list', items: [
@@ -408,7 +408,7 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'The practical steps that turn a policy into a payout.',
     minutes: 6,
     blocks: [
-      scene4('cover-ladder'),
+      scene4('cover-claim-steps'),
       { kind: 'p', text: "A policy is only useful if you can actually make a claim when the event happens. That means the claim process — intimation, documents, approvals, and settlement — matters as much as the coverage on paper. The best policy is the one you can use without a nightmare at the worst possible time. Understanding the process in advance removes a lot of stress when you need it." },
       { kind: 'h', text: 'The steps that usually matter' },
       { kind: 'list', items: [

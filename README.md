@@ -8,14 +8,16 @@ financial system (RBI, UPI, TDS, EPF, Nifty/Sensex).
 
 | Level | Topic | Chapters | Content |
 | --- | --- | --- | --- |
-| 1 | Money Foundations | 64 | ✅ fully written |
-| 2 | Your Money Machine | 81 | ✅ fully written |
-| 3 | The Investing World | 94 | syllabus mapped |
-| 4 | Taxes & Advanced Money | 108 | syllabus mapped |
+| 1 | Money Foundations | 64 | ✅ live |
+| 2 | Your Money Machine | 81 | ✅ live |
+| 3 | The Investing World | 94 | ✅ live |
+| 4 | Taxes & Advanced Money | 108 | ✅ live |
 | 5 | Mastery & Life Planning | 161 | syllabus mapped |
 
-The full syllabus is generated from `.agents/workflow/Prompts.json`, so all 508 chapter titles exist in the
-app from day one. Unwritten chapters render an explicit "queued for writing" page rather than a broken one.
+**Levels 1–4 (347 chapters) are released** and playable end to end: every chapter carries a quiz, an animated
+illustration and a hands-on simulation, and no level is gated behind progress. The full syllabus is generated
+from `.agents/workflow/Prompts.json`, so all 508 chapter titles exist in the app from day one; the remaining
+Level 5 chapters render an explicit "queued for writing" page rather than a broken one.
 
 ## Commands
 

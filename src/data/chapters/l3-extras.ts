@@ -5,47 +5,22 @@ import type { Extra } from '../../lib/extras'
  * Gap-filling illustrations and simulations for Level 3 — The Investing World.
  *
  * Each entry supplies the one block the chapter was missing, with a caption
- * written for that specific topic. Chapters that already carry both a sim and
- * an illustration are intentionally absent from this map.
+ * written for that specific topic.
+ *
+ * The market, mutual-fund, fixed-income and financial-statement chapters
+ * (l3-010 to l3-013, l3-021 to l3-063) were rewritten with their own
+ * illustration and simulation, so they are deliberately absent here: adding
+ * them would only duplicate what the chapter already carries. What remains are
+ * the chapters that still need one of the two blocks supplied.
  */
 export const l3Extras: Record<string, Extra> = {
   // ---------------------------------------------------------------- sims
   'l3-009': { sim: sim('compound', 'A monthly deposit that compounds — change the amount and the tenure.') },
-  'l3-011': { sim: sim('bond', 'Treasury bills sell at a discount to face value; that gap is your return.') },
   'l3-014': { sim: sim('bond', 'Par, coupon, maturity, yield — move one and watch the rest respond.') },
   'l3-015': { sim: sim('bond', 'Change the coupon and see how a bond\u2019s income stream is priced.') },
   'l3-016': { sim: sim('bond', 'Face value is what is repaid at maturity — it is not the price you pay today.') },
   'l3-017': { sim: sim('bond', 'A longer maturity means a bigger price swing when rates move.') },
   'l3-020': { sim: sim('bond', 'A weaker borrower must offer a higher yield — watch the spread widen.') },
-  'l3-021': { sim: sim('market', 'Run a bull, bear and crash to feel what owning a stock really does.') },
-  'l3-022': { sim: sim('market', 'Test how a share\u2019s price moves when market sentiment changes.') },
-  'l3-023': { sim: sim('valuation', 'Ownership is a claim on profits — see how earnings drive value.') },
-  'l3-024': { sim: sim('market', 'Watch total return split into price change and the dividend you actually receive.') },
-  'l3-025': { sim: sim('market', 'Hold through different paths and see where the gain really comes from.') },
-  'l3-026': { sim: sim('market', 'A screen of buyers and sellers: see how an exchange sets a price.') },
-  'l3-027': { sim: sim('market', 'The NSE floor in miniature — run a cycle and watch the index move.') },
-  'l3-028': { sim: sim('market', 'India\u2019s oldest exchange in miniature — test a full market cycle.') },
-  'l3-029': { sim: sim('feedrag', 'Brokerage, STT and stamp duty quietly drag every trade — see it add up.') },
-  'l3-030': { sim: sim('market', 'Buy, hold and sell: your demat account is where the shares actually live.') },
-  'l3-031': { sim: sim('market', 'Place a trade and see how the order type changes the price you get.') },
-  'l3-032': { sim: sim('market', 'The gap between the bid and the ask is the first cost of any trade.') },
-  'l3-033': { sim: sim('market', 'A market order accepts whatever price the book offers — try it.') },
-  'l3-034': { sim: sim('market', 'A limit order sets your price; the trade may or may not happen.') },
-  'l3-035': { sim: sim('market', 'You pay now and receive the shares at settlement — see the timing at work.') },
-  'l3-036': { sim: sim('valuation', 'Price times shares outstanding — change either and watch the market cap.') },
-  'l3-037': { sim: sim('market', 'Small caps swing harder — compare how each size rides a cycle.') },
-  'l3-038': { sim: sim('valuation', 'Revenue is the top line; see how it flows down into what the owner keeps.') },
-  'l3-039': { sim: sim('valuation', 'Every rupee of cost comes off before profit — move the numbers.') },
-  'l3-041': { sim: sim('valuation', 'What the company owns, and how it is funded — read the balance.') },
-  'l3-042': { sim: sim('valuation', 'Debt and obligations: watch what leverage does to returns and risk.') },
-  'l3-043': { sim: sim('valuation', 'Profit is an opinion; cash is a fact — compare the two.') },
-  'l3-044': { sim: sim('valuation', 'The statements brought to life: type numbers and watch the ratios update.') },
-  'l3-052': { sim: sim('feedrag', 'The AMC takes its expense ratio off the top every year — see the drag.') },
-  'l3-053': { sim: sim('portfolio', 'NAV is assets minus liabilities, per unit — watch it move with the portfolio.') },
-  'l3-057': { sim: sim('portfolio', 'Blend equity and debt and see the return-and-swing trade-off.') },
-  'l3-061': { sim: sim('portfolio', 'A basket that trades like a share — check the allocation and its drift.') },
-  'l3-062': { sim: sim('market', 'The Nifty 50 in miniature: run a cycle and watch the index.') },
-  'l3-063': { sim: sim('market', 'Thirty large companies, one number — test a market cycle.') },
   'l3-068': { sim: sim('portfolio', 'Gold as a diversifier: add it and watch portfolio volatility fall.') },
   'l3-069': { sim: sim('portfolio', 'Paper gold with a live price — see its role in a mixed portfolio.') },
   'l3-071': { sim: sim('portfolio', 'Silver swings harder than gold — see the effect on a balanced portfolio.') },
@@ -64,26 +39,14 @@ export const l3Extras: Record<string, Extra> = {
   // ---------------------------------------------------------------- scenes
   'l3-005': { scene: scene('emergency-ladder', 'Liquidity is the rung you can reach today — the rest takes time.') },
   'l3-006': { scene: scene('allocation-pie', 'One slice can fail without sinking the whole plate.') },
-  'l3-013': { scene: scene('yield-curve', 'A safer borrower pays less, a weaker one pays more — the curve shows it.') },
   'l3-018': { scene: scene('yield-curve', 'Yield is the return you actually get at the price you pay.') },
-  'l3-040': { scene: scene('profit-waterfall', 'Revenue cascades down: costs first, then taxes, then what is left.') },
-  'l3-045': { scene: scene('profit-waterfall', 'Profit divided by shares — see how the per-share figure is built.') },
-  'l3-046': { scene: scene('market-cap-ladder', 'Price against earnings: what the market is willing to pay.') },
-  'l3-047': { scene: scene('market-cap-ladder', 'Price against book value — cheap or expensive?') },
-  'l3-048': { scene: scene('profit-waterfall', 'Profit against shareholders\u2019 equity — the return the business earns.') },
-  'l3-049': { scene: scene('profit-waterfall', 'How much of the business is funded by borrowing versus by owners.') },
-  'l3-050': { scene: scene('profit-waterfall', 'How many paise of each rupee of sales survive as profit.') },
-  'l3-051': { scene: scene('allocation-pie', 'Many investors\u2019 money pooled into one diversified basket.') },
-  'l3-054': { scene: scene('passive-vs-active', 'A manager takes calls; an index simply follows the market.') },
-  'l3-056': { scene: scene('yield-curve', 'Debt funds own bonds, so their returns track the yields in the curve.') },
-  'l3-059': { scene: scene('interest-growth', 'Small, regular amounts compound quietly — the curve does the work.') },
   'l3-065': { scene: scene('passive-vs-active', 'Active chases the market; passive accepts it. Compare the outcomes.') },
   'l3-070': { scene: scene('gold-role', 'Commodities behave differently from shares — that is the point.') },
   'l3-076': { scene: scene('property-cashflow', 'Rent in, costs out — what is actually left each year.') },
   'l3-082': { scene: scene('emi-split', 'Most of an early EMI is interest; the principal catches up later.') },
   'l3-084': { scene: scene('property-cashflow', 'Thin yields and slow exits are the real risks of property.') },
-  'l3-086': { scene: scene('allocation-pie', 'Spread across assets that fail differently, not just across names.') },
+  'l3-086': { scene: scene('diversify-fail', 'Spread across assets that fail differently, not just across names.') },
   'l3-089': { scene: scene('real-vs-nominal', 'A great past return is not a promise about the future.') },
   'l3-092': { scene: scene('time-horizon', 'Same plan, full cycle — would you have held on through it?') },
-  'l3-094': { scene: scene('allocation-pie', 'Target weights versus actual weights — that gap is what you track.') },
+  'l3-094': { scene: scene('target-vs-actual', 'Target weights versus actual weights — that gap is what you track.') },
 }

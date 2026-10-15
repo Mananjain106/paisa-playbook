@@ -28,3 +28,9 @@ dist-ssr
 .env.*
 !.env.example
 backend.env
+
+# Device-side content-fix tools
+_authoring_tools/
+
+# Missing the RealBlue Bluelight blocker config
+_authoring_tools/

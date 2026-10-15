@@ -1,0 +1,48 @@
+import type { Chapter } from '../../types'
+import { l5Career } from './l5-career'
+import { l5Money } from './l5-money'
+import { l5System } from './l5-system'
+import { l5InvestA } from './l5-invest'
+import { l5RetireA } from './l5-retire'
+import { l5InstA } from './l5-inst'
+import { l5InstB } from './l5-inst2'
+import { l5InstC } from './l5-inst3'
+
+/**
+ * Authored Level 5 chapters, keyed by chapter id.
+ *
+ * Level 5 has 161 chapters. They are authored in batches, one theme at a time,
+ * and each batch adds its own module here:
+ *
+ *   l5-career.ts   band 1, batch 1 — first salary, negotiation, offers, CTC (l5-001 to l5-004)
+ *   l5-money.ts    band 1, batch 2 — benefits, PF, taxation and the monthly money system (l5-005 to l5-014)
+ *   l5-system.ts   band 1, batch 3 — savings, investment and bill automation, alerts, dashboards (l5-015 to l5-019)
+ *   l5-invest.ts   band 2, batch 1 — portfolio construction, allocation, diversification, rebalancing, goals,
+ *                  REITs, InvITs, international investing, ETFs, alternatives (l5-020 to l5-029)
+ *   l5-retire.ts   band 2, batch 2 — private equity, venture capital, liquidity, fees, advanced tax,
+ *                  retirement, independence, FIRE, savings rate, passive income (l5-030 to l5-039)
+ *   l5-inst.ts     band 3, batch 1 — regulators, the RBI, SEBI, IRDAI and PFRDA, banks, NBFCs,
+ *                  insurers, asset managers and exchanges (l5-040 to l5-049)
+ *   l5-inst2.ts    band 3, batch 2 — brokers, depositories, KYC and AML, investor protection,
+ *                  complaints and consumer rights, and the contracts people sign (l5-050 to l5-059)
+ *   l5-inst3.ts    band 3, batch 3 — card and broking terms, tenancy, hidden charges, fees,
+ *                  penalties and clauses, then negotiating pay, rent, loans and rates
+ *                  (l5-060 to l5-070)
+ *
+ * The plan for every chapter — including the ones not yet written, with their
+ * goal, topics, illustration, simulation and sources — lives in
+ * `src/data/level5-plan.ts`. `npm run check` keeps this file and the plan in
+ * step, so a chapter cannot ship without its own illustration, its own lab,
+ * a quiz of at least three explained questions, and a linked official source
+ * with a verification date.
+ */
+export const level5: Record<string, Chapter> = {
+  ...l5Career,
+  ...l5Money,
+  ...l5System,
+  ...l5InvestA,
+  ...l5RetireA,
+  ...l5InstA,
+  ...l5InstB,
+  ...l5InstC,
+}

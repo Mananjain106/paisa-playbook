@@ -171,7 +171,7 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'Replacing the income your family depends on',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'insurance-umbrella', caption: 'Life cover protects dependants. With none, the umbrella has little to shelter.' },
+      { kind: 'scene', name: 'life-cover-dependants', caption: 'Life cover protects dependants. With none, the umbrella has little to shelter.' },
       { kind: 'p', text: 'Life insurance pays a sum to your family when you die. Its only purpose is to replace the income your household loses — which means its value is entirely about dependents, not about you.' },
       {
         kind: 'table',
@@ -255,7 +255,7 @@ export const insurance: Record<string, Chapter> = {
     subtitle: 'Mandatory, but heavily overpriced in India',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'insurance-umbrella', caption: 'Third-party cover matters most when the accident is worst — which is exactly when the statutory cap bites.' },
+      { kind: 'scene', name: 'motor-third-party', caption: 'Third-party cover matters most when the accident is worst — which is exactly when the statutory cap bites.' },
       { kind: 'p', text: 'Motor insurance is compulsory for every registered vehicle in India. It is one of the few places where the law decides the minimum, and the gap between the legal minimum and a sensible policy is where most of the cost sits.' },
       {
         kind: 'table',

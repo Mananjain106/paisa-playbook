@@ -125,7 +125,7 @@ export const foundations: Record<string, Chapter> = {
         title: 'India specifically',
         text: 'India has layered its own history onto this: silver rupees, then the colonial shift to a sterling-linked rupee, the 1957 decimalisation, demonetisation in 2016 to remove old ₹500 and ₹1000 notes, and now a UPI system that settles more retail payments than cards do.',
       },
-      { kind: 'sim', name: 'sheet', caption: 'Dig into your own statement later — but first, see how a payment rail becomes the backbone of daily life.' },
+      { kind: 'sim', name: 'sheet', caption: 'Age each form of money, from cowrie shells to UPI, and see how recent the money you use daily really is.' },
       {
         kind: 'table',
         caption: 'The Indian rupee timeline',

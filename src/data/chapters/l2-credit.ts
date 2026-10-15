@@ -87,7 +87,7 @@ export const credit: Record<string, Chapter> = {
     subtitle: 'Small amounts with long memories',
     minutes: 3,
     blocks: [
-      { kind: 'scene', name: 'shield', caption: 'The fee is small. The record it leaves is not.' },
+      { kind: 'scene', name: 'late-fee-record', caption: 'The fee is small. The record it leaves is not.' },
       { kind: 'p', text: 'A late fee is a fixed charge for missing a due date. The amount is trivial; the consequences are not. Late payments are one of the most heavily weighted factors in credit scoring, and they stay on your record for years.' },
       {
         kind: 'table',

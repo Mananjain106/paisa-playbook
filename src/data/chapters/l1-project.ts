@@ -48,7 +48,7 @@ export const project: Record<string, Chapter> = {
           'Review weekly for fifteen minutes and look for patterns, not for guilt.',
         ],
       },
-      { kind: 'sim', name: 'sheet', caption: 'Build the tracker itself here: enter transactions in columns and total them with formulas.' },
+      { kind: 'sim', name: 'sheet', caption: 'Build the tracker itself here: one column of expenses, then the four formulas that read it.' },
       {
         kind: 'callout',
         tone: 'tip',
@@ -340,7 +340,7 @@ export const project: Record<string, Chapter> = {
         title: 'Act on two, not ten',
         text: 'A month of tracking produces a long list of possible changes. Trying to fix everything at once usually means fixing nothing. Pick the two largest, change them, and keep tracking for another month. Repeat.',
       },
-      { kind: 'sim', name: 'sheet', caption: 'Use the spreadsheet as your tracker: enter a month of expenses and total by category.' },
+      { kind: 'sim', name: 'sheet', caption: 'Track twelve days honestly in the spreadsheet, then measure how much of the month you actually covered.' },
     ],
     quiz: [
       {

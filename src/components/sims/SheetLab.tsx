@@ -1,42 +1,30 @@
 import { useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { displayValue, evaluateCell, refsUsed, type Sheet } from '../../lib/sheet'
-import { rupees } from '../../lib/format'
+import { sheetFallback, sheetScenarios } from '../../data/sheet-scenarios'
 
 const COLS = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-const ROWS = Array.from({ length: 12 }, (_, i) => i + 1)
-
-const starter: Sheet = {
-  A1: 'Date', B1: 'Category', C1: 'Type', D1: 'Amount', E1: 'Need or Want',
-  A2: '01 Mar', B2: 'Rent', C2: 'Fixed', D2: '15000', E2: 'Need',
-  A3: '02 Mar', B3: 'Groceries', C3: 'Variable', D3: '4200', E3: 'Need',
-  A4: '03 Mar', B4: 'Coffee', C4: 'Variable', D4: '350', E4: 'Want',
-  A5: '04 Mar', B5: 'Movie', C5: 'Variable', D5: '900', E5: 'Want',
-  A6: '05 Mar', B6: 'Bijli bill', C6: 'Fixed', D6: '1800', E6: 'Need',
-  A7: '06 Mar', B7: 'Shopping', C7: 'Variable', D7: '2600', E7: 'Want',
-  A8: '07 Mar', B8: 'Salon', C8: 'Variable', D8: '700', E8: 'Want',
-  F1: 'Monthly income', G1: '50000',
-  F2: 'Total expenses', G2: '=SUM(D2:D8)',
-  F3: 'Wants total', G3: '=SUMIF(E2:E8,"Want",D2:D8)',
-  F4: 'Needs total', G4: '=SUMIF(E2:E8,"Need",D2:D8)',
-  F5: 'Savings left', G5: '=G1-G2',
-  F6: 'Saving rate %', G6: '=ROUND((G5/G1)*100,1)',
-}
-
-const TASKS = [
-  { cell: 'G2', ask: 'Total of all expenses', expect: 25550, hint: '=SUM(D2:D8)' },
-  { cell: 'G3', ask: 'How much went on wants?', expect: 4550, hint: '=SUMIF(E2:E8,"Want",D2:D8)' },
-  { cell: 'G5', ask: 'What is left after expenses?', expect: 24450, hint: '=G1-G2' },
-  { cell: 'G6', ask: 'Saving rate, rounded to 1 decimal', expect: 48.9, hint: '=ROUND((G5/G1)*100,1)' },
-]
+const ROWS = Array.from({ length: 14 }, (_, i) => i + 1)
 
 const PALETTE = ['#4ade80', '#38bdf8', '#c084fc', '#facc15', '#fb923c']
 
-export function SheetLab() {
-  const [sheet, setSheet] = useState<Sheet>(starter)
-  const [selected, setSelected] = useState('G2')
-  const [draft, setDraft] = useState(starter.G2 ?? '')
+type SheetLabProps = {
+  /**
+   * The chapter the lab is being rendered inside. Each chapter gets its own
+   * dataset and assignment from `sheetScenarios`; unknown chapters fall back
+   * to a generic sheet so the lab is never blank.
+   */
+  chapterId?: string
+}
+
+export function SheetLab({ chapterId }: SheetLabProps) {
+  const scenario = (chapterId && sheetScenarios[chapterId]) || sheetFallback
+  const first = scenario.tasks[0].cell
+  const [sheet, setSheet] = useState<Sheet>(scenario.starter)
+  const [selected, setSelected] = useState(first)
+  const [draft, setDraft] = useState(scenario.starter[first] ?? '')
   const [checked, setChecked] = useState(false)
+  const [showDebrief, setShowDebrief] = useState(false)
 
   const values = useMemo(() => {
     const out: Record<string, ReturnType<typeof evaluateCell>> = {}
@@ -71,13 +59,28 @@ export function SheetLab() {
     setChecked(false)
   }
 
-  const allCorrect = TASKS.every((t) => {
+  const reset = () => {
+    setSheet(scenario.starter)
+    setSelected(first)
+    setDraft(scenario.starter[first] ?? '')
+    setChecked(false)
+    setShowDebrief(false)
+  }
+
+  const taskState = scenario.tasks.map((t) => {
     const v = values[t.cell]
-    return typeof v === 'number' && Math.abs(v - t.expect) < 0.05
+    return { ...t, ok: typeof v === 'number' && Math.abs(v - t.expect) < 0.05 }
   })
+  const done = taskState.filter((t) => t.ok).length
+  const allCorrect = done === taskState.length
 
   return (
     <div className="space-y-4">
+      <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+        <h4 className="font-display text-white">{scenario.title}</h4>
+        <p className="mt-1 text-sm text-ink-300">{scenario.brief}</p>
+      </div>
+
       <div className="overflow-x-auto rounded-xl border border-white/10">
         <table className="w-full border-collapse text-sm">
           <thead>
@@ -103,6 +106,7 @@ export function SheetLab() {
                   const isSel = selected === addr
                   const hl = inRange(addr)
                   const isError = typeof val === 'object'
+                  const isTask = scenario.tasks.some((t) => t.cell === addr)
                   return (
                     <td
                       key={addr}
@@ -111,9 +115,11 @@ export function SheetLab() {
                         setDraft(raw)
                         setChecked(false)
                       }}
+                      title={isTask ? 'This cell is part of the assignment' : undefined}
                       className={`cursor-pointer border-b border-white/5 px-2 py-1 transition ${
                         isSel ? 'bg-brand-400/15 ring-1 ring-inset ring-brand-400/50'
                           : hl ? 'bg-sky-400/15'
+                          : isTask && raw === '' ? 'bg-amber-400/5 hover:bg-amber-400/10'
                           : 'hover:bg-white/5'
                       }`}
                     >
@@ -148,69 +154,79 @@ export function SheetLab() {
           Enter
         </button>
         <button
-          onClick={() => { setSheet(starter); setSelected('G2'); setDraft(starter.G2 ?? ''); setChecked(false) }}
+          onClick={reset}
           className="rounded-md border border-white/15 px-3 py-1 text-xs text-ink-300 transition hover:text-white"
         >
-          Reset
+          Reset sheet
         </button>
       </div>
 
-      <div className="grid gap-3 md:grid-cols-[1.2fr_1fr]">
-        <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-          <h4 className="mb-2 font-display text-white">Try these (edit cells G2–G6)</h4>
-          <ul className="space-y-2">
-            {TASKS.map((t, i) => {
-              const v = values[t.cell]
-              const ok = typeof v === 'number' && Math.abs(v - t.expect) < 0.05
-              return (
+      <div className="grid gap-3 md:grid-cols-[1.15fr_1fr]">
+        <div className="space-y-3">
+          <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <h4 className="mb-2 font-display text-white">Assignment</h4>
+            <ol className="space-y-1.5 text-sm text-ink-300">
+              {scenario.steps.map((s, i) => (
+                <li key={s} className="flex gap-2">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 text-[11px] font-bold text-ink-200">
+                    {i + 1}
+                  </span>
+                  <span>{s}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+            <div className="mb-2 flex items-center justify-between">
+              <h4 className="font-display text-white">Cells to fill in</h4>
+              <span className="text-xs text-ink-400">
+                {done} of {taskState.length} done
+              </span>
+            </div>
+            <ul className="space-y-2">
+              {taskState.map((t, i) => (
                 <li key={t.cell} className="flex items-start gap-2 text-sm">
                   <span
                     className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[11px] font-bold"
-                    style={{ background: ok ? '#34e0a1' : PALETTE[i % PALETTE.length], color: '#11131f' }}
+                    style={{ background: t.ok ? '#34e0a1' : PALETTE[i % PALETTE.length], color: '#11131f' }}
                   >
-                    {ok ? '✓' : i + 1}
+                    {t.ok ? '✓' : i + 1}
                   </span>
                   <span className="text-ink-200">
                     <strong className="font-mono text-xs text-white">{t.cell}</strong> — {t.ask}
-                    <span className="mt-0.5 block text-xs text-ink-500">hint: <code className="text-brand-300">{t.hint}</code></span>
+                    <span className="mt-0.5 block text-xs text-ink-500">
+                      hint: <code className="text-brand-300">{t.hint}</code>
+                    </span>
                   </span>
                 </li>
-              )
-            })}
-          </ul>
-          <button
-            onClick={() => setChecked(true)}
-            className="mt-3 rounded-lg border border-brand-400/40 bg-brand-400/10 px-3 py-1.5 text-xs font-semibold text-brand-300 transition hover:bg-brand-400/20"
-          >
-            Check my answers
-          </button>
-          <AnimateWrap show={checked}>
-            <motion.div
-              initial={{ opacity: 0, y: -6 }}
-              animate={{ opacity: 1, y: 0 }}
-              className={`mt-2 rounded-lg p-2.5 text-xs ${allCorrect ? 'bg-brand-400/15 text-brand-300' : 'bg-amber-400/10 text-amber-200'}`}
+              ))}
+            </ul>
+            <button
+              onClick={() => setChecked(true)}
+              className="mt-3 rounded-lg border border-brand-400/40 bg-brand-400/10 px-3 py-1.5 text-xs font-semibold text-brand-300 transition hover:bg-brand-400/20"
             >
-              {allCorrect
-                ? 'All correct! You just built a budget with real spreadsheet formulas.'
-                : 'Not all correct yet — click a cell, edit its formula, and re-check.'}
-            </motion.div>
-          </AnimateWrap>
+              Check my answers
+            </button>
+            <AnimateWrap show={checked}>
+              <motion.div
+                initial={{ opacity: 0, y: -6 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`mt-2 rounded-lg p-2.5 text-xs ${allCorrect ? 'bg-brand-400/15 text-brand-300' : 'bg-amber-400/10 text-amber-200'}`}
+              >
+                {allCorrect
+                  ? 'All correct. Read on for what the numbers mean.'
+                  : `Not yet — ${done} of ${taskState.length} cells match. Click a cell, edit its formula, and check again.`}
+              </motion.div>
+            </AnimateWrap>
+          </div>
         </div>
 
         <div className="space-y-3">
           <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm">
-            <h4 className="mb-2 font-display text-white">Formula reference</h4>
+            <h4 className="mb-2 font-display text-white">Formulas for this assignment</h4>
             <dl className="space-y-1.5 text-xs">
-              {[
-                ['=SUM(D2:D8)', 'adds a range'],
-                ['=SUMIF(E2:E8,"Want",D2:D8)', 'adds where a condition matches'],
-                ['=SUMIFS(D2:D8,B2:B8,"Rent",C2:C8,"Fixed")', 'two conditions at once'],
-                ['=IF(G5>0,"Saving!","Overspent")', 'branching logic'],
-                ['=ROUND(x,1)', 'round to n decimals'],
-                ['=AVERAGE(D2:D8)', 'mean of a range'],
-                ['=MAX(D2:D8) / =MIN(D2:D8)', 'largest / smallest'],
-                ['=COUNT(D2:D8)', 'how many numbers'],
-              ].map(([f, d]) => (
+              {scenario.reference.map(([f, d]) => (
                 <div key={f} className="flex flex-col gap-0.5">
                   <code className="font-mono text-brand-300">{f}</code>
                   <span className="text-ink-400">{d}</span>
@@ -219,9 +235,24 @@ export function SheetLab() {
             </dl>
           </div>
           <div className="rounded-xl border border-white/10 bg-white/5 p-4 text-xs text-ink-300">
-            <strong className="text-white">Your result:</strong> saving {rupees(24450)} of {rupees(50000)} this
-            month — a {48.9}% saving rate. That's far above the 20% guideline. Try editing D4 (coffee) upward
-            and watch G3 and G6 react.
+            <div className="flex items-center justify-between gap-2">
+              <strong className="text-white">What this means</strong>
+              {!allCorrect && !showDebrief && (
+                <button
+                  onClick={() => setShowDebrief(true)}
+                  className="rounded-md border border-white/15 px-2 py-0.5 text-[11px] text-ink-300 transition hover:text-white"
+                >
+                  Show anyway
+                </button>
+              )}
+            </div>
+            {allCorrect || showDebrief ? (
+              <p className="mt-1.5">{scenario.debrief}</p>
+            ) : (
+              <p className="mt-1.5 text-ink-500">
+                Complete the {taskState.length} cells above and this reveals what the finished numbers mean.
+              </p>
+            )}
           </div>
         </div>
       </div>

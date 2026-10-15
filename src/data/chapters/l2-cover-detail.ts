@@ -249,7 +249,7 @@ export const coverDetail: Record<string, Chapter> = {
     subtitle: 'What the policy will not pay for',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'shield', caption: 'The shield only covers what the policy says it covers. Everything else falls through it.' },
+      { kind: 'scene', name: 'policy-gaps', caption: 'The shield only covers what the policy says it covers. Everything else falls through it.' },
       { kind: 'p', text: 'An exclusion is something the policy does not cover. Exclusions are where most claim rejections happen, and they are always written in the policy document rather than the sales pitch. Reading them before buying is the single most effective way to avoid a rejected claim.' },
       {
         kind: 'table',
@@ -328,7 +328,7 @@ export const coverDetail: Record<string, Chapter> = {
     subtitle: 'The moment the policy is tested',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'shield', caption: 'Pre-authorisation before admission is what makes a cashless claim quick.' },
+      { kind: 'scene', name: 'claim-steps', caption: 'Pre-authorisation before admission is what makes a cashless claim quick.' },
       { kind: 'p', text: 'A claim is the process of asking the insurer to pay for a covered loss. How it is handled — cashless or reimbursement, and how smoothly — matters as much as whether you have cover, and a poor claims experience can be as damaging financially as no insurance at all.' },
       {
         kind: 'table',

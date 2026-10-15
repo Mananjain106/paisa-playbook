@@ -232,7 +232,7 @@ export const cards: Record<string, Chapter> = {
     subtitle: 'Borrowing capacity is not income',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'minpayment-trap', caption: 'A higher limit does not raise what you can repay — it only raises what you can lose.' },
+      { kind: 'scene', name: 'limit-vs-repay', caption: 'A higher limit does not raise what you can repay — it only raises what you can lose.' },
       { kind: 'p', text: 'A credit limit is the maximum a card issuer will let you borrow. It is not money you own, not income, and not a sign of financial success. The confusion is culturally powerful in India, where limits often rise with income and are treated as an achievement.' },
       {
         kind: 'formula',
@@ -384,7 +384,7 @@ export const cards: Record<string, Chapter> = {
     subtitle: 'The most important number on your statement',
     minutes: 3,
     blocks: [
-      { kind: 'scene', name: 'shield', caption: 'One missed date costs a fee, a penalty rate and a note on your record for years.' },
+      { kind: 'scene', name: 'due-date-clock', caption: 'One missed date costs a fee, a penalty rate and a note on your record for years.' },
       { kind: 'p', text: 'The due date is the day by which payment must be credited. Miss it and three things happen at once: a late fee, a penalty interest rate, and a negative mark on your credit record that stays for years.' },
       {
         kind: 'table',

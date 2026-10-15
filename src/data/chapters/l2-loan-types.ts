@@ -242,7 +242,7 @@ export const loanTypes: Record<string, Chapter> = {
     subtitle: 'Small amounts, enormous cost, spread invisibly',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'fomo-chase', caption: 'Three tiny instalments a month, repeated across five apps, become a number you never chose.' },
+      { kind: 'scene', name: 'bnpl-stack', caption: 'Three tiny instalments a month, repeated across five apps, become a number you never chose.' },
       { kind: 'p', text: 'Buy Now Pay Later services let you split a small purchase into three or four instalments, often with no interest at all. The instalment looks free. The cost has not disappeared — it has moved into a short credit period, and into the fact that you can take on several BNPL obligations simultaneously without noticing.' },
       {
         kind: 'table',
@@ -322,7 +322,7 @@ export const loanTypes: Record<string, Chapter> = {
     subtitle: 'Secured, cheap, and structured to be affordable',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'emi-split', caption: 'The EMI is engineered to be affordable — which is not the same as being a good deal.' },
+      { kind: 'scene', name: 'vehicle-emi-true', caption: 'The EMI is engineered to be affordable — which is not the same as being a good deal.' },
       { kind: 'p', text: 'A vehicle loan is secured by the vehicle itself, which is why rates are lower than personal loans and approval is quick. The structure is built so the EMI is affordable — but affordability is engineered to be the wrong measure for a depreciating purchase.' },
       {
         kind: 'table',

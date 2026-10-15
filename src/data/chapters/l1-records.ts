@@ -104,7 +104,7 @@ export const records: Record<string, Chapter> = {
           'Raise a dispute with your bank in writing, keeping the reference number.',
         ],
       },
-      { kind: 'sim', name: 'sheet', caption: 'Turn a month of transactions into a categorised sheet with SUM and SUMIF.' },
+      { kind: 'sim', name: 'sheet', caption: 'Reconcile the bank’s version of your month against your own records with SUMIF, and find the gap.' },
     ],
     quiz: [
       {
@@ -179,7 +179,7 @@ export const records: Record<string, Chapter> = {
           'Do a filing review once a quarter so it does not become a backlog.',
         ],
       },
-      { kind: 'sim', name: 'sheet', caption: 'Build a simple expense record in the spreadsheet so every entry has a category and a reason.' },
+      { kind: 'sim', name: 'sheet', caption: 'Mark which purchases have proof behind them, then price the spending that has none.' },
     ],
     quiz: [
       {

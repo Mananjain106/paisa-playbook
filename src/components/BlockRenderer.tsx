@@ -11,7 +11,16 @@ const TONES = {
   india: { cls: 'border-amber-400/30 bg-amber-400/10 text-amber-100', Icon: Info, label: 'In India' },
 }
 
-export function BlockRenderer({ block, index = 0 }: { block: Block; index?: number }) {
+export function BlockRenderer({
+  block,
+  index = 0,
+  chapterId,
+}: {
+  block: Block
+  index?: number
+  /** Passed to labs so they can render chapter-specific content. */
+  chapterId?: string
+}) {
   const fade = {
     initial: { opacity: 0, y: 14 },
     whileInView: { opacity: 1, y: 0 },
@@ -154,7 +163,7 @@ export function BlockRenderer({ block, index = 0 }: { block: Block; index?: numb
             </div>
             <p className="mt-0.5 text-sm text-ink-400">{block.caption ?? sim.blurb}</p>
           </div>
-          <sim.C />
+          <sim.C chapterId={chapterId} />
         </motion.div>
       )
     }

@@ -79,35 +79,42 @@ export function CapacityVsTolerance() {
 /** The yield curve: short rates vs long rates. */
 export function YieldCurve() {
   const pts = [6.2, 6.4, 6.6, 6.8, 7.0, 7.3, 7.6]
-  const w = 60
+  const bw = 32
+  const step = 48
+  const x0 = 46
+  const floor = 5.5
+  const scale = 70
   return (
     <>
-      <motion.line x1="36" y1="180" x2="372" y2="180" stroke="#8791b3" strokeWidth="1" />
-      <motion.line x1="36" y1="20" x2="36" y2="180" stroke="#8791b3" strokeWidth="1" />
+      <motion.line x1="40" y1="180" x2="376" y2="180" stroke="#8791b3" strokeWidth="1" />
+      <motion.line x1="40" y1="24" x2="40" y2="180" stroke="#8791b3" strokeWidth="1" />
       {pts.map((rate, i) => {
-        const h = (rate - 5.5) * 90
+        const h = (rate - floor) * scale
         return (
           <motion.rect
-            key={i}
-            x={44 + i * w}
-            y={180 - h}
-            width={34}
-            height={h}
+            key={`b${i}`}
+            x={x0 + i * step}
+            width={bw}
             rx="4"
             fill={i >= 4 ? '#34e0a1' : '#38bdf8'}
-            opacity="0.75"
-            initial={{ height: 0, y: 180 }}
-            animate={{ height: h, y: 180 - h }}
+            opacity="0.8"
+            initial={{ height: 0, attrY: 180 }}
+            animate={{ height: h, attrY: 180 - h }}
             transition={{ delay: i * 0.07, ...ease }}
           />
         )
       })}
+      {pts.map((rate, i) => (
+        <text key={`v${i}`} x={x0 + bw / 2 + i * step} y={180 - (rate - floor) * scale - 6} textAnchor="middle" fontSize="8" fill={i >= 4 ? '#34e0a1' : '#38bdf8'}>
+          {rate.toFixed(1)}%
+        </text>
+      ))}
       {pts.map((_, i) => (
-        <text key={i} x={61 + i * w} y="194" textAnchor="middle" fontSize="9" fill="#8791b3">
+        <text key={`x${i}`} x={x0 + bw / 2 + i * step} y="194" textAnchor="middle" fontSize="9" fill="#8791b3">
           {i + 1}y
         </text>
       ))}
-      <text x="200" y="212" textAnchor="middle" fontSize="10" fill="#d7dbe9">
+      <text x="200" y="210" textAnchor="middle" fontSize="10" fill="#d7dbe9">
         Upward sloping: investors want more to lock money away for longer
       </text>
     </>
@@ -155,81 +162,105 @@ export function PriceYieldInverse() {
   )
 }
 
-/** Revenue flowing down to profit, with costs draining it. */
+/** Revenue shrinking step by step until only profit is left. */
 export function ProfitWaterfall() {
-  const rows = [
-    { l: 'Revenue', v: 170, c: '#38bdf8' },
-    { l: 'Costs', v: -96, c: '#f87171' },
-    { l: 'Interest', v: -22, c: '#f87171' },
-    { l: 'Tax', v: -16, c: '#f87171' },
-    { l: 'Profit', v: 36, c: '#34e0a1' },
+  const bars = [
+    { l: 'Revenue', c: '#38bdf8', a: 0, b: 170, v: '170' },
+    { l: 'Costs', c: '#f87171', a: 74, b: 170, v: '-96' },
+    { l: 'Interest', c: '#f87171', a: 52, b: 74, v: '-22' },
+    { l: 'Tax', c: '#f87171', a: 36, b: 52, v: '-16' },
+    { l: 'Profit', c: '#34e0a1', a: 0, b: 36, v: '+36' },
+  ]
+  const x0 = 96
+  const s = 1.55
+  const px = (v: number) => x0 + v * s
+  const bh = 22
+  const links = [
+    { x: px(170), y1: 52, y2: 62 },
+    { x: px(74), y1: 84, y2: 94 },
+    { x: px(52), y1: 116, y2: 126 },
+    { x: px(36), y1: 148, y2: 158 },
   ]
   return (
     <>
-      {rows.map((r, i) => {
-        const y = 34 + i * 34
-        const h = Math.abs(r.v) * 0.9
-        const yy = y
+      {links.map((k, i) => (
+        <motion.line key={i} x1={k.x} x2={k.x} y1={k.y1} y2={k.y2} stroke="#8791b3" strokeWidth="1" strokeDasharray="2 2" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 + i * 0.1 }} />
+      ))}
+      {bars.map((r, i) => {
+        const y = 30 + i * 32
+        const bx = px(r.a)
+        const bw = px(r.b) - px(r.a)
         return (
-          <motion.g key={r.l} initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.1 }}>
+          <motion.g key={r.l} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.12 }}>
             <motion.rect
-              x="86"
-              y={r.v > 0 ? yy : yy + h}
-              width={r.v > 0 ? 220 : 220}
-              height={h}
+              x={bx}
+              y={y}
+              width={bw}
+              height={bh}
               rx="5"
               fill={r.c}
-              opacity="0.75"
+              opacity="0.85"
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              style={{ transformOrigin: '86px' }}
+              transition={{ delay: i * 0.12, duration: 0.5 }}
+              style={{ transformOrigin: `${bx}px` }}
             />
-            <text x="78" y={yy + h / 2 + 4} textAnchor="end" fontSize="11" fill="#d7dbe9">
+            <text x="88" y={y + 15} textAnchor="end" fontSize="11" fill="#d7dbe9">
               {r.l}
+            </text>
+            <text x={bx + bw + 7} y={y + 15} fontSize="10" fill={r.c}>
+              {r.v}
             </text>
           </motion.g>
         )
       })}
-      <text x="200" y="214" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Every rupee of profit is what survived everything above it
+      <text x="200" y="208" textAnchor="middle" fontSize="10" fill="#8791b3">
+        Revenue, minus every cost and tax - what survives is profit
       </text>
     </>
   )
 }
 
-/** One share = a tiny slice of a company. */
+/** One share = a slice of the whole business, carved into ownership. */
 export function ShareSlice() {
-  const cx = 200
-  const cy = 108
-  const r = 74
+  const cx = 128
+  const cy = 112
+  const R = 70
+  const RI = 44
+  const n = 8
+  const seg = (2 * Math.PI) / n
+  const a0 = -Math.PI / 2
+  const ring = (i: number) => {
+    const s = a0 + i * seg
+    const e = s + seg
+    return `M ${cx + R * Math.cos(s)} ${cy + R * Math.sin(s)} A ${R} ${R} 0 0 1 ${cx + R * Math.cos(e)} ${cy + R * Math.sin(e)} L ${cx + RI * Math.cos(e)} ${cy + RI * Math.sin(e)} A ${RI} ${RI} 0 0 0 ${cx + RI * Math.cos(s)} ${cy + RI * Math.sin(s)} Z`
+  }
+  const ya = a0 + seg / 2
   return (
     <>
-      <circle cx={cx} cy={cy} r={r} fill="#34e0a1" opacity="0.12" />
-      <motion.g
-        initial={{ rotate: -40 }}
-        animate={{ rotate: 0 }}
-        transition={{ duration: 0.9, ease: 'easeOut' }}
-        style={{ transformOrigin: `${cx}px ${cy}px` }}
-      >
-        <path
-          d={`M ${cx} ${cy} L ${cx} ${cy - r} A ${r} ${r} 0 0 1 ${cx + r * 0.7} ${cy + r * 0.7} Z`}
-          fill="#34e0a1"
-          opacity="0.85"
+      {Array.from({ length: n }).map((_, i) => (
+        <motion.path
+          key={i}
+          d={ring(i)}
+          fill={i === 0 ? '#34e0a1' : '#33415c'}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: i === 0 ? 0.95 : 0.85 }}
+          transition={{ delay: i * 0.06 }}
         />
-      </motion.g>
-      <circle cx={cx} cy={cy} r={r} fill="none" stroke="#34e0a1" strokeWidth="2" opacity="0.5" />
-      <text x={cx} y={cy - 22} textAnchor="middle" fontSize="12" fill="#11131f" fontWeight="800">
-        You
-      </text>
-      <text x={cx} y={cy - 6} textAnchor="middle" fontSize="10" fill="#11131f">
-        own this
-        <br />
-        slice
-      </text>
-      <text x={cx} y={cy + r + 30} textAnchor="middle" fontSize="11" fill="#d7dbe9">
-        A share is a claim on a company&apos;s future cash flow
-      </text>
+      ))}
+      <rect x={cx - 15} y={cy - 4} width="30" height="26" rx="3" fill="#38bdf8" />
+      <polygon points={`${cx - 19},${cy - 4} ${cx},${cy - 20} ${cx + 19},${cy - 4}`} fill="#38bdf8" />
+      <rect x={cx - 9} y={cy + 2} width="6" height="6" fill="#0b1220" />
+      <rect x={cx + 3} y={cy + 2} width="6" height="6" fill="#0b1220" />
+      <rect x={cx - 4} y={cy + 12} width="8" height="10" fill="#0b1220" />
+      <motion.line x1={cx + (R - 4) * Math.cos(ya)} y1={cy + (R - 4) * Math.sin(ya)} x2="232" y2="76" stroke="#34e0a1" strokeWidth="1" strokeDasharray="3 3" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} />
+      <circle cx="234" cy="76" r="4" fill="#34e0a1" />
+      <text x="246" y="80" fontSize="11" fill="#34e0a1" fontWeight="700">You - 1 share</text>
+      <text x="246" y="94" fontSize="9" fill="#8791b3">one sliver of the company</text>
+      <circle cx="234" cy="120" r="4" fill="#33415c" />
+      <text x="246" y="124" fontSize="10" fill="#8791b3">Other investors</text>
+      <text x="234" y="152" fontSize="9" fill="#8791b3">A share is a claim on the</text>
+      <text x="234" y="165" fontSize="9" fill="#8791b3">profits, assets and debts.</text>
     </>
   )
 }
@@ -371,27 +402,51 @@ export function CurrencyErosion() {
   )
 }
 
-/** A dividend arriving, year after year, without doing anything. */
+/** Dividends arriving each year, with compounding growth stacked on top. */
 export function DividendStream() {
+  const growth = [14, 24, 36, 50, 66, 84]
+  const dividend = 18
+  const base = 178
+  const bw = 30
   return (
     <>
-      {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
-        <motion.circle
-          key={i}
-          cx={44 + i * 42}
-          cy={140 - i * 6}
-          r="9"
-          fill="#34e0a1"
-          initial={{ opacity: 0, y: 140 }}
-          animate={{ opacity: 0.9, y: 140 - i * 6 }}
-          transition={{ delay: i * 0.1, ...ease }}
-        />
-      ))}
-      <text x="200" y="30" textAnchor="middle" fontSize="12" fill="#34e0a1" fontWeight="700">
-        Cash, arriving on its own
-      </text>
-      <text x="200" y="180" textAnchor="middle" fontSize="10" fill="#8791b3">
-        Plus any growth in the shares themselves
+      <motion.line x1="36" y1={base} x2="374" y2={base} stroke="#8791b3" strokeWidth="1" />
+      <circle cx="52" cy="30" r="5" fill="#34e0a1" />
+      <text x="63" y="34" fontSize="10" fill="#d7dbe9">Dividend each year</text>
+      <circle cx="186" cy="30" r="5" fill="#38bdf8" />
+      <text x="197" y="34" fontSize="10" fill="#d7dbe9">Growth compounds</text>
+      {growth.map((g, i) => {
+        const x = 48 + i * 54
+        return (
+          <motion.g key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.1 }}>
+            <motion.rect
+              x={x}
+              width={bw}
+              rx="3"
+              fill="#34e0a1"
+              opacity="0.9"
+              initial={{ height: 0, attrY: base }}
+              animate={{ height: dividend, attrY: base - dividend }}
+              transition={{ delay: i * 0.1, ...ease }}
+            />
+            <motion.rect
+              x={x}
+              width={bw}
+              rx="3"
+              fill="#38bdf8"
+              opacity="0.85"
+              initial={{ height: 0, attrY: base - dividend }}
+              animate={{ height: g, attrY: base - dividend - g }}
+              transition={{ delay: 0.15 + i * 0.1, ...ease }}
+            />
+            <text x={x + bw / 2} y={base + 14} textAnchor="middle" fontSize="9" fill="#8791b3">
+              Yr {i + 1}
+            </text>
+          </motion.g>
+        )
+      })}
+      <text x="200" y="208" textAnchor="middle" fontSize="10" fill="#8791b3">
+        Dividends arrive on their own; growth is stacked on top
       </text>
     </>
   )
@@ -496,12 +551,14 @@ export function PassiveVsActive() {
 export function RealVsNominal() {
   return (
     <>
-      <motion.rect x="44" y="30" width="150" height="130" rx="8" fill="#34e0a1" opacity="0.7" initial={{ height: 0, y: 160 }} animate={{ height: 130, y: 30 }} transition={{ duration: 0.7 }} />
+      <motion.rect x="44" width="150" rx="8" fill="#34e0a1" opacity="0.75" initial={{ height: 0, attrY: 160 }} animate={{ height: 130, attrY: 30 }} transition={{ duration: 0.7 }} />
       <text x="119" y="100" textAnchor="middle" fontSize="11" fill="#0b1524" fontWeight="700">Nominal</text>
       <text x="119" y="118" textAnchor="middle" fontSize="10" fill="#0b1524">the balance</text>
-      <motion.rect x="206" y="66" width="150" height="94" rx="8" fill="#f87171" opacity="0.7" initial={{ height: 0, y: 160 }} animate={{ height: 94, y: 66 }} transition={{ delay: 0.2, duration: 0.7 }} />
+      <motion.rect x="206" width="150" rx="8" fill="#f87171" opacity="0.85" initial={{ height: 0, attrY: 160 }} animate={{ height: 94, attrY: 66 }} transition={{ delay: 0.2, duration: 0.7 }} />
       <text x="281" y="112" textAnchor="middle" fontSize="11" fill="#2a0f0f" fontWeight="700">Real</text>
       <text x="281" y="130" textAnchor="middle" fontSize="10" fill="#2a0f0f">what it buys</text>
+      <motion.line x1="44" y1="30" x2="356" y2="30" stroke="#8791b3" strokeWidth="1" strokeDasharray="4 4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }} />
+      <text x="281" y="49" textAnchor="middle" fontSize="9" fill="#f87171">inflation</text>
       <text x="200" y="190" textAnchor="middle" fontSize="11" fill="#f87171">
         The gap between these two bars is inflation
       </text>
@@ -514,10 +571,10 @@ export function GoldRole() {
   return (
     <>
       <motion.line x1="30" y1="90" x2="370" y2="90" stroke="#8791b3" strokeWidth="1" strokeDasharray="4 4" />
-      <motion.rect x="60" y="30" width="90" height="60" rx="8" fill="#f59e0b" opacity="0.8" initial={{ y: 30 }} animate={{ y: 30 }} transition={ease} />
+      <motion.rect x="60" width="90" rx="8" fill="#f59e0b" opacity="0.8" initial={{ height: 0, attrY: 90 }} animate={{ height: 60, attrY: 30 }} transition={ease} />
       <text x="105" y="66" textAnchor="middle" fontSize="11" fill="#11131f" fontWeight="700">Equity</text>
-      <motion.rect x="250" y="60" width="90" height="30" rx="8" fill="#f59e0b" opacity="0.5" initial={{ width: 0 }} animate={{ width: 90 }} transition={ease} />
-      <text x="295" y="80" textAnchor="middle" fontSize="10" fill="#f59e0b">Gold</text>
+      <motion.rect x="250" width="90" rx="8" fill="#f59e0b" opacity="0.5" initial={{ height: 0, attrY: 90 }} animate={{ height: 30, attrY: 60 }} transition={{ delay: 0.15, ...ease }} />
+      <text x="295" y="80" textAnchor="middle" fontSize="10" fill="#fff7ed">Gold</text>
       <text x="105" y="120" textAnchor="middle" fontSize="10" fill="#34e0a1">Long-run growth</text>
       <text x="295" y="120" textAnchor="middle" fontSize="10" fill="#8791b3">No income at all</text>
       <text x="200" y="166" textAnchor="middle" fontSize="12" fill="#d7dbe9">

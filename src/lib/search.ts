@@ -4,13 +4,15 @@ import type { Block } from '../types'
 /**
  * A small, dependency-free full-text index over every chapter in the course.
  *
- * Authored chapters (currently Levels 1-2) contribute their subtitle, takeaway,
- * body prose and glossary terms. Unwritten chapters are still searchable by
- * title so the full 508-chapter syllabus is navigable today.
+ * Every authored chapter contributes its subtitle, takeaway and all of its body
+ * prose — paragraphs, callouts, examples, lists, tables, headings and the
+ * `terms` glossary each chapter carries. Unwritten chapters are still searchable
+ * by title, so the full 508-chapter syllabus is navigable today.
  *
- * Scoring is deliberately simple: title hits outweigh body hits, prefix hits
- * outweigh word-start hits. That is enough for a keyboard-driven search box and
- * keeps the whole index small enough to build at module load.
+ * Scoring is deliberately simple: title hits outweigh body hits, a hit in a
+ * heading, table caption or glossary term outweighs a passing mention in prose,
+ * and prefix hits outweigh word-start hits. That is enough for a keyboard-driven
+ * search box and keeps the whole index small enough to build at module load.
  */
 
 export type SearchDoc = {
@@ -23,6 +25,8 @@ export type SearchDoc = {
   authored: boolean
   /** Lowercased haystack for body matching. */
   haystack: string
+  /** Lowercased headings, table captions and glossary terms — the deliberate signals. */
+  focus: string
   /** Title + subtitle lowercased, kept separate for weighting. */
   titleKey: string
 }
@@ -34,6 +38,16 @@ export type SearchHit = {
   snippet?: string
 }
 
+/** Does the term appear at the start of a word, rather than inside one? */
+const hasWord = (haystack: string, term: string): boolean => {
+  let i = haystack.indexOf(term)
+  while (i >= 0) {
+    if (i === 0 || haystack[i - 1] === ' ') return true
+    i = haystack.indexOf(term, i + 1)
+  }
+  return false
+}
+
 /** Strip punctuation so "50/30/20" and "503020" are comparable-ish. */
 const normalise = (s: string) =>
   s
@@ -42,6 +56,24 @@ const normalise = (s: string) =>
     .replace(/[^\p{L}\p{N}\s%/.-]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim()
+
+/** The parts of a chapter that were written as labels rather than prose. */
+const focusText = (b: Block): string => {
+  switch (b.kind) {
+    case 'h':
+      return b.text
+    case 'table':
+      return b.caption ?? ''
+    case 'example':
+      return b.title
+    case 'callout':
+      return b.title ?? ''
+    case 'terms':
+      return b.items.map((t) => t.term).join(' ')
+    default:
+      return ''
+  }
+}
 
 /** Pull the searchable prose out of a chapter's block list. */
 const blockText = (b: Block): string => {
@@ -72,6 +104,7 @@ const buildDocs = (): SearchDoc[] =>
     const subtitle = authored?.subtitle ?? ''
     const takeaway = authored?.takeaway ?? ''
     const body = authored ? authored.blocks.map(blockText).join(' ') : ''
+    const focus = authored ? authored.blocks.map(focusText).join(' ') : ''
     const title = authored?.title ?? c.title
     return {
       id: c.id,
@@ -83,6 +116,7 @@ const buildDocs = (): SearchDoc[] =>
       authored: Boolean(authored),
       titleKey: normalise(`${title} ${subtitle}`),
       haystack: normalise(`${body} ${takeaway}`),
+      focus: normalise(focus),
     }
   })
 
@@ -148,12 +182,20 @@ export const search = (query: string, limit = 40): SearchHit[] => {
       }
 
       if (inTitle >= 0) {
-        // Exact title is best, then word-start, then any occurrence.
-        score += doc.titleKey === term ? 60 : doc.titleKey.startsWith(term) ? 40 : 20
+        // Exact title is best, then a word-start hit, then a hit in the middle
+        // of a word — so "free" matches "Free float" strongly but "risk-free"
+        // only weakly.
+        const titleWordStart = inTitle === 0 || doc.titleKey[inTitle - 1] === ' '
+        score += doc.titleKey === term ? 60 : titleWordStart ? (inTitle === 0 ? 40 : 20) : 6
       }
       if (inBody >= 0) {
         bodyMatched = true
-        score += doc.haystack.startsWith(term) ? 10 : 6
+        // Prefer a hit at the start of a word: "free float" should rank the
+        // chapter that defines it above one that merely says "risk-free".
+        score += hasWord(doc.haystack, term) ? (inBody === 0 ? 10 : 7) : 3
+        // A hit in a heading, table caption or glossary term is a stronger
+        // signal than a mention buried in a paragraph.
+        if (hasWord(doc.focus, term)) score += 8
       }
     }
 

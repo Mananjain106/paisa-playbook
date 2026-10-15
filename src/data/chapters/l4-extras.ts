@@ -28,7 +28,7 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-005': { captions: { valuation: 'The same earnings, priced through two very different lenses.' } },
   'l4-006': {
-    scene: scene('growth-vs-value', 'A moat is what lets a company keep its rewards.'),
+    scene: scene('moat-defence', 'A moat is what lets a company keep its rewards.'),
     captions: { valuation: 'Durable profits come from structure, not from a good story.' },
   },
   'l4-007': {
@@ -48,11 +48,11 @@ export const l4Extras: Record<string, Extra> = {
     captions: { valuation: 'Revenue down to profit, with the margins along the way.' },
   },
   'l4-011': {
-    scene: scene('profit-waterfall', 'Profit is an opinion; cash flow is the reality check.'),
+    scene: scene('cashflow-reality', 'Profit is an opinion; cash flow is the reality check.'),
     captions: { valuation: 'Profit and cash are not the same number — compare them here.' },
   },
   'l4-012': {
-    scene: scene('balance-sheet', 'A clean headline can still sit on weak accounting.'),
+    scene: scene('accounting-quality', 'A clean headline can still sit on weak accounting.'),
     captions: { valuation: 'When profit does not convert to cash, quality is in question.' },
   },
   'l4-013': {
@@ -79,11 +79,11 @@ export const l4Extras: Record<string, Extra> = {
   // ----------------------------------------------------------- tax (l4-018–029)
   'l4-018': {
     sim: sim('tax', 'Direct tax, indirect tax and how the tax base is built — try the regime lab.'),
-    captions: { 'tax-bracket': 'Direct versus indirect tax, and how a taxable base is assembled.' },
+    captions: { 'direct-vs-indirect': 'Direct versus indirect tax, and how a taxable base is assembled.' },
   },
   'l4-019': { scene: scene('tax-bracket', 'Tax is broader than salary: know your heads of income.') },
   'l4-020': {
-    scene: scene('tax-bracket', 'Not every rupee you receive is taxable income.'),
+    scene: scene('taxable-base', 'Not every rupee you receive is taxable income.'),
     captions: { tax: 'Apply exemptions and deductions and see taxable income fall.' },
   },
   'l4-022': { captions: { tax: 'TDS is tax paid in advance — watch the final bill settle.' } },
@@ -95,9 +95,9 @@ export const l4Extras: Record<string, Extra> = {
     scene: scene('tds-flow', 'Income, deductions, tax paid — where it all comes together.'),
     captions: { tax: 'Build the return: income, deductions, tax paid, and the balance.' },
   },
-  'l4-025': { scene: scene('tax-bracket', 'Deductions lower taxable income; they do not erase the bill.') },
+  'l4-025': { scene: scene('deduction-effect', 'Deductions lower taxable income; they do not erase the bill.') },
   'l4-026': {
-    scene: scene('tax-bracket', 'How long you held the asset decides how the gain is taxed.'),
+    scene: scene('capital-gains-holding', 'How long you held the asset decides how the gain is taxed.'),
     captions: { tax: 'Short-term and long-term gains are taxed at different rates.' },
   },
   'l4-027': { captions: { tax: 'Compare tax on a holding of 11 months against 13 months.' } },
@@ -117,7 +117,7 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-031': {
     sim: sim('realreturn', 'Set the goal in today\u2019s rupees and watch inflation raise the target.'),
-    captions: { 'corpus-ladder': 'Inflation raises the target while you are still trying to reach it.' },
+    captions: { 'inflation-target': 'Inflation raises the target while you are still trying to reach it.' },
   },
   'l4-032': {
     sim: sim('compound', 'How large a corpus you need, and how long it takes to build.'),
@@ -128,7 +128,7 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-033': {
     sim: sim('compound', '12% from you, 12% from your employer, compounding every month.'),
-    captions: { 'corpus-ladder': 'EPF builds one rung at a time, every single month.' },
+    captions: { 'epf-monthly': 'EPF builds one rung at a time, every single month.' },
   },
   'l4-034': {
     sim: sim('compound', 'Fifteen years of tax-free compounding — see the curve.'),
@@ -140,7 +140,7 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-036': {
     sim: sim('compound', 'Turn a lump sum into a monthly pension and see what it costs.'),
-    captions: { 'corpus-ladder': 'An annuity converts a corpus into a monthly income for life.' },
+    captions: { 'annuity-income': 'An annuity converts a corpus into a monthly income for life.' },
   },
 
   // ------------------------------------------------------ insurance (l4-037–048)
@@ -150,19 +150,19 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-038': {
     sim: sim('cover', 'Pure protection: a large cover for a small, regular premium.'),
-    captions: { 'cover-ladder': 'Pure cover — the rungs you need, at the lowest premium.' },
+    captions: { 'term-cover-rungs': 'Pure cover — the rungs you need, at the lowest premium.' },
   },
   'l4-039': {
     sim: sim('cover', 'Lifetime cover bundled with savings — see where the money goes.'),
-    captions: { 'cover-ladder': 'Lifetime cover bundled with savings — see what you pay for.' },
+    captions: { 'whole-life-bundle': 'Lifetime cover bundled with savings — see what you pay for.' },
   },
   'l4-040': {
     sim: sim('compound', 'Insurance and investment mixed — compare the net return.'),
-    captions: { 'cover-ladder': 'An endowment is insurance plus investment; the mix sets the return.' },
+    captions: { 'endowment-mix': 'An endowment is insurance plus investment; the mix sets the return.' },
   },
   'l4-041': {
     sim: sim('feedrag', 'Charges come off before your money is invested — see the drag.'),
-    captions: { 'cover-ladder': 'Charges come off each premium before your money is invested.' },
+    captions: { 'ulip-charges': 'Charges come off each premium before your money is invested.' },
   },
   'l4-042': {
     sim: sim('cover', 'Keep them separate: cover for risk, investments for returns.'),
@@ -174,23 +174,23 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-044': {
     sim: sim('cover', 'A higher deductible lowers the premium but raises what you pay.'),
-    captions: { 'cover-ladder': 'A higher deductible lowers the premium but raises your first cost.' },
+    captions: { 'deductible-tradeoff': 'A higher deductible lowers the premium but raises your first cost.' },
   },
   'l4-045': {
     sim: sim('cover', 'A 20% co-pay on a large bill is a real number — size it.'),
-    captions: { 'cover-ladder': 'A co-pay is the slice of every bill you still pay yourself.' },
+    captions: { 'copay-slice': 'A co-pay is the slice of every bill you still pay yourself.' },
   },
   'l4-046': {
     sim: sim('cover', 'Cover does not start on day one for everything — plan the gap.'),
-    captions: { 'cover-ladder': 'Cover does not reach the top rungs until the waiting period ends.' },
+    captions: { 'waiting-period': 'Cover does not reach the top rungs until the waiting period ends.' },
   },
   'l4-047': {
     sim: sim('cover', 'What the policy will not pay for matters as much as what it will.'),
-    captions: { 'cover-ladder': 'Exclusions are the rungs the policy will not pay for.' },
+    captions: { 'cover-exclusions': 'Exclusions are the rungs the policy will not pay for.' },
   },
   'l4-048': {
     sim: sim('cover', 'Know the paperwork before you need it — claims are easier that way.'),
-    captions: { 'cover-ladder': 'Knowing the steps turns a claim into a routine, not a crisis.' },
+    captions: { 'cover-claim-steps': 'Knowing the steps turns a claim into a routine, not a crisis.' },
   },
 
   // ------------------------------------------------------- property (l4-049–053)
@@ -204,7 +204,7 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-051': {
     sim: sim('compound', 'Build the down payment in safe, short-horizon assets.'),
-    captions: { 'loan-amort': 'A bigger down payment shrinks the loan and the interest.' },
+    captions: { 'downpayment-effect': 'A bigger down payment shrinks the loan and the interest.' },
   },
   'l4-052': {
     sim: sim('emi', 'See how much of the early EMI is interest, and what prepaying saves.'),
@@ -229,11 +229,11 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-060': {
     sim: sim('options-payoff', 'Size the contract and watch the profit and loss swing.'),
-    captions: { 'deriv-payoff': 'Size the contract and the payoff scales with it.' },
+    captions: { 'contract-sizing': 'Size the contract and the payoff scales with it.' },
   },
   'l4-061': {
     sim: sim('options-payoff', 'A small margin controls a large position — see the leverage.'),
-    captions: { 'deriv-payoff': 'A small margin controls a large position — that is the leverage.' },
+    captions: { 'margin-leverage': 'A small margin controls a large position — that is the leverage.' },
   },
   'l4-062': {
     sim: sim('options-payoff', 'Leverage multiplies gains and losses alike — test the extremes.'),
@@ -241,11 +241,11 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-063': {
     sim: sim('options-payoff', 'At expiry only intrinsic value is left — watch the time value vanish.'),
-    captions: { 'deriv-payoff': 'At expiry, time value is gone and only intrinsic value remains.' },
+    captions: { 'expiry-intrinsic': 'At expiry, time value is gone and only intrinsic value remains.' },
   },
   'l4-064': {
     sim: sim('options-payoff', 'Daily settlement means gains and losses are settled every day.'),
-    captions: { 'deriv-payoff': 'Daily settlement resets the position every evening.' },
+    captions: { 'mark-to-market': 'Daily settlement resets the position every evening.' },
   },
   'l4-065': {
     sim: sim('options-payoff', 'A hedge costs a little to cap a loss you could not absorb.'),
@@ -253,31 +253,31 @@ export const l4Extras: Record<string, Extra> = {
   },
   'l4-066': {
     sim: sim('options-payoff', 'A naked position is a bet — see the capped upside and open downside.'),
-    captions: { 'deriv-payoff': 'A naked position: little upside, an open downside.' },
+    captions: { 'naked-speculation': 'A naked position: little upside, an open downside.' },
   },
   'l4-067': { captions: { 'call-put': 'A call pays off above the strike; a put pays off below it.' } },
   'l4-068': { captions: { 'call-put': 'The buyer\u2019s loss is capped at the premium paid.' } },
   'l4-069': { captions: { 'call-put': 'The option seller earns the premium — and takes the risk.' } },
-  'l4-070': { captions: { 'call-put': 'In-the-money, at-the-money and out-of-the-money, side by side.' } },
-  'l4-071': { captions: { 'call-put': 'Intrinsic value plus time value is what you pay for an option.' } },
-  'l4-072': { captions: { 'call-put': 'Time decay eats an option\u2019s value as expiry approaches.' } },
-  'l4-073': { captions: { 'call-put': 'Volatility moves the price of the option, not the strike.' } },
-  'l4-074': { captions: { 'call-put': 'A put is protection — its payoff rises as the market falls.' } },
+  'l4-070': { captions: { 'moneyness': 'In-the-money, at-the-money and out-of-the-money, side by side.' } },
+  'l4-071': { captions: { 'premium-split': 'Intrinsic value plus time value is what you pay for an option.' } },
+  'l4-072': { captions: { 'time-decay': 'Time decay eats an option\u2019s value as expiry approaches.' } },
+  'l4-073': { captions: { 'volatility-effect': 'Volatility moves the price of the option, not the strike.' } },
+  'l4-074': { captions: { 'put-protection': 'A put is protection — its payoff rises as the market falls.' } },
   'l4-075': {
     sim: sim('options-payoff', 'Used well, derivatives transfer risk instead of creating it.'),
-    captions: { 'deriv-payoff': 'Used well, the payoff transfers risk rather than creating it.' },
+    captions: { 'risk-transfer': 'Used well, the payoff transfers risk rather than creating it.' },
   },
   'l4-076': {
     sim: sim('options-payoff', 'A farmer, a miller and a speculator — one contract, three motives.'),
-    captions: { 'deriv-payoff': 'One contract, three views: producer, buyer and speculator.' },
+    captions: { 'commodity-futures-roles': 'One contract, three views: producer, buyer and speculator.' },
   },
   'l4-077': {
     sim: sim('options-payoff', 'Trade the whole index in a single contract — see the payoff.'),
-    captions: { 'deriv-payoff': 'The whole index in one payoff line, up or down.' },
+    captions: { 'index-futures': 'The whole index in one payoff line, up or down.' },
   },
   'l4-078': { captions: { 'currency-risk': 'A depreciating rupee changes the value of every foreign cash flow.' } },
-  'l4-079': { captions: { 'currency-risk': 'Exporters and importers sit on opposite sides of the same move.' } },
-  'l4-080': { captions: { 'currency-risk': 'A forward locks the rate today for a payment months away.' } },
+  'l4-079': { captions: { 'exporter-importer': 'Exporters and importers sit on opposite sides of the same move.' } },
+  'l4-080': { captions: { 'forward-lock': 'A forward locks the rate today for a payment months away.' } },
   'l4-081': { captions: { 'currency-risk': 'Unhedged, the exchange rate is an extra risk you did not choose.' } },
   'l4-082': { captions: { 'currency-risk': 'Hedging strips out a risk you are not paid to take.' } },
 
@@ -293,7 +293,7 @@ export const l4Extras: Record<string, Extra> = {
   'l4-091': { sim: sim('compound', 'Growth needs cash before it returns cash — model the gap.') },
   'l4-092': {
     sim: sim('networth', 'Runway and burn: how many months can the business survive?'),
-    captions: { 'corpus-ladder': 'Runway is the rungs of cash left before the business runs dry.' },
+    captions: { 'runway-cash': 'Runway is the rungs of cash left before the business runs dry.' },
   },
   'l4-093': { sim: sim('valuation', 'What a buyer pays for depends on the numbers you kept.') },
 

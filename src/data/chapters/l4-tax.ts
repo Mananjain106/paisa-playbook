@@ -1,7 +1,6 @@
 import type { Chapter } from '../../types'
 import { scene4, sim } from '../../lib/chapter-blocks'
 
-const SCENE_0 = scene4('tax-bracket')
 export const tax: Record<string, Chapter> = {
   'l4-018': {
     id: 'l4-018',
@@ -10,7 +9,7 @@ export const tax: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
       { kind: 'p', text: "Tax is the money citizens and businesses pay to the government so it can run public services, build infrastructure, and fund the machinery of the state. It is not a fine, and it is not optional in the way a subscription is. You do not pick and choose which public goods you want to fund; you pay according to the law, and the government decides how to use the money." },
-      SCENE_0,
+      scene4('direct-vs-indirect'),
       { kind: 'h', text: 'The Indian tax system in broad strokes' },
       { kind: 'list', items: [
         'Direct tax: paid directly by the person or entity on whom it is levied — income tax, corporate tax, and a few others.',
@@ -19,7 +18,7 @@ export const tax: Record<string, Chapter> = {
         'Administration: the Income Tax Department collects direct taxes and enforces the law; GST is administered separately. For personal finance, income tax is the one you deal with most directly.',
       ] },
       { kind: 'callout', tone: 'india', title: 'Start with the law, not the shortcut', text: "Indian tax law is detailed, amended often, and occasionally frustratingly circular. The practical habit is to learn the structure rather than memorise every clause. Know what counts as income, what counts as a deduction, and what counts as an exemption. The rest you can look up when you file." },
-      SCENE_0,
+      scene4('direct-vs-indirect'),
       { kind: 'terms', items: [
         { term: 'direct tax', meaning: 'tax paid directly by the person or entity on whom it is levied, such as income tax.' },
         { term: 'indirect tax', meaning: 'tax collected through the price of goods and services, such as GST, rather than directly from income.' },
@@ -336,7 +335,7 @@ export const tax: Record<string, Chapter> = {
     subtitle: 'How long you hold can change how the profit is taxed.',
     minutes: 6,
     blocks: [
-      scene4('tax-bracket', 'Short-term and long-term gains sit in different tax brackets — the holding period decides which one applies.'),
+      scene4('stcg-vs-ltcg', 'Short-term and long-term gains sit in different tax brackets — the holding period decides which one applies.'),
       { kind: 'p', text: "The law often treats gains differently depending on how long you held the asset before selling. Short-term gains are generally taxed at one set of rules; long-term gains can be taxed at another, sometimes more favourably, sometimes with different conditions. The dividing line is the holding period, and it is set by the type of asset." },
       sim('tax', ''),
       { kind: 'h', text: 'Why the holding period matters' },

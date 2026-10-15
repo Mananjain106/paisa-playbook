@@ -54,7 +54,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
 
-      { kind: 'scene', name: 'gold-role', caption: 'Physical gold carries a 20–40% entry cost — for investment use a fund or ETF.' },
+      { kind: 'scene', name: 'physical-gold-cost', caption: 'Physical gold carries a 20–40% entry cost — for investment use a fund or ETF.' },
 
 
       { kind: 'p', text: 'Buying gold coins or bars feels safe because you can hold it. In practice you pay a making charge of 20–40% on entry, lose much of it on exit, and pay GST on the purchase — all before the gold price moves at all.' },
@@ -182,7 +182,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
 
-      { kind: 'scene', name: 'gold-role', caption: 'Silver is half precious, half industrial — roughly 1.5x as volatile as gold.' },
+      { kind: 'scene', name: 'silver-volatility', caption: 'Silver is half precious, half industrial — roughly 1.5x as volatile as gold.' },
 
 
       { kind: 'p', text: 'Silver is both a precious metal and an essential industrial input — solar panels, electronics and electrical contacts. That dual role makes it more volatile than gold, with industrial demand swinging alongside investor demand.' },
@@ -326,7 +326,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
 
-      { kind: 'scene', name: 'property-cashflow', caption: 'Land produces no income, is nearly impossible to mortgage and takes years to sell.' },
+      { kind: 'scene', name: 'land-idle', caption: 'Land produces no income, is nearly impossible to mortgage and takes years to sell.' },
 
 
       { kind: 'p', text: 'Land is the most illiquid major asset in India. It pays nothing, cannot be mortgaged easily, has unclear title risk, and takes years to sell at the right price. Most people buying land are hoping for appreciation with no income to offset the wait.' },
@@ -371,7 +371,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
 
-      { kind: 'scene', name: 'property-cashflow', caption: 'Apartments are more liquid than land, but you owe maintenance every month for life.' },
+      { kind: 'scene', name: 'apartment-dues', caption: 'Apartments are more liquid than land, but you owe maintenance every month for life.' },
 
 
       { kind: 'p', text: 'An apartment gives you a defined, habitable asset on a known plot, which is why most Indian households prefer it to land. It is easier to sell, can sometimes be mortgaged, and produces potential rental income. But you pay monthly maintenance forever, which land does not.' },
@@ -473,7 +473,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
 
-      { kind: 'scene', name: 'property-cashflow', caption: 'Appreciation is the main source of property return — and the hardest to forecast.' },
+      { kind: 'scene', name: 'appreciation-forecast', caption: 'Appreciation is the main source of property return — and the hardest to forecast.' },
 
 
       { kind: 'p', text: 'Appreciation is the rise in the property\'s price over time. For most Indian property investors it has been the dominant component of return — and it is the component nobody can reliably forecast.' },
@@ -522,7 +522,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 4,
     blocks: [
 
-      { kind: 'scene', name: 'property-cashflow', caption: 'Property tax is small but permanent — unpaid dues complicate a sale.' },
+      { kind: 'scene', name: 'property-tax-clock', caption: 'Property tax is small but permanent — unpaid dues complicate a sale.' },
 
 
       { kind: 'p', text: 'Property tax is an annual local-government charge, usually a small percentage of the assessed or market value depending on the state. It is trivial next to maintenance, but it recurs forever and is often unpaid, which creates liability on sale.' },
@@ -567,7 +567,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 4,
     blocks: [
 
-      { kind: 'scene', name: 'property-cashflow', caption: 'Stamp duty and registration add 5–10% to a purchase — paid upfront, never recovered.' },
+      { kind: 'scene', name: 'stamp-duty-cost', caption: 'Stamp duty and registration add 5–10% to a purchase — paid upfront, never recovered.' },
 
 
       { kind: 'p', text: 'Stamp duty is a state-level tax on property transactions, payable on registration. Together with registration charges it is often 5–10% of the purchase price, and some states also levy a registration fee on a similar base.' },
@@ -611,7 +611,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 4,
     blocks: [
 
-      { kind: 'scene', name: 'property-cashflow', caption: 'Registration receipts prove your original cost — keep them for the life of the property.' },
+      { kind: 'scene', name: 'registration-records', caption: 'Registration receipts prove your original cost — keep them for the life of the property.' },
 
 
       { kind: 'p', text: 'Registration is the legal recording of the sale with the sub-registrar office. It carries its own fee on the transaction value plus stamp duty, and it is the point at which the buyer officially owns the property.' },
@@ -646,7 +646,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
 
-      { kind: 'scene', name: 'property-cashflow', caption: 'Maintenance never stops — treat property as a zero-coupon bond and subtract every running cost.' },
+      { kind: 'scene', name: 'maintenance-drag', caption: 'Maintenance never stops — treat property as a zero-coupon bond and subtract every running cost.' },
 
 
       { kind: 'p', text: 'Unlike a bond, a property never finishes costing money. Alongside the EMI you pay maintenance, property tax, society charges, lift and water bills, insurance, repairs and eventual repainting — every single year, for as long as you own it.' },
@@ -757,7 +757,7 @@ export const assets: Record<string, Chapter> = {
     minutes: 5,
     blocks: [
 
-      { kind: 'scene', name: 'property-cashflow', caption: 'Property is the least liquid major asset — concentrating your net worth in one flat is risky.' },
+      { kind: 'scene', name: 'property-liquidity', caption: 'Property is the least liquid major asset — concentrating your net worth in one flat is risky.' },
 
 
       { kind: 'p', text: 'Selling property takes weeks or months, involves legal transfer and taxes, and only reaches a buyer at whatever the market offers that day. That is the opposite of how equities work, and it changes how property should be held.' },

@@ -51,9 +51,9 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'The details that shape what the contract actually does.',
     minutes: 6,
     blocks: [
-      SCENE_DERIV,
+      scene4('contract-sizing'),
       { kind: 'p', text: "Not all futures contracts are the same. The contract size, the underlying, the expiry date, the tick size, the margin rules, and whether the contract is cash-settled or physically settled all matter. These details determine how much exposure you have, how much capital you need, and what happens when the contract ends." },
-      SCENE_DERIV,
+      scene4('contract-sizing'),
       { kind: 'h', text: 'Contract features worth knowing' },
       { kind: 'list', items: [
         'Contract size: how much of the underlying one contract represents, which affects the scale of the position.',
@@ -63,7 +63,7 @@ export const derivatives: Record<string, Chapter> = {
         'Margin: the capital required to hold the position, which shapes leverage and risk.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'The contract is not the underlying', text: "A futures contract is a derivative of the underlying, not the underlying itself. The price can track closely, but the contract has its own rules, its own timing, and its own risk profile. Treating a futures contract as if it were the same thing as owning the asset is a common source of confusion." },
-      SCENE_DERIV,
+      scene4('contract-sizing'),
       { kind: 'example', title: 'Why details matter', text: 'Two index futures may both be linked to the same market, but if one contract is four times the size of another, the same price move has four times the impact on the smaller or larger contract. The underlying story may be identical; the contract exposure is not. That is why the contract specification is part of the decision.' },
       { kind: 'terms', items: [
         { term: 'contract size', meaning: 'the quantity of the underlying represented by one futures contract, which determines how much exposure a single contract gives.' },
@@ -89,9 +89,9 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'The capital you post to hold a leveraged position.',
     minutes: 6,
     blocks: [
-      SCENE_DERIV,
+      scene4('margin-leverage'),
       { kind: 'p', text: "Margin is the money you put up to enter and maintain a position in a leveraged market like futures. It is not the full value of the contract; it is the performance bond, the stake that shows you can meet your obligations as the market moves. The word can be confusing because it is used for different things in different contexts, but in derivatives it usually means the capital required to keep the trade alive." },
-      SCENE_DERIV,
+      scene4('margin-leverage'),
       { kind: 'h', text: 'What margin does' },
       { kind: 'list', items: [
         'It protects the counterparty and exchange against default if the position moves against you.',
@@ -100,7 +100,7 @@ export const derivatives: Record<string, Chapter> = {
         'It creates the lever that makes futures powerful and dangerous at the same time.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Margin is a source of both power and peril', text: "Margin lets a trader control a large notional value with a smaller amount of capital, which is why futures can produce large gains and large losses from small moves. The danger is not the leverage itself; it is forgetting that leverage works both ways. A small adverse move can require more capital or force a closure." },
-      SCENE_DERIV,
+      scene4('margin-leverage'),
       { kind: 'example', title: 'Margin in plain terms', text: "If a contract’s notional value is large but the margin required is much smaller, you are controlling more value than the cash you put up. That is the leverage. If the market moves against you, the margin may need to be topped up, or the position may be at risk. The smaller the margin relative to the contract value, the larger the lever — and the larger the swing." },
       { kind: 'terms', items: [
         { term: 'margin', meaning: 'the capital posted to enter or hold a leveraged position, serving as a performance bond against future price moves.' },
@@ -163,9 +163,9 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'The date that forces a decision or a replacement.',
     minutes: 5,
     blocks: [
-      SCENE_DERIV,
+      scene4('expiry-intrinsic'),
       { kind: 'p', text: "Expiry is the date on which a contract or option ceases to be live in its current form. For futures, it is the point where the contract is settled or rolled. For options, it is the last day the contract has life as an option. Expiry matters because it forces action: a position does not go on forever just because you want it to." },
-      SCENE_DERIV,
+      scene4('expiry-intrinsic'),
       { kind: 'h', text: 'Why expiry changes behaviour' },
       { kind: 'list', items: [
         'Positions can’t be held indefinitely in the same contract; they must be closed, settled, or rolled.',
@@ -174,7 +174,7 @@ export const derivatives: Record<string, Chapter> = {
         'Expiry can create rushed decisions, which is exactly when poor risk control is most dangerous.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Do not let expiry become a surprise deadline', text: "Expiry is a feature, not a trap, if you plan for it. The trap is holding a contract into expiry without knowing what you will do at the end. Know the expiry, know the settlement, and know whether you want to roll, close, or let it settle." },
-      SCENE_DERIV,
+      scene4('expiry-intrinsic'),
       { kind: 'example', title: 'A roll decision', text: "If you want a futures view to continue past the current contract’s expiry, you may need to close the near contract and open the next one. The move from one contract to the next is not always seamless; there can be a price difference and a transaction cost. That is part of the cost of maintaining a longer view through the futures market." },
       { kind: 'terms', items: [
         { term: 'expiry', meaning: 'the date on which a contract or option ceases to be live in its current form and is settled, closed, or rolled.' },
@@ -200,9 +200,9 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'Daily settlement of gains and losses as the price moves.',
     minutes: 5,
     blocks: [
-      SCENE_DERIV,
+      scene4('mark-to-market'),
       { kind: 'p', text: "Mark-to-market means the position is revalued at current market prices, often daily, so gains and losses are recognised as they happen rather than waiting until the end. In futures, this is part of how margin works: if the position moves against you, you may need to add funds; if it moves in your favour, you may get a credit. The idea is to keep the exposure backed by current value." },
-      SCENE_DERIV,
+      scene4('mark-to-market'),
       { kind: 'h', text: 'What mark-to-market changes' },
       { kind: 'list', items: [
         'You see gains and losses earlier, not just at maturity or final settlement.',
@@ -211,7 +211,7 @@ export const derivatives: Record<string, Chapter> = {
         'It makes leverage felt sooner, because the capital tied up can change with the daily price.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Paper profit is not the same as spendable cash', text: "Mark-to-market can make a position look good one day and painful the next. That is normal, but it is not the same as intending to pay bills from a temporary gain. If you rely on a mark-to-market profit that can reverse, you are borrowing against the market, which is a fragile plan." },
-      SCENE_DERIV,
+      scene4('mark-to-market'),
       { kind: 'example', title: 'Daily revaluation in action', text: "A futures position may gain on one day, reducing the margin requirement or creating a credit, and then lose on the next day, requiring funds again. The market’s daily movement becomes a series of small settlements, not one big result at the end. That daily rhythm is what mark-to-market means in practice." },
       { kind: 'terms', items: [
         { term: 'mark-to-market', meaning: 'revaluing a position to current market prices, often daily, so gains and losses are recognised as they occur.' },
@@ -274,9 +274,9 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'Taking risk on purpose, with the hope of profit.',
     minutes: 6,
     blocks: [
-      SCENE_DERIV,
+      scene4('naked-speculation'),
       { kind: 'p', text: "Speculation is taking a position in the hope of profit from a price move, with the acceptance of risk. It is the opposite of hedging in purpose, even if the instruments are the same. A speculator does not already have the exposure they are betting on or against; they are creating a new exposure because they think the price will move in their favour." },
-      SCENE_DERIV,
+      scene4('naked-speculation'),
       { kind: 'h', text: 'Speculation in plain terms' },
       { kind: 'list', items: [
         'The motive is profit from a predicted price move.',
@@ -285,7 +285,7 @@ export const derivatives: Record<string, Chapter> = {
         'A good speculator thinks in terms of risk, size, and exit, not just in terms of being right.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Speculation is not investment, and it is not a hobby paid by confidence', text: "A speculative position can be thoughtful or reckless. The difference is whether the person has a plan for sizing, risk, and exit, and whether they accept that being wrong is part of the game. Speculation without a plan is just gambling with better vocabulary." },
-      SCENE_DERIV,
+      scene4('naked-speculation'),
       { kind: 'example', title: 'Speculation versus hedging', text: "A trader who buys a futures contract because they think the price will rise is speculating. A farmer who sells a futures contract because they want to lock in a price for a crop they will harvest is hedging. The instrument may be similar, but the purpose is different: one is creating risk in search of profit, the other is reducing risk already there." },
       { kind: 'terms', items: [
         { term: 'speculation', meaning: 'taking a position in the hope of profit from a price move, accepting the risk that the prediction may be wrong.' },
@@ -431,10 +431,10 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'The price written into the option that shapes everything else.',
     minutes: 5,
     blocks: [
-      SCENE_CP,
+      scene4('moneyness'),
       SIM_OPTS,
       { kind: 'p', text: "The strike price is the price at which the option holder can buy or sell the underlying. It is the reference point that determines whether the option is in the money, at the money, or out of the money. The strike is not just a number; it is the hinge on which the option’s value turns, together with the underlying price and the premium." },
-      SCENE_CP,
+      scene4('moneyness'),
       SIM_OPTS,
       { kind: 'h', text: 'How the strike matters' },
       { kind: 'list', items: [
@@ -444,7 +444,7 @@ export const derivatives: Record<string, Chapter> = {
         'Choosing a strike is a choice about how much movement you need to make the option worth it.',
       ] },
       { kind: 'callout', tone: 'tip', title: 'The strike chooses your threshold', text: "When you pick a strike, you are choosing how far the underlying must move before the option starts to do its job. A strike closer to the current price is usually more expensive but needs less movement; a strike further away is cheaper but needs a bigger move. The choice is a trade between probability and payoff." },
-      SCENE_CP,
+      scene4('moneyness'),
       SIM_OPTS,
       { kind: 'example', title: 'Strike selection as a trade-off', text: "A call with a strike near the current price might cost more but has a better chance of gaining value if the market rises modestly. A call with a strike far above the current price might be cheaper but only pays off if the market rallies a lot. The strike is the lever that shapes both cost and required move." },
       { kind: 'terms', items: [
@@ -471,10 +471,10 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'The price of the right — and the first thing an option costs.',
     minutes: 6,
     blocks: [
-      SCENE_CP,
+      scene4('premium-split'),
       SIM_OPTS,
       { kind: 'p', text: "The premium is what the option buyer pays to the seller for the right the option confers. It is the upfront cost of the position and the maximum loss for the buyer if the option expires worthless. The premium is not arbitrary; it reflects the strike, the underlying price, the time left, the volatility, and the interest environment. In other words, it is a price for a probability-weighted promise." },
-      SCENE_CP,
+      scene4('premium-split'),
       SIM_OPTS,
       { kind: 'h', text: 'What drives the premium' },
       { kind: 'list', items: [
@@ -484,7 +484,7 @@ export const derivatives: Record<string, Chapter> = {
         'The risk-free rate and other market conditions, which also influence option pricing.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'A higher premium is not automatically a better trade', text: "Paying more for an option does not by itself make the trade smarter. A high premium can mean the option already has a lot of value baked in, which may limit the upside relative to the cost. The right premium is the one that fits the trade, not the one that sounds most expensive or cheapest." },
-      SCENE_CP,
+      scene4('premium-split'),
       SIM_OPTS,
       { kind: 'example', title: 'Premium as price of a right', text: "If you buy a call for ₹10, that is the most you can lose if the option expires worthless. If the underlying rallies enough, the option can become worth far more than ₹10. The premium is the entry ticket, and the trade is whether that ticket is worth the chance it buys." },
       { kind: 'terms', items: [
@@ -511,10 +511,10 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'The value an option already has if it is in the money.',
     minutes: 5,
     blocks: [
-      SCENE_CP,
+      scene4('time-decay'),
       SIM_OPTS,
       { kind: 'p', text: "Intrinsic value is the part of an option’s value that comes from the underlying price already being favourable relative to the strike. A call with the underlying above the strike has intrinsic value; a put with the underlying below the strike has intrinsic value. If the option is out of the money, its intrinsic value is zero or near zero, and any remaining value is from time and other factors." },
-      SCENE_CP,
+      scene4('time-decay'),
       SIM_OPTS,
       { kind: 'h', text: 'Intrinsic value in practice' },
       { kind: 'list', items: [
@@ -524,7 +524,7 @@ export const derivatives: Record<string, Chapter> = {
         'It is one component of the premium; the other main component is time value.',
       ] },
       { kind: 'callout', tone: 'tip', title: 'Intrinsic value is the floor, not the whole house', text: "When an option is in the money, intrinsic value is the part of the price you can point to and say ‘this is already real’. But the option can be worth more than that because of time value. Do not confuse the floor with the ceiling." },
-      SCENE_CP,
+      scene4('time-decay'),
       SIM_OPTS,
       { kind: 'example', title: 'Reading intrinsic value', text: "If a call has a strike of ₹100 and the underlying is ₹120, the intrinsic value is roughly ₹20, because you could theoretically buy at ₹100 and sell at ₹120. If the option is trading for ₹25, the extra ₹5 is time value and other factors, not intrinsic. The split matters when you judge what you are paying for." },
       { kind: 'terms', items: [
@@ -551,10 +551,10 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'What you pay for the chance that the option will become more valuable.',
     minutes: 5,
     blocks: [
-      SCENE_CP,
+      scene4('volatility-effect'),
       SIM_OPTS,
       { kind: 'p', text: "Time value is the part of an option’s premium beyond intrinsic value. It reflects the possibility that the underlying will move in a way that makes the option more valuable before expiry. More time usually means more time value, because there is more opportunity for the market to move. As expiry approaches, time value tends to erode, and the option’s price increasingly reflects intrinsic value alone." },
-      SCENE_CP,
+      scene4('volatility-effect'),
       SIM_OPTS,
       { kind: 'h', text: 'Why time value matters' },
       { kind: 'list', items: [
@@ -564,7 +564,7 @@ export const derivatives: Record<string, Chapter> = {
         'It is sensitive to volatility, because bigger expected swings increase the chance of a favourable outcome.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Time value can melt away', text: "An option can hurt you not because the market went the wrong way, but because time passed and the option’s chance premium evaporated. That is one of the central risks of buying options: you can be right about direction and still lose if the move does not happen soon enough." },
-      SCENE_CP,
+      scene4('volatility-effect'),
       SIM_OPTS,
       { kind: 'example', title: 'Time value erosion', text: "Suppose you buy an option for ₹12 when intrinsic value is ₹2. The remaining ₹10 is time value and other factors. If the underlying stays where it is and time passes, that ₹10 can shrink toward zero. The option’s fate depends on both direction and timing, which is why time value is such an important part of the price." },
       { kind: 'terms', items: [
@@ -591,10 +591,10 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'The same contract looks very different depending on which side you are on.',
     minutes: 6,
     blocks: [
-      SCENE_CP,
+      scene4('put-protection'),
       SIM_OPTS,
       { kind: 'p', text: "Buying an option and selling an option are not two versions of the same trade; they are two different risk profiles. The buyer pays the premium and gets a right with limited downside. The seller collects the premium and takes on the obligation if the option is exercised, with a different and often larger risk shape. Confusing the two is one of the most common beginner mistakes in options." },
-      SCENE_CP,
+      scene4('put-protection'),
       SIM_OPTS,
       { kind: 'h', text: 'The two sides compared' },
       { kind: 'list', items: [
@@ -604,7 +604,7 @@ export const derivatives: Record<string, Chapter> = {
         'The seller wants the option to lose value or expire worthless.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Selling options is not the mirror image of buying them', text: "Selling an option can seem attractive because you collect premium, but it can also bring obligations and larger risk than the premium collected. The buyer’s loss is capped by the premium; the seller’s loss is not, unless the position is structured to cap it. Never assume the sell side is just ‘the buy side in reverse’." },
-      SCENE_CP,
+      scene4('put-protection'),
       SIM_OPTS,
       { kind: 'example', title: 'Buying versus selling a call', text: "A buyer of a call risks the premium and hopes the underlying rises enough to make the option valuable. A seller of the same call collects that premium upfront but may be assigned to sell at the strike if the underlying rises a lot. The buyer’s downside is defined; the seller’s downside can be much larger if the move is strong." },
       { kind: 'terms', items: [
@@ -631,9 +631,9 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'Instruments that can transfer risk, not just create it.',
     minutes: 6,
     blocks: [
-      SCENE_DERIV,
+      scene4('risk-transfer'),
       { kind: 'p', text: "Derivatives get a bad reputation because they are used for speculation, but their original usefulness is risk management. A futures contract can lock in a price for a future sale or purchase. An option can protect a position from a bad move while leaving some upside. A swap or other derivative can shift interest-rate or currency exposure. Used well, derivatives are tools for moving risk from where it is unwanted to where it is more acceptable." },
-      SCENE_DERIV,
+      scene4('risk-transfer'),
       { kind: 'h', text: 'When derivatives are useful for risk management' },
       { kind: 'list', items: [
         'When you already have an exposure and want to reduce its uncertainty.',
@@ -642,7 +642,7 @@ export const derivatives: Record<string, Chapter> = {
         'When the cost of the hedge is acceptable relative to the risk it addresses.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'A hedge can be a bad hedge if it is done badly', text: "Not every derivative position is a hedge. A hedge is a risk-management action with a clear exposure in mind. A derivative bet disguised as hedging is still a bet. The test is simple: what risk are you reducing, and is the hedge actually reducing it, or just adding another position?" },
-      SCENE_DERIV,
+      scene4('risk-transfer'),
       { kind: 'example', title: 'Risk management in action', text: "A business expecting to receive payment in a foreign currency may use a derivative to reduce the risk of a bad exchange-rate move before the payment arrives. The derivative does not guarantee the best outcome; it reduces the range of bad outcomes for that exposure. That is the risk-management use: not prediction, but protection." },
       { kind: 'terms', items: [
         { term: 'risk management', meaning: 'the practice of identifying, understanding, and reducing or transferring risks that matter to a business or portfolio.' },
@@ -668,9 +668,9 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'Locking in prices for physical goods and inputs.',
     minutes: 6,
     blocks: [
-      SCENE_DERIV,
+      scene4('commodity-futures-roles'),
       { kind: 'p', text: "Commodity futures are futures contracts on physical goods such as metals, energy products, or agricultural commodities. They are used by producers, consumers, and traders. For a business that buys or sells a commodity, the contract can reduce the risk of price swings; for a trader, it can be a way to take a view on the commodity market." },
-      SCENE_DERIV,
+      scene4('commodity-futures-roles'),
       { kind: 'h', text: 'Why commodity futures matter' },
       { kind: 'list', items: [
         'They help businesses manage the risk of input-cost swings or sales-price swings.',
@@ -679,7 +679,7 @@ export const derivatives: Record<string, Chapter> = {
         'They carry storage, delivery, and roll considerations that do not exist in the same way for financial futures.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Commodity futures are not just a price chart', text: "A commodity futures price reflects expectations, storage costs, seasonality, and the practical realities of the physical market. Thinking about a commodity only as a line on a chart misses the economics that shape the contract. The physical side matters." },
-      SCENE_DERIV,
+      scene4('commodity-futures-roles'),
       { kind: 'example', title: 'A commodity hedge idea', text: "An airline worried about fuel prices may use energy futures or similar instruments to reduce exposure to price spikes. A miner worried about metal prices may use metal futures to lock in a forward price. In each case, the futures contract is a tool for managing real commodity risk, not just an abstract bet." },
       { kind: 'terms', items: [
         { term: 'commodity futures', meaning: 'futures contracts on physical commodities such as metals, energy, or agricultural products, used for hedging or speculation.' },
@@ -705,9 +705,9 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'Trading a whole market in one contract.',
     minutes: 5,
     blocks: [
-      SCENE_DERIV,
+      scene4('index-futures'),
       { kind: 'p', text: "Index futures are futures contracts on a market index, such as a broad equity index. They let traders and institutions take a position on the overall market direction or use the contract to hedge a portfolio. Because one contract represents a basket of stocks, index futures are often used as a compact way to express a market view or to manage market risk." },
-      SCENE_DERIV,
+      scene4('index-futures'),
       { kind: 'h', text: 'What index futures are used for' },
       { kind: 'list', items: [
         'To take a directional view on the market without picking individual stocks.',
@@ -716,7 +716,7 @@ export const derivatives: Record<string, Chapter> = {
         'To trade around key events or index moves with a standardised instrument.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Index futures track the index, but they are not the index', text: "An index future is tied to the index, but it has its own contract, expiry, margin, and settlement. It can move very closely with the index, but it is not the same thing as owning the index. The contract mechanics matter, especially around expiry and in times of stress." },
-      SCENE_DERIV,
+      scene4('index-futures'),
       { kind: 'example', title: 'A market-risk hedge idea', text: "An investor with a long equity portfolio may use an index future to offset part of the portfolio’s market exposure if they are worried about a broad decline. The hedge may not be perfect, but it can reduce the portfolio’s sensitivity to a market move. That is one of the classic uses of index futures." },
       { kind: 'terms', items: [
         { term: 'index futures', meaning: 'futures contracts whose underlying is a market index, used to take a view on or hedge exposure to the broad market.' },
@@ -782,10 +782,10 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'How one currency is priced in another — and why it moves.',
     minutes: 6,
     blocks: [
-      SCENE_CUR,
+      scene4('exporter-importer'),
       SIM_CURRENCY,
       { kind: 'p', text: "An exchange rate is the price of one currency in terms of another. It can be quoted directly or indirectly, and it moves for many reasons: interest-rate differences, inflation expectations, trade balances, capital flows, policy actions, and market sentiment. The important thing for a practical finance student is not to memorise every driver, but to understand that the rate is a price, not a fixed number." },
-      SCENE_CUR,
+      scene4('exporter-importer'),
       SIM_CURRENCY,
       { kind: 'h', text: 'What makes exchange rates move' },
       { kind: 'list', items: [
@@ -796,7 +796,7 @@ export const derivatives: Record<string, Chapter> = {
         'Market sentiment and safe-haven flows, which can move rates quickly.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'Do not treat the exchange rate as a forecast device', text: "Exchange rates can be mean-reverting for long stretches and wildly unpredictable for short ones. Using today’s rate as if it were a sure guide to the future is a common mistake. The rate is a current price reflecting a complex balance of forces, not a promise." },
-      SCENE_CUR,
+      scene4('exporter-importer'),
       SIM_CURRENCY,
       { kind: 'example', title: 'A rate move in plain terms', text: "If the rupee weakens against the dollar, the same dollar-denominated asset is worth more in rupee terms. If the rupee strengthens, it is worth less. The asset may have done nothing, but the rate changed the rupee answer. That is why exchange-rate moves matter even when the underlying asset is calm." },
       { kind: 'terms', items: [
@@ -823,10 +823,10 @@ export const derivatives: Record<string, Chapter> = {
     subtitle: 'The rupee-dollar rate as a familiar example of currency risk.',
     minutes: 5,
     blocks: [
-      SCENE_CUR,
+      scene4('forward-lock'),
       SIM_CURRENCY,
       { kind: 'p', text: "INR/USD is the rupee-dollar exchange rate, one of the most watched currency pairs for an Indian audience. The rupee is the domestic currency and the dollar is the dominant international currency for trade, finance, and many global asset prices. Because so much cross-border activity is priced in dollars, the rupee-dollar rate is a practical place to understand how currency moves affect Indian money." },
-      SCENE_CUR,
+      scene4('forward-lock'),
       SIM_CURRENCY,
       { kind: 'h', text: 'Why rupee-dollar matters' },
       { kind: 'list', items: [
@@ -836,7 +836,7 @@ export const derivatives: Record<string, Chapter> = {
         'The pair is a useful example for understanding currency risk more broadly.',
       ] },
       { kind: 'callout', tone: 'warning', title: 'A stronger or weaker rupee is not inherently good or bad', text: "People often say a stronger rupee is ‘good’ or a weaker rupee is ‘bad’. The truth is more nuanced. A weaker rupee can be painful for importers and travellers but helpful for rupee-based holders of foreign assets. A stronger rupee can be good for importers and bad for exporters. The direction matters depending on what you hold." },
-      SCENE_CUR,
+      scene4('forward-lock'),
       SIM_CURRENCY,
       { kind: 'example', title: 'Two sides of the same move', text: "If the rupee weakens, a family planning an overseas trip faces higher rupee costs, while an Indian investor holding a dollar asset sees that asset worth more in rupees. The same rate move cuts in different directions for different people. That is the practical lesson of watching INR/USD." },
       { kind: 'terms', items: [

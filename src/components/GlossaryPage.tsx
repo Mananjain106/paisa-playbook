@@ -20,7 +20,11 @@ export function GlossaryPage() {
     }
   }, [])
 
-  const groups = useMemo(() => (ready ? groupByLetter(searchGlossary(query, 300)) : []), [ready, query])
+  // Browsing shows every entry; a query is capped so results stay readable.
+  const groups = useMemo(
+    () => (ready ? groupByLetter(searchGlossary(query, query ? 300 : 1000)) : []),
+    [ready, query],
+  )
   const letters = groups.map((g) => g.letter)
   const total = ready ? glossaryCount() : 0
   const shown = groups.reduce((n, g) => n + g.entries.length, 0)

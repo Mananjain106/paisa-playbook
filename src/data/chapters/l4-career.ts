@@ -79,7 +79,7 @@ export const career: Record<string, Chapter> = {
     subtitle: 'How pay grows inside a job, and why you cannot assume it will.',
     minutes: 5,
     blocks: [
-      scene4('income-streams', 'Raises are small annual additions to one long stream.'),
+      scene4('raise-compounding', 'Raises are small annual additions to one long stream.'),
       { kind: 'p', text: "A raise is an increase in pay within the same job, usually tied to performance, market movement, tenure, or a review cycle. Many people assume raises will arrive automatically and generously. They often do not. The useful habit is to treat raises as something to earn, ask for, and track, not as a reward that arrives on its own." },
       { kind: 'h', text: 'Why raises are worth managing' },
       { kind: 'list', items: [

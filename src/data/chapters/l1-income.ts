@@ -173,7 +173,7 @@ export const income: Record<string, Chapter> = {
     subtitle: 'Trading stability for ownership',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'goal-ladder', caption: 'Freelancing shortens the climb to a bigger income — if you can survive the gaps on the way.' },
+      { kind: 'scene', name: 'freelance-climb', caption: 'Freelancing shortens the climb to a bigger income — if you can survive the gaps on the way.' },
       { kind: 'p', text: 'Freelancing means selling your skills directly to clients without an employer. You gain freedom and ownership, and you take on the problems of an employer — irregular income, no benefits, and the need to find your own next project.' },
       { kind: 'table',
         caption: 'Employee vs freelancer, honestly',

@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion'
-import { Lock, ArrowRight, Flame, Sparkles, Trophy } from 'lucide-react'
+import { ArrowRight, Flame, Sparkles, Trophy } from 'lucide-react'
 import { Hero } from './Hero'
-import { levels } from '../data/curriculum'
-import { isUnlocked, type Progress } from '../lib/store'
+import { levels, isReleased, releasedChapterCount } from '../data/curriculum'
+import type { Progress } from '../lib/store'
 import { useNavigate } from 'react-router-dom'
 import type { LevelRef } from '../data/curriculum.generated'
 
@@ -43,7 +43,12 @@ export function Home({
       </section>
 
       <section>
-        <h2 className="mb-4 font-display text-2xl">The five levels</h2>
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+          <h2 className="font-display text-2xl">The five levels</h2>
+          <p className="text-xs text-ink-400">
+            Levels 1–4 are live now · {releasedChapterCount} chapters written. Level 5 is coming next.
+          </p>
+        </div>
         <div className="space-y-3">
           {levels.map((l, i) => (
             <LevelCard key={l.level} level={l} index={i} progress={progress} />
@@ -85,7 +90,7 @@ function StatTile({
 
 function LevelCard({ level, index, progress }: { level: LevelRef; index: number; progress: Progress }) {
   const navigate = useNavigate()
-  const unlocked = isUnlocked(level.level, progress)
+  const released = isReleased(level.level)
   const done = level.chapters.filter((c) => progress.read.includes(c.id)).length
   const pct = Math.round((done / level.chapters.length) * 100)
 
@@ -94,24 +99,31 @@ function LevelCard({ level, index, progress }: { level: LevelRef; index: number;
       initial={{ opacity: 0, x: -14 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: index * 0.07 }}
-      disabled={!unlocked}
+      disabled={!released}
       onClick={() => navigate(`/level/${level.level}`)}
       className={`group flex w-full items-center gap-4 rounded-2xl border p-4 text-left transition ${
-        unlocked
+        released
           ? 'border-white/10 bg-white/5 hover:border-white/30 hover:bg-white/10'
           : 'cursor-not-allowed border-white/5 bg-white/[0.02] opacity-60'
       }`}
     >
       <div
         className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-lg font-semibold tabular-nums text-ink-950"
-        style={{ background: unlocked ? level.color : '#3d4464' }}
+        style={{ background: released ? level.color : '#3d4464' }}
       >
-        {unlocked ? level.level : <Lock size={16} />}
+        {level.level}
       </div>
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
           <h3 className="truncate font-display text-lg text-white">{level.title}</h3>
           <span className="shrink-0 text-xs text-ink-500">{level.chapters.length} ch</span>
+          <span
+            className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide ${
+              released ? 'bg-brand-400/15 text-brand-300' : 'bg-white/10 text-ink-400'
+            }`}
+          >
+            {released ? 'Live' : 'Coming soon'}
+          </span>
         </div>
         <p className="truncate text-sm text-ink-400">{level.blurb}</p>
         <div className="mt-2 flex items-center gap-2">
@@ -126,7 +138,7 @@ function LevelCard({ level, index, progress }: { level: LevelRef; index: number;
           <span className="w-9 text-right text-xs text-ink-500">{pct}%</span>
         </div>
       </div>
-      {unlocked && <ArrowRight size={18} className="shrink-0 text-ink-500 transition group-hover:translate-x-1" />}
+      {released && <ArrowRight size={18} className="shrink-0 text-ink-500 transition group-hover:translate-x-1" />}
     </motion.button>
   )
 }

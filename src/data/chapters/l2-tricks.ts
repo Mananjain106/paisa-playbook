@@ -69,7 +69,7 @@ export const tricks: Record<string, Chapter> = {
     subtitle: 'The most expensive illusion in personal finance',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'minpayment-trap', caption: 'Available credit looks like capacity. It is actually exposure.' },
+      { kind: 'scene', name: 'credit-exposure', caption: 'Available credit looks like capacity. It is actually exposure.' },
       { kind: 'p', text: 'A credit limit is permission to borrow, not money you have. The confusion is culturally reinforced in India, where a high limit is treated as a status marker and household decisions are made against total available credit rather than actual income.' },
       {
         kind: 'table',

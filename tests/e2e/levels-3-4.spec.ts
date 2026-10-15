@@ -30,6 +30,37 @@ test.describe('levels 3 & 4 authoring', () => {
     }
   })
 
+  test('levels 1–4 are released and directly reachable; level 5 is not', async ({ page }) => {
+    await page.goto('/')
+
+    const released = [
+      /Money Foundations/,
+      /Your Money Machine/,
+      /The Investing World/,
+      /Taxes & Advanced Money/,
+    ]
+    for (const name of released) {
+      const card = page.getByRole('button', { name })
+      await expect(card, `${name} should be open`).toBeEnabled()
+      await expect(card, `${name} should be marked live`).toContainText('Live')
+    }
+
+    const locked = page.getByRole('button', { name: /Mastery & Life Planning/ })
+    await expect(locked, 'level 5 is not released yet').toBeDisabled()
+    await expect(locked).toContainText('Coming soon')
+
+    // Deep-link straight into a later level with no prior progress at all.
+    for (const [level, title] of [
+      [2, /Your Money Machine/],
+      [3, /The Investing World/],
+      [4, /Taxes & Advanced Money/],
+    ] as const) {
+      await page.goto(`/level/${level}`)
+      await expect(page.getByRole('heading', { level: 1 })).toContainText(title)
+      await expect(page.getByText(/still being written|not released yet/)).toHaveCount(0)
+    }
+  })
+
   for (const l of LEVELS) {
     test(`every ${l.slug} chapter has a quiz, a simulation and an illustration`, async ({ page }) => {
       // Walking every chapter in a level takes far longer than the default 30s.

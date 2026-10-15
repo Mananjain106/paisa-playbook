@@ -43,7 +43,7 @@ export const education: Record<string, Chapter> = {
     subtitle: 'Money for learning that does not have to be repaid.',
     minutes: 5,
     blocks: [
-      scene4('goal-ladder', 'A scholarship removes part of the cost of the very same rung.'),
+      scene4('scholarship-offset', 'A scholarship removes part of the cost of the very same rung.'),
       { kind: 'p', text: "A scholarship is money for education that does not have to be repaid, usually awarded on the basis of merit, need, or both, depending on the program. Because it is not a loan, a scholarship changes the economics of education in a way that loans do not: it lowers the price directly rather than lowering only the timing problem. That is why scholarships are worth pursuing aggressively when they are accessible." },
       { kind: 'h', text: 'Why scholarships matter financially' },
       { kind: 'list', items: [
@@ -113,7 +113,7 @@ export const education: Record<string, Chapter> = {
     subtitle: 'What the education is expected to return, in money and in options.',
     minutes: 6,
     blocks: [
-      scene4('corpus-ladder', 'The payoff of education arrives years after the cost.'),
+      scene4('education-payoff', 'The payoff of education arrives years after the cost.'),
       { kind: 'p', text: "Return on investment for education is not only the salary you might earn after a course. It is also the doors it opens, the skills it builds, the mobility it gives you, and the option value it creates. Money matters, but so does whether the education meaningfully expands what you can do. The best education decisions compare the cost with the full range of expected benefits, not just the highest hoped-for salary." },
       { kind: 'h', text: 'What counts as return' },
       { kind: 'list', items: [

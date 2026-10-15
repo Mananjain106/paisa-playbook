@@ -48,7 +48,7 @@ export const retirement: Record<string, Chapter> = {
     subtitle: 'A crore today is not a crore in twenty-five years.',
     minutes: 6,
     blocks: [
-      scene4('corpus-ladder'),
+      scene4('inflation-target'),
       { kind: 'p', text: "The most common retirement mistake is setting a goal in today’s rupees and then treating the future number as if it were the same value. It is not. Inflation erodes purchasing power year after year. A goal of ₹X in today’s money must become a much larger number by the time you reach retirement, and then it must still be large enough to last through decades of spending." },
       { kind: 'h', text: 'Why ‘a crore’ is not enough by itself' },
       { kind: 'list', items: [
@@ -120,7 +120,7 @@ export const retirement: Record<string, Chapter> = {
     subtitle: 'The employee provident fund: a long-built, forced-savings base for retirement.',
     minutes: 6,
     blocks: [
-      scene4('corpus-ladder'),
+      scene4('epf-monthly'),
       { kind: 'p', text: "The EPF, or Employee Provident Fund, is a retirement savings system for many salaried employees in India. Both the employee and the employer contribute, and the money accumulates with interest over the years of service. For a lot of people, it is the first large, involuntary retirement asset they ever build — which is useful precisely because it happens automatically." },
       { kind: 'h', text: 'What makes EPF useful' },
       { kind: 'list', items: [
@@ -227,7 +227,7 @@ export const retirement: Record<string, Chapter> = {
     subtitle: 'Turning a lump sum into a stream of income.',
     minutes: 6,
     blocks: [
-      scene4('corpus-ladder'),
+      scene4('annuity-income'),
       { kind: 'p', text: "An annuity is a financial arrangement that can convert a lump sum into a stream of income over time. In retirement, that stream can be attractive because it reduces the risk of outliving your money. The trade-off is that an annuity can reduce flexibility and can be taxable depending on how the income is treated. The right use is as one option among several, not as a default for every retirement plan." },
       { kind: 'h', text: 'When an annuity is useful' },
       { kind: 'list', items: [

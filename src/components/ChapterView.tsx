@@ -11,6 +11,7 @@ import {
   levels,
   loadLevel,
   neighbours,
+  releasedLevels,
 } from '../data/curriculum'
 import { useNavigate } from 'react-router-dom'
 
@@ -77,8 +78,9 @@ export function ChapterView({
         <div className="text-5xl">🚧</div>
         <h1 className="mt-3 font-display text-2xl">{ref.title}</h1>
         <p className="mt-2 text-ink-300">
-          This chapter is queued for writing. The full {TOTAL_CHAPTERS}-chapter syllabus is mapped out — Level 1 is
-          live now and each following level unlocks as it is finished.
+          This chapter is queued for writing. Levels 1–{releasedLevels[releasedLevels.length - 1]?.level ?? 1} are being
+          published in batches: the full {TOTAL_CHAPTERS}-chapter syllabus is listed below, and each chapter appears here
+          as it is written.
         </p>
         <div className="mt-5 flex justify-center gap-3">
           <button onClick={() => navigate(`/level/${ref.level}`)} className="rounded-lg border border-white/15 px-4 py-2 text-sm text-ink-200 transition hover:text-white">
@@ -110,7 +112,7 @@ export function ChapterView({
 
       <div className="my-6 space-y-5">
         {chapter.blocks.map((b, i) => (
-          <BlockRenderer key={i} block={b} index={i} />
+          <BlockRenderer key={i} block={b} index={i} chapterId={chapter.id} />
         ))}
       </div>
 

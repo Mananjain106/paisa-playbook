@@ -25,7 +25,7 @@ export function LevelView({ level, progress }: { level: number; progress: Progre
   const meta = levels.find((l) => l.level === level)
   if (!meta) return <p className="text-ink-400">Level not found.</p>
 
-  const unlocked = isUnlocked(level, progress)
+  const unlocked = isUnlocked(level)
   const done = meta.chapters.filter((c) => progress.read.includes(c.id)).length
   const authoredCount = loaded ? meta.chapters.filter((c) => isAuthored(c.id)).length : 0
 
@@ -54,15 +54,16 @@ export function LevelView({ level, progress }: { level: number; progress: Progre
         </div>
         {authoredCount < meta.chapters.length && (
           <p className="mt-3 rounded-lg bg-amber-400/10 px-3 py-2 text-xs text-amber-200">
-            {authoredCount} of {meta.chapters.length} chapters are written so far. The rest arrive as the course
-            is expanded — the full syllabus is already listed below.
+            {authoredCount} of {meta.chapters.length} chapters are live. The rest arrive as the course is
+            expanded — the full syllabus is already listed below.
           </p>
         )}
       </div>
 
       {!unlocked && (
         <p className="rounded-xl border border-amber-400/30 bg-amber-400/10 p-3 text-sm text-amber-200">
-          Finish at least 60% of Level {level - 1} to unlock this level. You can preview any chapter below.
+          This level is still being written — it is not released yet. The full syllabus is listed below so you
+          can see what is coming.
         </p>
       )}
 

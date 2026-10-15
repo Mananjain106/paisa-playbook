@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { levels } from '../data/curriculum.generated'
 import type { LevelRef } from '../data/curriculum.generated'
+import { AUTHORED_LEVELS } from '../data/curriculum'
 import {
   loadRemote,
   mergeProgress,
@@ -202,13 +203,13 @@ export function useProgress() {
   return { progress, stats, recordQuiz, markRead, reset, sync, pullAndMerge, pushNow }
 }
 
-/** Level is unlocked once the previous level is at least 60% complete. */
-export function isUnlocked(level: number, progress: Progress): boolean {
-  if (level === 1) return true
-  const prev = levels.find((l) => l.level === level - 1)
-  if (!prev) return false
-  const done = prev.chapters.filter((c) => progress.read.includes(c.id)).length
-  return done / prev.chapters.length >= 0.6
+/**
+ * Levels 1-4 are released, so every authored level is open to anyone — there is
+ * no progress gate. Level 5 is still being written and is presented as
+ * "coming soon" rather than locked behind a completion threshold.
+ */
+export function isUnlocked(level: number): boolean {
+  return AUTHORED_LEVELS.includes(level)
 }
 
 export type { LevelRef }

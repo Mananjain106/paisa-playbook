@@ -524,8 +524,8 @@ export function LifestyleInflation() {
           <motion.g key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.18 }}>
             <motion.rect x={x} width="26" rx="4" fill="#38bdf8" opacity="0.7" animate={{ height: v * 1.1, y: 185 - v * 1.1 }} transition={{ delay: i * 0.18, type: 'spring', stiffness: 120 }} />
             <motion.rect x={x + 28} width="26" rx="4" fill="#f87171" opacity="0.7" animate={{ height: spending[i] * 1.1, y: 185 - spending[i] * 1.1 }} transition={{ delay: i * 0.18, type: 'spring', stiffness: 120 }} />
-            <text x={x + 27} y={198} textAnchor="middle" fontSize="9" fill={saved[i] <= 0 ? "#fca5a5" : "#fcd34d"} fontWeight={saved[i] <= 0 ? 700 : 400}>
-              {saved[i] <= 0 ? 0 : `+${saved[i}`}
+            <text x={x + 27} y={198} textAnchor="middle" fontSize="9" fill="#fcd34d">
+              +{saved[i]}
             </text>
           </motion.g>
         )
@@ -541,7 +541,7 @@ export function LifestyleInflation() {
       </text>
       <motion.text
         x="200"
-        y="120"
+        y="44"
         textAnchor="middle"
         fontSize="12"
         fill="#fcd34d"

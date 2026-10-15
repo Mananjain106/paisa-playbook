@@ -14,16 +14,27 @@ export type { Chapter, ChapterRef, LevelRef }
  * first time a level or chapter inside it is opened. The search page and the
  * content validator deliberately pull every level.
  *
- * AUTHORED_LEVELS lists which levels have written content, so we can show
- * "coming soon" without downloading anything.
+ * AUTHORED_LEVELS lists which levels are written and released. It is the single
+ * source of truth for "is this level live?", so we can label the rest
+ * "coming soon" without downloading any content.
  */
-export const AUTHORED_LEVELS = [1, 2, 3, 4]
+export const AUTHORED_LEVELS = [1, 2, 3, 4, 5]
+
+/** A level is released once its content has been written. */
+export const isReleased = (level: number): boolean => AUTHORED_LEVELS.includes(level)
+
+/** The levels that are live on the site right now, in syllabus order. */
+export const releasedLevels: LevelRef[] = levels.filter((l) => AUTHORED_LEVELS.includes(l.level))
+
+/** Total chapters across the released levels. */
+export const releasedChapterCount = releasedLevels.reduce((n, l) => n + l.chapters.length, 0)
 
 const levelLoaders: Record<number, () => Promise<Record<string, Chapter>>> = {
   1: () => import('./chapters/level1').then((m) => m.level1),
   2: () => import('./chapters/level2').then((m) => m.level2),
   3: () => import('./chapters/level3').then((m) => m.level3),
   4: () => import('./chapters/level4').then((m) => m.level4),
+  5: () => import('./chapters/level5').then((m) => m.level5),
 }
 
 /** Populated as levels load. Read through `getChapter` / `isAuthored`. */

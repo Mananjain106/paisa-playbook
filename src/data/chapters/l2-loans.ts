@@ -92,7 +92,6 @@ export const loans: Record<string, Chapter> = {
     minutes: 3,
     blocks: [
       { kind: 'scene', name: 'emi-split', caption: 'Principal is the part that reduces the debt. Interest is the price of having used it.' },
-      { kind: 'scene', name: 'emi-split', caption: 'Every EMI contains two things: some is yours, most is the lender\'s.' },
       { kind: 'p', text: 'Principal is the amount you originally borrowed. It is the only part of your EMI that reduces what you owe — the rest is interest. In the early years of a loan, most of your payment is interest, which is why the balance barely seems to move.' },
       {
         kind: 'formula',
@@ -313,7 +312,7 @@ export const loans: Record<string, Chapter> = {
     subtitle: 'The cost that hides behind the interest rate',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'emi-split', caption: 'Fees never appear in the EMI, which is exactly why they get missed.' },
+      { kind: 'scene', name: 'fee-addons', caption: 'Fees never appear in the EMI, which is exactly why they get missed.' },
       { kind: 'p', text: 'A processing fee is a one-time charge for setting up the loan: paperwork, appraisal, legal and credit checks. It is charged upfront and never refunded, and for many Indian loans it is worth more than the difference between the best and second-best interest rate.' },
       {
         kind: 'table',
@@ -472,7 +471,7 @@ export const loans: Record<string, Chapter> = {
     subtitle: 'Closing a loan early, and what it really costs',
     minutes: 4,
     blocks: [
-      { kind: 'scene', name: 'emi-split', caption: 'The balance you settle today is smaller than the interest you would have paid after it.' },
+      { kind: 'scene', name: 'foreclosure-balance', caption: 'The balance you settle today is smaller than the interest you would have paid after it.' },
       { kind: 'p', text: 'Foreclosure is paying off a loan entirely before its scheduled end date. It is more than prepayment: you close the account, and in most Indian loans the lender charges a percentage of the outstanding amount for the privilege.' },
       {
         kind: 'table',
@@ -551,7 +550,7 @@ export const loans: Record<string, Chapter> = {
     subtitle: 'What happens when you stop paying — and how to avoid it',
     minutes: 5,
     blocks: [
-      { kind: 'scene', name: 'minpayment-trap', caption: 'Missed payments escalate from a fee to an asset being sold. It starts with one date.' },
+      { kind: 'scene', name: 'default-cascade', caption: 'Missed payments escalate from a fee to an asset being sold. It starts with one date.' },
       { kind: 'p', text: 'Default is failing to make a required payment. It is the point where a financial problem becomes a financial crisis: your credit record is damaged, penalties accumulate, and in secured loans you can lose the asset.' },
       {
         kind: 'table',

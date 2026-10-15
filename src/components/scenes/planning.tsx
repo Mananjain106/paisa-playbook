@@ -268,38 +268,68 @@ export function InflationCrocodile() {
 export function OpportunityFork() {
   return (
     <>
-      <motion.circle cx="60" cy="110" r="18" fill="#34e0a1" opacity="0.7" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 200 }} style={{ transformOrigin: '60px 110px' }} />
-      <path d="M78 110 Q180 40 300 55" fill="none" stroke="#38bdf8" strokeWidth="2.5" />
-      <path d="M78 110 Q180 180 300 165" fill="none" stroke="#f472b6" strokeWidth="2.5" />
-      <motion.path
-        d="M78 110 Q180 180 300 165"
-        fill="none"
-        stroke="#f472b6"
-        strokeWidth="4"
-        strokeDasharray="8 8"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 0.9 }}
-      />
-      <motion.circle cx="300" cy="55" r="20" fill="#38bdf8" opacity="0.6" />
-      <motion.circle cx="300" cy="165" r="20" fill="#f472b6" opacity="0.6" />
-      <text x="300" y="60" textAnchor="middle" fontSize="10" fill="#a7f3d0" fontWeight="700">
-        Movie
-      </text>
-      <text x="300" y="170" textAnchor="middle" fontSize="10" fill="#ffe4f1" fontWeight="700">
-        Invest
-      </text>
-      <text x="60" y="115" textAnchor="middle" fontSize="11" fill="#0b1524" fontWeight="700">
+      <motion.circle cx="58" cy="110" r="20" fill="#34e0a1" opacity="0.8" initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 200 }} style={{ transformOrigin: '58px 110px' }} />
+      <text x="58" y="114" textAnchor="middle" fontSize="11" fill="#0b1524" fontWeight="800">
         ₹500
       </text>
+
+      <motion.path
+        d="M78 110 Q185 30 300 52"
+        fill="none"
+        stroke="#38bdf8"
+        strokeWidth="2.5"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
+      <motion.path
+        d="M78 110 Q185 190 300 168"
+        fill="none"
+        stroke="#f472b6"
+        strokeWidth="2.5"
+        initial={{ pathLength: 0 }}
+        animate={{ pathLength: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      />
+
+      <motion.g
+        initial={{ opacity: 0, scale: 0.6 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.9, type: 'spring', stiffness: 180 }}
+        style={{ transformOrigin: '306px 52px' }}
+      >
+        <circle cx="306" cy="52" r="25" fill="#38bdf8" opacity="0.85" />
+        <text x="306" y="50" textAnchor="middle" fontSize="10" fill="#062a45" fontWeight="700">
+          Movie
+        </text>
+        <text x="306" y="62" textAnchor="middle" fontSize="8" fill="#062a45">
+          enjoy now
+        </text>
+      </motion.g>
+      <motion.g
+        initial={{ opacity: 0, scale: 0.6 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1.05, type: 'spring', stiffness: 180 }}
+        style={{ transformOrigin: '306px 168px' }}
+      >
+        <circle cx="306" cy="168" r="25" fill="#f472b6" opacity="0.85" />
+        <text x="306" y="166" textAnchor="middle" fontSize="10" fill="#3b0a20" fontWeight="700">
+          Invest
+        </text>
+        <text x="306" y="178" textAnchor="middle" fontSize="8" fill="#3b0a20">
+          grows later
+        </text>
+      </motion.g>
+
       <motion.text
-        x="140"
-        y="195"
+        x="200"
+        y="202"
+        textAnchor="middle"
         fontSize="10"
         fill="#8791b3"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
+        transition={{ delay: 1.3 }}
       >
         You only get one — the other is the opportunity cost
       </motion.text>

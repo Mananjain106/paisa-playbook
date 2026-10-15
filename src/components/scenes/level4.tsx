@@ -416,19 +416,19 @@ export const CurrencyRisk: React.FC = () => (
       <rect x="210" y="35" width="40" height="125" rx="6" />
       <rect x="260" y="28" width="40" height="132" rx="6" />
     </g>
-    <text x="60" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+    <text x="60" y="178" textAnchor="middle" fill="#8791b3" fontSize="9">
       +10%
     </text>
-    <text x="110" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+    <text x="110" y="178" textAnchor="middle" fill="#8791b3" fontSize="9">
       +20%
     </text>
-    <text x="160" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+    <text x="160" y="178" textAnchor="middle" fill="#8791b3" fontSize="9">
       +30%
     </text>
-    <text x="210" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+    <text x="210" y="178" textAnchor="middle" fill="#8791b3" fontSize="9">
       +40%
     </text>
-    <text x="260" y="210" textAnchor="middle" fill="#8791b3" fontSize="9">
+    <text x="260" y="178" textAnchor="middle" fill="#8791b3" fontSize="9">
       +50%
     </text>
     <motion.path
@@ -440,8 +440,8 @@ export const CurrencyRisk: React.FC = () => (
       initial={{ pathLength: 0 }}
       animate={{ pathLength: 1 }}
     />
-    <text x="280" y="36" fill="#34e0a1" fontSize="10">
-      Worse for locals buying imports — better for rupee holders of foreign assets
+    <text x="180" y="194" textAnchor="middle" fill="#34e0a1" fontSize="10">
+      Costs more to import; foreign holdings gain in rupees
     </text>
   </svg>
 )
@@ -449,15 +449,23 @@ export const CurrencyRisk: React.FC = () => (
 export const GrowthVsValue: React.FC = () => (
   <svg viewBox="0 0 360 180" className="w-full">
     <rect width="360" height="180" rx="16" fill="#0f1529" />
-    <text x="180" y="26" textAnchor="middle" fill="#e6e7ee" fontSize="13">
+    <text x="180" y="24" textAnchor="middle" fill="#e6e7ee" fontSize="12">
       Growth and value: two ways to miss the same price
     </text>
+    <line x1="58" y1="42" x2="78" y2="42" stroke="#34e0a1" strokeWidth="2" />
+    <text x="84" y="45" fill="#34e0a1" fontSize="9">
+      Growth - priced for the future
+    </text>
+    <line x1="212" y1="42" x2="232" y2="42" stroke="#38bdf8" strokeWidth="2" />
+    <text x="238" y="45" fill="#38bdf8" fontSize="9">
+      Value - priced for today
+    </text>
     <g stroke="#475569">
-      <line x1="60" y1="40" x2="300" y2="40" />
-      <line x1="60" y1="40" x2="60" y2="140" />
+      <line x1="50" y1="54" x2="50" y2="150" />
+      <line x1="50" y1="150" x2="312" y2="150" />
     </g>
     <motion.path
-      d="M60 120 L100 110 L140 95 L180 75 L220 50 L260 35 L300 30"
+      d="M50 144 L100 130 L150 110 L200 86 L250 68 L312 58"
       stroke="#34e0a1"
       strokeWidth="2"
       fill="none"
@@ -465,22 +473,19 @@ export const GrowthVsValue: React.FC = () => (
       animate={{ pathLength: 1 }}
     />
     <motion.path
-      d="M60 60 L100 75 L140 88 L180 98 L220 105 L260 110 L300 112"
+      d="M50 124 L100 123 L150 124 L190 121 L230 108 L270 88 L312 74"
       stroke="#38bdf8"
       strokeWidth="2"
       fill="none"
       initial={{ pathLength: 0 }}
       animate={{ pathLength: 1 }}
-      transition={{ delay: 0.2 }}
+      transition={{ delay: 0.25 }}
     />
-    <text x="298" y="30" fill="#34e0a1" fontSize="9">
-      Growth (rising, often expensive)
+    <text x="246" y="132" fill="#8791b3" fontSize="8">
+      re-rated
     </text>
-    <text x="298" y="116" fill="#38bdf8" fontSize="9">
-      Value (flat, then re-rated)
-    </text>
-    <text x="180" y="158" textAnchor="middle" fill="#8791b3" fontSize="9">
-      The same business can look like a growth story or a value story at different times
+    <text x="180" y="170" textAnchor="middle" fill="#8791b3" fontSize="9">
+      Growth pays for tomorrow, value pays for today - both can be wrong
     </text>
   </svg>
 )

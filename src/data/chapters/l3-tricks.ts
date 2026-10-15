@@ -285,7 +285,7 @@ export const tricks: Record<string, Chapter> = {
     subtitle: 'Turning everything you have learned into one allocation',
     minutes: 7,
     blocks: [
-      { kind: 'scene', name: 'allocation-pie', caption: 'One allocation, most of your outcome.' },
+      { kind: 'scene', name: 'portfolio-build', caption: 'One allocation, most of your outcome.' },
       { kind: 'p', text: 'Portfolio construction is the practice of building an allocation from your goals, horizon, capacity and tolerance — and then holding to it. It is where every earlier chapter converges.' },
       {
         kind: 'list',
@@ -421,7 +421,7 @@ export const tricks: Record<string, Chapter> = {
     subtitle: 'The cheapest edge you will ever own',
     minutes: 6,
     blocks: [
-      { kind: 'scene', name: 'time-horizon', caption: 'Keep a written record of every decision and your emotional state when you made it.' },
+      { kind: 'scene', name: 'decision-journal', caption: 'Keep a written record of every decision and your emotional state when you made it.' },
 
       { kind: 'p', text: 'An investment journal is a written record of what you own, why you own it, and what you felt at the time. It is the only way to detect your own repeated mistakes — and it turns investing from a mood into a process.' },
       {
