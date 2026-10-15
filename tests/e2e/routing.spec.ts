@@ -56,7 +56,9 @@ test.describe('routing', () => {
   })
 
   test('unwritten chapters render the coming-soon page', async ({ page }) => {
-    await page.goto('/chapter/l5-001')
+    // l5-001 is written; the level ships in batches, so use a chapter that is
+    // still in the plan (the capstone, l5-161) as the unwritten example.
+    await page.goto('/chapter/l5-161')
     await expect(page.getByText('This chapter is queued for writing.')).toBeVisible()
   })
 })

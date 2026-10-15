@@ -103,6 +103,44 @@ const L5RaiseNegotiation = lazy(() => import('./l5-inst3').then((m) => ({ defaul
 const L5RentNegotiation = lazy(() => import('./l5-inst3').then((m) => ({ default: m.L5RentNegotiation })))
 const L5LoanNegotiation = lazy(() => import('./l5-inst3').then((m) => ({ default: m.L5LoanNegotiation })))
 const L5FreelanceRate = lazy(() => import('./l5-inst3').then((m) => ({ default: m.L5FreelanceRate })))
+// Band four, batch 1: the estate, the family and the paperwork around both.
+const L5EstatePlanner = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5EstatePlanner })))
+const L5NominationAudit = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5NominationAudit })))
+const L5BeneficiaryDesigner = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5BeneficiaryDesigner })))
+const L5WillBuilder = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5WillBuilder })))
+const L5InheritanceProcessor = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5InheritanceProcessor })))
+const L5SuccessionPlanner = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5SuccessionPlanner })))
+const L5JointHoldingChooser = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5JointHoldingChooser })))
+const L5FamilyFinanceSetup = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5FamilyFinanceSetup })))
+const L5MarriageFinancePlan = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5MarriageFinancePlan })))
+const L5ParentCareBudget = lazy(() => import('./l5-estate').then((m) => ({ default: m.L5ParentCareBudget })))
+
+// Band four, batch 2: dependants, education, the purchases people make with a
+// loan, and what to do when the money stops arriving.
+const L5DependantPlanner = lazy(() => import('./l5-life').then((m) => ({ default: m.L5DependantPlanner })))
+const L5EducationGoal = lazy(() => import('./l5-life').then((m) => ({ default: m.L5EducationGoal })))
+const L5MajorPurchaseAnalyser = lazy(() => import('./l5-life').then((m) => ({ default: m.L5MajorPurchaseAnalyser })))
+const L5HouseAffordability = lazy(() => import('./l5-life').then((m) => ({ default: m.L5HouseAffordability })))
+const L5VehicleTco = lazy(() => import('./l5-life').then((m) => ({ default: m.L5VehicleTco })))
+const L5EducationRoi = lazy(() => import('./l5-life').then((m) => ({ default: m.L5EducationRoi })))
+const L5RentBuyModel = lazy(() => import('./l5-life').then((m) => ({ default: m.L5RentBuyModel })))
+const L5NewVsUsed = lazy(() => import('./l5-life').then((m) => ({ default: m.L5NewVsUsed })))
+const L5CashVsFinance = lazy(() => import('./l5-life').then((m) => ({ default: m.L5CashVsFinance })))
+const L5CrisisDrill = lazy(() => import('./l5-life').then((m) => ({ default: m.L5CrisisDrill })))
+
+// Band four, batch 3, and the first chapters of fraud & due diligence: income
+// shocks, medical claims, market falls, debt, fraud, identity and the sellers
+// who are not regulated at all.
+const L5JobLossPlan = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5JobLossPlan })))
+const L5MedicalClaimRun = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5MedicalClaimRun })))
+const L5CrashSimulator = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5CrashSimulator })))
+const L5RecessionAdjuster = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5RecessionAdjuster })))
+const L5DebtTriage = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5DebtTriage })))
+const L5FraudResponseDrill = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5FraudResponseDrill })))
+const L5AccountRecovery = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5AccountRecovery })))
+const L5IdentityRepair = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5IdentityRepair })))
+const L5ScamInbox = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5ScamInbox })))
+const L5GuruAudit = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5GuruAudit })))
 
 /** Placeholder shown while a sim chunk is in flight. */
 function SimLoading() {
@@ -932,6 +970,276 @@ export const SIMS: Record<SimName, SimMeta> = {
     C: () => (
       <Suspense fallback={<SimLoading />}>
         <L5FreelanceRate />
+      </Suspense>
+    ),
+  },
+  'l5-estate-planner': {
+    title: 'Estate planning lab',
+    blurb: 'Sort an estate by the route each slice actually takes: nomination, will, or the default rule.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5EstatePlanner />
+      </Suspense>
+    ),
+  },
+  'l5-nomination-audit': {
+    title: 'Nomination audit',
+    blurb: 'Audit every place money sits and see what a missing nomination costs the family.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5NominationAudit />
+      </Suspense>
+    ),
+  },
+  'l5-beneficiary-designer': {
+    title: 'Beneficiary designer',
+    blurb: 'Compare the shares a will gives with the shares the default rule would give instead.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5BeneficiaryDesigner />
+      </Suspense>
+    ),
+  },
+  'l5-will-builder': {
+    title: 'Will builder',
+    blurb: 'Assemble a valid will part by part and find the piece that is missing.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5WillBuilder />
+      </Suspense>
+    ),
+  },
+  'l5-inheritance-processor': {
+    title: 'Inheritance processor',
+    blurb: 'Work an inheritance in order: liabilities, titles, then the decision to hold or sell.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5InheritanceProcessor />
+      </Suspense>
+    ),
+  },
+  'l5-succession-planner': {
+    title: 'Succession planner',
+    blurb: 'Move ownership, control and funding across a handover, and see the gap that remains.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5SuccessionPlanner />
+      </Suspense>
+    ),
+  },
+  'l5-joint-holding-chooser': {
+    title: 'Joint holding chooser',
+    blurb: 'Pick the wording on an account and see what it does, and does not do, on a death.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5JointHoldingChooser />
+      </Suspense>
+    ),
+  },
+  'l5-family-finance-setup': {
+    title: 'Household money setup',
+    blurb: 'Set who pays what, who sees what and what happens when one income stops.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5FamilyFinanceSetup />
+      </Suspense>
+    ),
+  },
+  'l5-marriage-finance-plan': {
+    title: 'Marriage finance planner',
+    blurb: 'Separate what stays individual from what marriage actually changes by default.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5MarriageFinancePlan />
+      </Suspense>
+    ),
+  },
+  'l5-parent-care-budget': {
+    title: 'Parent support budget',
+    blurb: 'Layer cover, monthly support, medicines and a buffer into one annual number.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5ParentCareBudget />
+      </Suspense>
+    ),
+  },
+  'l5-dependant-planner': {
+    title: 'Dependant planner',
+    blurb: 'Add up who depends on your income, what supporting them costs, and the cover that replaces it.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5DependantPlanner />
+      </Suspense>
+    ),
+  },
+  'l5-education-goal': {
+    title: 'Education goal planner',
+    blurb: 'Price a course at the day of admission, then find the monthly amount that gets there.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5EducationGoal />
+      </Suspense>
+    ),
+  },
+  'l5-major-purchase-analyser': {
+    title: 'Major purchase analyser',
+    blurb: 'Turn a price tag into the total cost of owning it, month by month and rupee by rupee.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5MajorPurchaseAnalyser />
+      </Suspense>
+    ),
+  },
+  'l5-house-affordability': {
+    title: 'House affordability lab',
+    blurb: 'Work out the cash a house actually needs on day one, and the EMI that follows it.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5HouseAffordability />
+      </Suspense>
+    ),
+  },
+  'l5-vehicle-tco': {
+    title: 'Vehicle cost of ownership',
+    blurb: 'Five years of a vehicle, from the on-road price to the cost of every kilometre.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5VehicleTco />
+      </Suspense>
+    ),
+  },
+  'l5-education-roi': {
+    title: 'Education return lab',
+    blurb: 'Judge a degree on its full cost, the payback period and the premium it actually buys.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5EducationRoi />
+      </Suspense>
+    ),
+  },
+  'l5-rent-buy-model': {
+    title: 'Rent versus buy model',
+    blurb: 'Put rent-and-invest against buy-and-repay, and find the year the two cross over.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5RentBuyModel />
+      </Suspense>
+    ),
+  },
+  'l5-new-vs-used': {
+    title: 'New versus used lab',
+    blurb: 'Compare the two depreciation curves and the five-year cost of each choice.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5NewVsUsed />
+      </Suspense>
+    ),
+  },
+  'l5-cash-vs-finance': {
+    title: 'Cash versus financing lab',
+    blurb: 'Compare the loan rate with what the cash earns after tax, and check the reserve survives.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5CashVsFinance />
+      </Suspense>
+    ),
+  },
+  'l5-crisis-drill': {
+    title: 'Crisis drill',
+    blurb: 'Run a financial crisis in order, from the runway to what you sell last.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5CrisisDrill />
+      </Suspense>
+    ),
+  },
+  'l5-job-loss-plan': {
+    title: 'Job loss runway plan',
+    blurb: 'Stack every source of time you can reach, then stage the spending until the next income arrives.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5JobLossPlan />
+      </Suspense>
+    ),
+  },
+  'l5-medical-claim-run': {
+    title: 'Medical claim run',
+    blurb: 'Walk a hospitalisation through the cashless route and the reimbursement route, and see what you pay.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5MedicalClaimRun />
+      </Suspense>
+    ),
+  },
+  'l5-crash-simulator': {
+    title: 'Crash plan simulator',
+    blurb: 'Test what the written plan does at each stage of a fall, before the fall happens.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5CrashSimulator />
+      </Suspense>
+    ),
+  },
+  'l5-recession-adjuster': {
+    title: 'Recession adjuster',
+    blurb: 'Measure fixed costs against income risk, then make the defensive adjustment in order.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5RecessionAdjuster />
+      </Suspense>
+    ),
+  },
+  'l5-debt-triage': {
+    title: 'Debt triage',
+    blurb: 'Sort several debts by rate and by consequence, and see what the order is worth in interest.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5DebtTriage />
+      </Suspense>
+    ),
+  },
+  'l5-fraud-response-drill': {
+    title: 'Fraud response drill',
+    blurb: 'Work the golden hour, and see which rung of the liability ladder your timing puts you on.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5FraudResponseDrill />
+      </Suspense>
+    ),
+  },
+  'l5-account-recovery': {
+    title: 'Account recovery lab',
+    blurb: 'Contain a compromised account, then audit every service that survives a new card.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AccountRecovery />
+      </Suspense>
+    ),
+  },
+  'l5-identity-repair': {
+    title: 'Identity repair lab',
+    blurb: 'Read a credit report that has something on it, and work the dispute in the order that fixes it.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5IdentityRepair />
+      </Suspense>
+    ),
+  },
+  'l5-scam-inbox': {
+    title: 'Scam inbox',
+    blurb: 'Judge six offers on who regulates them, where the money goes and what the hurry is.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5ScamInbox />
+      </Suspense>
+    ),
+  },
+  'l5-guru-audit': {
+    title: 'Guru audit',
+    blurb: 'Score a teacher against a promoter on registration, disclosure, track record and incentive.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5GuruAudit />
       </Suspense>
     ),
   },

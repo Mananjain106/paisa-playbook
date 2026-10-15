@@ -65,10 +65,11 @@ test.describe('search', () => {
     await expect(page.getByText(/Nothing matched/)).toBeVisible({ timeout: 15_000 })
   })
 
-  test('search covers chapters beyond the written levels by title', async ({ page }) => {
-    // Levels 1–4 are written; Level 5 titles are still in the syllabus and must
-    // be findable, marked "coming soon". "InvITs" is a Level-5-only title.
-    await page.goto('/search?q=InvIT')
+  test('search covers chapters beyond the written content by title', async ({ page }) => {
+    // Every syllabus title is searchable from day one. Level 5 ships in batches,
+    // so a chapter still in the plan is findable and marked "coming soon";
+    // l5-101 "Pump-And-Dump Schemes" is one of those.
+    await page.goto('/search?q=Pump-And-Dump')
     const soon = page.locator('ul li a', { hasText: 'coming soon' })
     await expect(soon.first()).toBeVisible({ timeout: 15_000 })
   })

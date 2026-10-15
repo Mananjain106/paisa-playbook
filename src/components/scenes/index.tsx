@@ -13,6 +13,9 @@ import * as l5r from './l5-retire'
 import * as l5n from './l5-inst'
 import * as l5n2 from './l5-inst2'
 import * as l5n3 from './l5-inst3'
+import * as l5e from './l5-estate'
+import * as l5l from './l5-life'
+import * as l5p from './l5-protect'
 import * as level2 from './level2'
 import * as level3 from './level3'
 import * as level4 from './level4'
@@ -270,6 +273,40 @@ export const SCENES: Record<SceneName, SceneFn> = {
   'rent-levers': () => <l5n3.RentLevers />,
   'loan-levers': () => <l5n3.LoanLevers />,
   'freelance-rate-build': () => <l5n3.FreelanceRateBuild />,
+  // Level 5 — band four, batch 1: the estate, the family and the paperwork around both
+  'estate-map': () => <l5e.EstateMap />,
+  'nominee-grid': () => <l5e.NomineeGrid />,
+  'beneficiary-tree': () => <l5e.BeneficiaryTree />,
+  'will-anatomy': () => <l5e.WillAnatomy />,
+  'inheritance-path': () => <l5e.InheritancePath />,
+  'succession-timeline': () => <l5e.SuccessionTimeline />,
+  'joint-holding-modes': () => <l5e.JointHoldingModes />,
+  'family-money-map': () => <l5e.FamilyMoneyMap />,
+  'marriage-money-defaults': () => <l5e.MarriageMoneyDefaults />,
+  'parent-support-plan': () => <l5e.ParentSupportPlan />,
+  // Level 5 — band four, batch 2: dependants, education, big purchases and crises
+  'dependant-matrix': () => <l5l.DependantMatrix />,
+  'education-ladder': () => <l5l.EducationLadder />,
+  'tco-breakdown': () => <l5l.TcoBreakdown />,
+  'house-cost-stack': () => <l5l.HouseCostStack />,
+  'vehicle-five-year-cost': () => <l5l.VehicleFiveYearCost />,
+  'education-payback': () => <l5l.EducationPayback />,
+  'rent-buy-crossover': () => <l5l.RentBuyCrossover />,
+  'new-used-curve': () => <l5l.NewUsedCurve />,
+  'cash-finance-seesaw': () => <l5l.CashFinanceSeesaw />,
+  'crisis-order': () => <l5l.CrisisOrder />,
+  // Level 5 — band four, batch 3: job loss, medical claims, crashes, recession,
+  // debt, fraud response, account compromise, identity theft, scams and gurus
+  'runway-months': () => <l5p.RunwayMonths />,
+  'hospital-flow': () => <l5p.HospitalFlow />,
+  'crash-playbook': () => <l5p.CrashPlaybook />,
+  'recession-map': () => <l5p.RecessionMap />,
+  'debt-triage': () => <l5p.DebtTriage />,
+  'golden-hour': () => <l5p.GoldenHour />,
+  'compromise-recovery': () => <l5p.CompromiseRecovery />,
+  'identity-trail': () => <l5p.IdentityTrail />,
+  'scam-triage': () => <l5p.ScamTriage />,
+  'guru-credibility': () => <l5p.GuruCredibility />,
 }
 
 export function Scene({ name, caption }: { name: SceneName; caption?: string }) {

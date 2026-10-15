@@ -30,14 +30,18 @@ test.describe('levels 3 & 4 authoring', () => {
     }
   })
 
-  test('levels 1–4 are released and directly reachable; level 5 is not', async ({ page }) => {
+  test('levels 1–5 are released and directly reachable', async ({ page }) => {
     await page.goto('/')
 
+    // Level 5 was released when its content began shipping, so all five levels
+    // are live now. A chapter inside a released level that has not been written
+    // yet still renders the "queued for writing" page rather than a broken one.
     const released = [
       /Money Foundations/,
       /Your Money Machine/,
       /The Investing World/,
       /Taxes & Advanced Money/,
+      /Mastery & Life Planning/,
     ]
     for (const name of released) {
       const card = page.getByRole('button', { name })
@@ -45,15 +49,12 @@ test.describe('levels 3 & 4 authoring', () => {
       await expect(card, `${name} should be marked live`).toContainText('Live')
     }
 
-    const locked = page.getByRole('button', { name: /Mastery & Life Planning/ })
-    await expect(locked, 'level 5 is not released yet').toBeDisabled()
-    await expect(locked).toContainText('Coming soon')
-
     // Deep-link straight into a later level with no prior progress at all.
     for (const [level, title] of [
       [2, /Your Money Machine/],
       [3, /The Investing World/],
       [4, /Taxes & Advanced Money/],
+      [5, /Mastery & Life Planning/],
     ] as const) {
       await page.goto(`/level/${level}`)
       await expect(page.getByRole('heading', { level: 1 })).toContainText(title)
