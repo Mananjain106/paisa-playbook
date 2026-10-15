@@ -7,6 +7,9 @@ import { l5RetireA } from './l5-retire'
 import { l5InstA } from './l5-inst'
 import { l5InstB } from './l5-inst2'
 import { l5InstC } from './l5-inst3'
+import { l5Estate } from './l5-estate'
+import { l5Life } from './l5-life'
+import { l5Protect } from './l5-protect'
 
 /**
  * Authored Level 5 chapters, keyed by chapter id.
@@ -28,6 +31,16 @@ import { l5InstC } from './l5-inst3'
  *   l5-inst3.ts    band 3, batch 3 — card and broking terms, tenancy, hidden charges, fees,
  *                  penalties and clauses, then negotiating pay, rent, loans and rates
  *                  (l5-060 to l5-070)
+ *   l5-estate.ts   band 4, batch 1 — the estate and the family: nominations, wills,
+ *                  inheritance, succession, joint holdings, household money, marriage
+ *                  and supporting parents (l5-071 to l5-080)
+ *   l5-life.ts     band 4, batch 2 — dependants and education, the big purchases of a
+ *                  household (house, vehicle, cash versus financing, new versus used),
+ *                  and working a financial crisis in order (l5-081 to l5-090)
+ *   l5-protect.ts  band 4, batch 3, and the opening of fraud & due diligence — job loss,
+ *                  medical claims, market falls, recession, debt, fraud response, account
+ *                  compromise, identity theft, scam detection and fake gurus
+ *                  (l5-091 to l5-100)
  *
  * The plan for every chapter — including the ones not yet written, with their
  * goal, topics, illustration, simulation and sources — lives in
@@ -45,4 +58,7 @@ export const level5: Record<string, Chapter> = {
   ...l5InstA,
   ...l5InstB,
   ...l5InstC,
+  ...l5Estate,
+  ...l5Life,
+  ...l5Protect,
 }
