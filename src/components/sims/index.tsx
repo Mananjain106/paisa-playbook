@@ -142,6 +142,34 @@ const L5IdentityRepair = lazy(() => import('./l5-protect').then((m) => ({ defaul
 const L5ScamInbox = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5ScamInbox })))
 const L5GuruAudit = lazy(() => import('./l5-protect').then((m) => ({ default: m.L5GuruAudit })))
 
+// Band three, batch 4 / fraud & due diligence: spotting the con, testing the
+// claim, and verifying before any money moves.
+const L5PumpDumpDetective = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5PumpDumpDetective })))
+const L5VerifyCall = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5VerifyCall })))
+const L5PlatformVerifier = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5PlatformVerifier })))
+const L5JobScamScreener = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5JobScamScreener })))
+const L5CryptoClaimCheck = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5CryptoClaimCheck })))
+const L5SocialEngineeringDefence = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5SocialEngineeringDefence })))
+const L5DiligenceWorksheet = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5DiligenceWorksheet })))
+const L5ProductComparator = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5ProductComparator })))
+const L5ReturnSourceAnalyser = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5ReturnSourceAnalyser })))
+const L5RiskRegister = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5RiskRegister })))
+const L5LiquidityStress = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5LiquidityStress })))
+const L5FeeAudit = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5FeeAudit })))
+const L5VerifyEntity = lazy(() => import('./l5-fraud').then((m) => ({ default: m.L5VerifyEntity })))
+
+// Band five / AI tools (l5-114 to l5-122): research, budgeting, spreadsheets,
+// documents, learning, the failure modes, and the credentials that never move.
+const L5AiAssistants = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5AiAssistants })))
+const L5AiBudgetReview = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5AiBudgetReview })))
+const L5AiFormulaChecker = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5AiFormulaChecker })))
+const L5AiPolicyReader = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5AiPolicyReader })))
+const L5AiTutorAudit = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5AiTutorAudit })))
+const L5AiStressTest = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5AiStressTest })))
+const L5AiClaimVerifier = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5AiClaimVerifier })))
+const L5AiPrivacyAudit = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5AiPrivacyAudit })))
+const L5CredentialDefence = lazy(() => import('./l5-ai').then((m) => ({ default: m.L5CredentialDefence })))
+
 /** Placeholder shown while a sim chunk is in flight. */
 function SimLoading() {
   return (
@@ -1240,6 +1268,205 @@ export const SIMS: Record<SimName, SimMeta> = {
     C: () => (
       <Suspense fallback={<SimLoading />}>
         <L5GuruAudit />
+      </Suspense>
+    ),
+  },
+  // Level 5 labs — band four, batch 4: fraud & due diligence (l5-101 to l5-113).
+  'l5-pump-dump-detective': {
+    title: 'Pump-and-dump detective',
+    blurb: 'Read a thin float, a loud climb and the tip-cascade, and decide when to stay out and when to exit.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5PumpDumpDetective />
+      </Suspense>
+    ),
+  },
+  'l5-verify-call': {
+    title: 'Verification call',
+    blurb: 'Work a distressed video call through the anomalies and the callback rule before any money moves.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5VerifyCall />
+      </Suspense>
+    ),
+  },
+  'l5-platform-verifier': {
+    title: 'Platform verifier',
+    blurb: 'Test a trading app by trying to withdraw, and read the funnel behind the friendly dashboard.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5PlatformVerifier />
+      </Suspense>
+    ),
+  },
+  'l5-job-scam-screener': {
+    title: 'Job-scam screener',
+    blurb: 'Screen an offer against the five tells, from a registration fee to equipment bought on your own card.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5JobScamScreener />
+      </Suspense>
+    ),
+  },
+  'l5-crypto-claim-check': {
+    title: 'Crypto claim check',
+    blurb: 'Judge a guaranteed daily return by custody, withdrawal evidence and the exit that is actually available.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5CryptoClaimCheck />
+      </Suspense>
+    ),
+  },
+  'l5-social-engineering-defence': {
+    title: 'Social-engineering defence',
+    blurb: 'Break authority, urgency and secrecy with a scripted response, and see which one holds.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5SocialEngineeringDefence />
+      </Suspense>
+    ),
+  },
+  'l5-diligence-worksheet': {
+    title: 'Diligence worksheet',
+    blurb: 'Run a standard four-step pass on a product or intermediary before committing money.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5DiligenceWorksheet />
+      </Suspense>
+    ),
+  },
+  'l5-product-comparator': {
+    title: 'Product comparator',
+    blurb: 'Compare two products on return source, risk, liquidity, cost and tax rather than on the headline yield.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5ProductComparator />
+      </Suspense>
+    ),
+  },
+  'l5-return-source-analyser': {
+    title: 'Return source analyser',
+    blurb: 'Name where a promised return actually comes from, then decide whether the story holds.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5ReturnSourceAnalyser />
+      </Suspense>
+    ),
+  },
+  'l5-risk-register': {
+    title: 'Risk register',
+    blurb: 'Break a decision into market, credit, liquidity, concentration, operational and conduct risk, and rank them.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5RiskRegister />
+      </Suspense>
+    ),
+  },
+  'l5-liquidity-stress': {
+    title: 'Liquidity stress test',
+    blurb: 'Price the time-to-cash and the stressed discount of each holding before you need the money.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5LiquidityStress />
+      </Suspense>
+    ),
+  },
+  'l5-fee-audit': {
+    title: 'Fee audit',
+    blurb: 'Total the layers of cost over a holding period and decide what each fee is actually buying.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5FeeAudit />
+      </Suspense>
+    ),
+  },
+  'l5-verify-entity': {
+    title: 'Verification desk',
+    blurb: 'Check an entity on the regulator\u2019s own register and the warn lists before any money moves.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5VerifyEntity />
+      </Suspense>
+    ),
+  },
+  'l5-ai-assistants': {
+    title: 'Task router',
+    blurb: 'Route nine money tasks to the assistant, to a checked hand-off, or to yourself.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AiAssistants />
+      </Suspense>
+    ),
+  },
+  'l5-ai-budget-review': {
+    title: 'Budget review lab',
+    blurb: 'Redact what should never be pasted, then correct an AI-categorised month and reconcile it.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AiBudgetReview />
+      </Suspense>
+    ),
+  },
+  'l5-ai-formula-checker': {
+    title: 'Formula checker',
+    blurb: 'Diagnose three AI-written formulas from their symptoms, then fix the reference that broke them.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AiFormulaChecker />
+      </Suspense>
+    ),
+  },
+  'l5-ai-policy-reader': {
+    title: 'Policy summary checker',
+    blurb: 'Check five summary claims against the clauses they cite, and remove the one with no support.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AiPolicyReader />
+      </Suspense>
+    ),
+  },
+  'l5-ai-tutor-audit': {
+    title: 'Tutor audit',
+    blurb: 'Separate a durable concept from a stale rule, and decide what has to go to the regulator.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AiTutorAudit />
+      </Suspense>
+    ),
+  },
+  'l5-ai-stress-test': {
+    title: 'AI failure-mode stress test',
+    blurb: 'Name the failure behind six fluent outputs and match it to the check that catches it.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AiStressTest />
+      </Suspense>
+    ),
+  },
+  'l5-ai-claim-verifier': {
+    title: 'Claim verifier',
+    blurb: 'Trace five citations to their sources and mark each claim supported or unsupported.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AiClaimVerifier />
+      </Suspense>
+    ),
+  },
+  'l5-ai-privacy-audit': {
+    title: 'Prompt privacy audit',
+    blurb: 'Strip the identifiers from a prompt without removing the fields the question needs.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5AiPrivacyAudit />
+      </Suspense>
+    ),
+  },
+  'l5-credential-defence': {
+    title: 'Credential defence',
+    blurb: 'Answer six requests for OTPs, PINs and card details without handing over a key.',
+    C: () => (
+      <Suspense fallback={<SimLoading />}>
+        <L5CredentialDefence />
       </Suspense>
     ),
   },

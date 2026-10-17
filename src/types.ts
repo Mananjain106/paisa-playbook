@@ -296,6 +296,30 @@ export type SceneName =
         | 'identity-trail'
         | 'scam-triage'
         | 'guru-credibility'
+        // Level 5 scenes — band three, batch 4: fraud & due diligence (l5-101 to l5-113)
+        | 'pump-dump-cycle'
+        | 'deepfake-check'
+        | 'fake-platform-funnel'
+        | 'job-offer-redflags'
+        | 'crypto-custody-layers'
+        | 'social-engineering-loop'
+        | 'diligence-checklist'
+        | 'product-compare-axes'
+        | 'return-source-tree'
+        | 'risk-matrix'
+        | 'time-to-cash'
+        | 'fee-waterfall'
+        | 'verification-desk'
+        // Level 5 scenes — AI tools (l5-114 to l5-122)
+        | 'ai-assist-boundary'
+        | 'ai-budget-loop'
+        | 'ai-formula-test'
+        | 'doc-ai-verify'
+        | 'learning-loop'
+        | 'ai-failure-modes'
+        | 'hallucination-hunt'
+        | 'redaction-filter'
+        | 'credential-wall'
 
 /** Hands-on simulations. */
 export type SimName =
@@ -351,6 +375,17 @@ export type SimName =
         | 'l5-identity-repair'
         | 'l5-scam-inbox'
         | 'l5-guru-audit'
+  // Level 5 labs — AI tools (l5-114 to l5-122). Each is its own chapter's.
+  | 'l5-ai-assistants'
+  | 'l5-ai-budget-review'
+  | 'l5-ai-formula-checker'
+  | 'l5-ai-policy-reader'
+  | 'l5-ai-tutor-audit'
+  | 'l5-ai-stress-test'
+  | 'l5-ai-claim-verifier'
+  | 'l5-ai-privacy-audit'
+  | 'l5-credential-defence'
+
   // Level 5 labs (band one). Each is used by exactly one chapter.
   | 'l5-first-salary-split'
   | 'l5-negotiation-rounds'
@@ -429,6 +464,20 @@ export type SimName =
   | 'l5-rent-negotiation'
   | 'l5-loan-negotiation'
   | 'l5-freelance-rate'
+  // Level 5 labs, band three batch 4 (l5-101 to l5-113): fraud & due diligence.
+  | 'l5-pump-dump-detective'
+  | 'l5-verify-call'
+  | 'l5-platform-verifier'
+  | 'l5-job-scam-screener'
+  | 'l5-crypto-claim-check'
+  | 'l5-social-engineering-defence'
+  | 'l5-diligence-worksheet'
+  | 'l5-product-comparator'
+  | 'l5-return-source-analyser'
+  | 'l5-risk-register'
+  | 'l5-liquidity-stress'
+  | 'l5-fee-audit'
+  | 'l5-verify-entity'
 
 export type QuizOption = { text: string; correct?: boolean; why: string }
 

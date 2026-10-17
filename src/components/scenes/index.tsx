@@ -16,6 +16,8 @@ import * as l5n3 from './l5-inst3'
 import * as l5e from './l5-estate'
 import * as l5l from './l5-life'
 import * as l5p from './l5-protect'
+import * as l5f from './l5-fraud'
+import * as l5a from './l5-ai'
 import * as level2 from './level2'
 import * as level3 from './level3'
 import * as level4 from './level4'
@@ -307,6 +309,30 @@ export const SCENES: Record<SceneName, SceneFn> = {
   'identity-trail': () => <l5p.IdentityTrail />,
   'scam-triage': () => <l5p.ScamTriage />,
   'guru-credibility': () => <l5p.GuruCredibility />,
+  // Level 5 — band three, batch 4: fraud & due diligence (l5-101 to l5-113)
+  'pump-dump-cycle': () => <l5f.PumpDumpCycle />,
+  'deepfake-check': () => <l5f.DeepfakeCheck />,
+  'fake-platform-funnel': () => <l5f.FakePlatformFunnel />,
+  'job-offer-redflags': () => <l5f.JobOfferRedflags />,
+  'crypto-custody-layers': () => <l5f.CustodyLayers />,
+  'social-engineering-loop': () => <l5f.SocialEngineeringLoop />,
+  'diligence-checklist': () => <l5f.DiligenceChecklist />,
+  'product-compare-axes': () => <l5f.ProductCompareAxes />,
+  'return-source-tree': () => <l5f.ReturnSourceTree />,
+  'risk-matrix': () => <l5f.RiskMatrix />,
+  'time-to-cash': () => <l5f.TimeToCash />,
+  'fee-waterfall': () => <l5f.FeeWaterfall />,
+  'verification-desk': () => <l5f.VerificationDesk />,
+  // Level 5 — band five, AI tools (l5-114 to l5-122)
+  'ai-assist-boundary': () => <l5a.AiAssistBoundary />,
+  'ai-budget-loop': () => <l5a.AiBudgetLoop />,
+  'ai-formula-test': () => <l5a.AiFormulaTest />,
+  'doc-ai-verify': () => <l5a.DocAiVerify />,
+  'learning-loop': () => <l5a.LearningLoop />,
+  'ai-failure-modes': () => <l5a.AiFailureModes />,
+  'hallucination-hunt': () => <l5a.HallucinationHunt />,
+  'redaction-filter': () => <l5a.RedactionFilter />,
+  'credential-wall': () => <l5a.CredentialWall />,
 }
 
 export function Scene({ name, caption }: { name: SceneName; caption?: string }) {

@@ -10,6 +10,8 @@ import { l5InstC } from './l5-inst3'
 import { l5Estate } from './l5-estate'
 import { l5Life } from './l5-life'
 import { l5Protect } from './l5-protect'
+import { l5Fraud } from './l5-fraud'
+import { l5Ai } from './l5-ai'
 
 /**
  * Authored Level 5 chapters, keyed by chapter id.
@@ -41,6 +43,10 @@ import { l5Protect } from './l5-protect'
  *                  medical claims, market falls, recession, debt, fraud response, account
  *                  compromise, identity theft, scam detection and fake gurus
  *                  (l5-091 to l5-100)
+ *   l5-fraud.ts    band 4, batch 4, closing fraud & due diligence — pump-and-dumps,
+ *                  deepfakes, fake platforms and jobs, crypto schemes, social
+ *                  engineering, and due diligence on products, returns, risk, liquidity,
+ *                  fees and the regulator's register (l5-101 to l5-113)
  *
  * The plan for every chapter — including the ones not yet written, with their
  * goal, topics, illustration, simulation and sources — lives in
@@ -61,4 +67,6 @@ export const level5: Record<string, Chapter> = {
   ...l5Estate,
   ...l5Life,
   ...l5Protect,
+  ...l5Fraud,
+  ...l5Ai,
 }

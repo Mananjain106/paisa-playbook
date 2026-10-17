@@ -64,8 +64,17 @@ const SIMS = new Set([
   'l5-cash-vs-finance', 'l5-crisis-drill',
   // Level 5 labs — band four, batch 3, and the first of fraud & due diligence
   'l5-job-loss-plan', 'l5-medical-claim-run', 'l5-crash-simulator', 'l5-recession-adjuster',
-  'l5-debt-triage', 'l5-fraud-response-drill', 'l5-account-recovery', 'l5-identity-repair',
+  'l5-debt-triage',  'l5-fraud-response-drill', 'l5-account-recovery', 'l5-identity-repair',
   'l5-scam-inbox', 'l5-guru-audit',
+  // Level 5 labs — band four, batch 4: fraud & due diligence
+  'l5-pump-dump-detective', 'l5-verify-call', 'l5-platform-verifier', 'l5-job-scam-screener',
+  'l5-crypto-claim-check', 'l5-social-engineering-defence', 'l5-diligence-worksheet',
+  'l5-product-comparator', 'l5-return-source-analyser', 'l5-risk-register',
+  'l5-liquidity-stress', 'l5-fee-audit', 'l5-verify-entity',
+  // Level 5 labs — band five: AI tools (l5-114 to l5-122)
+  'l5-ai-assistants', 'l5-ai-budget-review', 'l5-ai-formula-checker', 'l5-ai-policy-reader',
+  'l5-ai-tutor-audit', 'l5-ai-stress-test', 'l5-ai-claim-verifier', 'l5-ai-privacy-audit',
+  'l5-credential-defence',
 ])
 const SCENES = new Set([
   'coins', 'barter', 'timeline', 'rupee', 'rupee-erode', 'money-flow', 'rbi-funnel', 'bank-pyramid',
@@ -133,6 +142,14 @@ const SCENES = new Set([
   // Level 5 illustrations — band four, batch 3, and the first of fraud & due diligence
   'runway-months', 'hospital-flow', 'crash-playbook', 'recession-map', 'debt-triage',
   'golden-hour', 'compromise-recovery', 'identity-trail', 'scam-triage', 'guru-credibility',
+  // Level 5 illustrations — band four, batch 4: fraud & due diligence
+  'pump-dump-cycle', 'deepfake-check', 'fake-platform-funnel', 'job-offer-redflags',
+  'crypto-custody-layers', 'social-engineering-loop', 'diligence-checklist',
+  'product-compare-axes', 'return-source-tree', 'risk-matrix', 'time-to-cash',
+  'fee-waterfall', 'verification-desk',
+  // Level 5 illustrations — band five: AI tools (l5-114 to l5-122)
+  'ai-assist-boundary', 'ai-budget-loop', 'ai-formula-test', 'doc-ai-verify', 'learning-loop',
+  'ai-failure-modes', 'hallucination-hunt', 'redaction-filter', 'credential-wall',
 ])
 
 /** Every string a block renders, for source and wording checks. */
